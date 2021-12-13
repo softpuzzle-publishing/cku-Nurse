@@ -18,13 +18,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">학년별 실습배치표</h1>
+                            <h1 class="title">학생관리</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">학생관리</a></li>
-                                <li class="breadcrumb-item">학년별 실습배치표</li>
+                                <li class="breadcrumb-item">학생 참여관리</li>
                             </ol>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content" data-menu="practice-student">
+            <div class="content" data-menu="student">
                 <div class="container-fluid">
                     <div class="inquery-area">
                         <table class="table table-bordered">
@@ -51,37 +51,31 @@
                                             <option value="">연도 선택</option>
                                         </select>
                                     </td>
-                                </tr>
-                                <tr>
                                     <th>실습 학기</th>
                                     <td>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label">1분기</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-2">
-                                            <label for="chk1-2" class="custom-control-label">2분기</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-3">
-                                            <label for="chk1-3" class="custom-control-label">3분기</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-3">
-                                            <label for="chk1-3" class="custom-control-label">4분기</label>
-                                        </div>
+                                        <select name="" id="" class="custom-select">
+                                            <option value="">전체</option>
+                                        </select>
                                     </td>
-                                    <th>실습 학년</th>
+                                </tr>
+                                <tr>
+                                    <th>학년</th>
                                     <td>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label">3학년</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-2">
-                                            <label for="chk1-2" class="custom-control-label">4학년</label>
-                                        </div>
+                                        <select name="" id="" class="custom-select">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                    <th>진행현황</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>검색</th>
+                                    <td colspan="3">
+                                        <input type="text" class="form-control" placeholder="이름, 학번, 휴대폰번호 입력">
                                     </td>
                                 </tr>
                             </tbody>
@@ -90,21 +84,22 @@
                             <button type="button" class="btn btn-dark min-width-90px">검색</button>
                         </div>
                     </div>
-                    
-                    
-                    <div class="row justify-content-between align-items-end mb-0">
-                        <div class="col-auto">
-                           <b class="text-danger">2022</b>학년도 <b class="text-danger">3</b>학년 <b class="text-danger">1</b>분기 실습배치표
+                    <div class="row row-0 justify-content-between align-items-end mb-3">
+                        <div class="col-auto bg-gray-1 p-3">
+                            <p class="text-danger mb-2 font-weight-bold">유의사항</p>
+                            <p>※ 실습을 진행 중인 학생들의 예방접종현황과 보안서약서를 열람할 수 있으며, 출석부 및 평가서를 작성할 수 있습니다.</p>
+                            <p>※ 출석부 최초 저장시 해당 학생의 담당 현장지도자로 지정되며, 이후에는 변경할 수 없으니 유의하세요.</p>
                         </div>
-                    </div>
-                    <div class="row justify-content-between align-items-end mb-3">
-                        
+                    </div>                            
+                    <div class="row justify-content-between align-items-end mb-3 ">
                         <div class="col-auto">
-                            <b>Total : 000</b>,
+                            <b>Total : 000</b>
                             Page 1/3
                         </div>
                         <div class="col-auto">
-                            <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
+                            <!-- <button type="button" class="btn btn-danger mr-1" data-toggle="modal" data-target="#modal-training-designation-common">실습학생지정</button>
+                            <button type="button" class="btn btn-primary mr-1" data-toggle="modal" data-target="#modal-training-form">실습교과목관리</button>
+                            <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button> -->
                             <select class="custom-select w-auto">
                                 <option>10</option>
                                 <option>30</option>
@@ -129,25 +124,45 @@
                             </colgroup>
                             <thead>
                                 <tr>
+                                    <th class="text-center" style="width: 50px">
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="checkAll">
+                                            <label class="custom-control-label" for="checkAll"><label>
+                                        </div>
+                                    </th>
                                     <th class="text-center">번호</th>
+                                    <th class="text-center">실습학기</th>
                                     <th class="text-center">학년</th>
                                     <th class="text-center">학번</th>
                                     <th class="text-center">이름</th>
-                                    <th class="text-center">실습교과목</th>
-                                    <th class="text-center">관리</th>
+                                    <th class="text-center">진행현황</th>
+                                    <th class="text-center">순회지도</th>
+                                    <th class="text-center">잡담회</th>
+                                    <th class="text-center">검진 및 예방접종 <br> 자가 점검표</th>
+                                    <th class="text-center">서약서</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <% for(var i = 10; i > 0 ; i--){ %>
                                 <tr>
-                                    <td class="text-center"><%= i %></td>
-                                    <td class="text-center">4학년</td>
-                                    <td class="text-center"><a href="student_detail.html" class="text-underline">20211012011</a></td>
-                                    <td class="text-center">김학생</td>
-                                    <td class="text-center">기본간호학 실습 I, 성인간호학실습 I, 모성간호학실습 I, 아동간호학실습I</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#modal-training-designation-common">관리</button>
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="check<%= i %>">
+                                            <label class="custom-control-label" for="check<%= i %>"><label>
+                                        </div>
                                     </td>
+                                    <td class="text-center"><%= i %></td>
+                                    <td class="text-center">1분기</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">9819155</td>
+                                    <td class="text-center">김학생</td>
+                                    <td class="text-center">실습완료</td>
+                                    <td class="text-center"><a href="">2</a></td>
+                                    <td class="text-center"><a href="">2</a></td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#modal-flights-info">보기</button>
+                                    </td>
+                                    <td class="text-center">완료</td>
                                 </tr>
                                 <% } %>
                             </tbody>
@@ -170,7 +185,7 @@
 
     <script>
         $(document).ready(function () {
-            // $("#modal-flights-info").modal("show");
+            // $("#modal-training-designation-common").modal("show");
         });
     </script>
 </body>

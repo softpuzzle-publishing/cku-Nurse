@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <%- include('../layout/_head.ejs')%>
 </head>
+
 <body>
 
     <div id="wrap">
@@ -19,11 +21,11 @@
                                 <% for(var i = 1; i < 4; i++){ %>
                                 <div class="swiper-slide" style="background-image: url('../assets/images/main_visual_<%= i %>.png');">
                                     <div class="item">
-                                        <strong>항공운항관리시스템</strong>
+                                        <strong>간호교육인증관리시스템</strong>
                                         <p>
-                                            새로운 항공 시대를 이끌어 나갈 차세대 인력양성! <br>
-                                            호연지기(浩然之氣)와 실무능력을 겸비한 <br>
-                                            민·군 조종사 양성하는 비행교육원입니다.
+                                            새로운 시대를 이끌어 나갈 차세대 인력양성!<br>
+                                            특화된 전공으로 보건의료계를 리드하고 실무에 적용할 수 있는<br>
+                                            전문직을 양성하는 간호학과교육입니다.
                                         </p>
                                         <a href="" class="btn btn-outline-white width-140px">1:1 inquiry</a>
                                     </div>
@@ -33,7 +35,7 @@
                             <div class="main-visual-container">
                                 <div class="swiper-pagination"></div>
                             </div>
-                            <span class="main-sub-text">Air flight management system</span>
+                            <span class="main-sub-text">Nursing Education Certification</span>
                         </div>
                     </div>
                     <div class="container">
@@ -53,86 +55,88 @@
                             <!-- } -->
 
                             <!-- 로그인 후 { -->
-                                <div class="box dark" style="">
-                                    <div class="top">
-                                        <div class="row row-25">
-                                            <div class="col-auto">
-                                                <div class="profile" style="background-image: url('../../assets/images/@portrait.jpg');"></div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <a href="../personal/personal_list.html" class="d-inline-flex text-white font-14px">나의정보 수정
-                                                            <i class="icon-lock-gray m-l-10"></i>
-                                                        </a>
-                                                        <button class="btn btn-sm logout-btn btn-round">로그아웃</button>
-                                                    </div>
-                                                    <strong class="m-t-30">가디언즈 <span>위탁기간</span></strong>
-                                                    <!-- 학번/ 위탁기간 / 교관번호 {-->
-                                                    <p  class="m-t-10">202121548</p>
-                                                    <!-- } -->
-                                                    <p class="m-t-5">ghdrlfehd@naver.com</p>
+                            <div class="box dark" style="">
+                                <div class="top">
+                                    <div class="row row-25">
+                                        <div class="col-auto">
+                                            <div class="profile" style="background-image: url('../../assets/images/@portrait.jpg');"></div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex flex-column">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <a href="../personal/personal_list.html" class="d-inline-flex text-white font-14px">나의정보 수정
+                                                        <i class="icon-lock-gray m-l-10"></i>
+                                                    </a>
+                                                    <button class="btn btn-sm logout-btn btn-round">로그아웃</button>
                                                 </div>
+                                                <!-- 학생/ 현장지도자{ -->
+                                                <strong class="m-t-30">가디언즈 <span>학생</span></strong>
+                                                <!-- } -->
+                                                <!-- 학번/ 위탁기간 / 교관번호 {-->
+                                                <p class="m-t-10">202121548</p>
+                                                <!-- } -->
+                                                <p class="m-t-5">ghdrlfehd@naver.com</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 학생 {-->
-                                    <div class="bottom">
-                                        <a href="../student/curriculum_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">훈련일정</div>
-                                        </a>
-                                        <a href="../student/traning_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">비행정보</div>
-                                        </a>
-                                        <a href="../student/expense_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">안전보고</div>
-                                        </a>
-                                        <a href="../student/expense_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">전문 교육 학과 시간</div>
-                                        </a>
-                                        <a href="../board/qna_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">1:1 문의</div>
-                                        </a>
-                                    </div>
-                                    <!-- } -->
-
-                                    <!-- 위탁기간 { -->
-                                    <div class="bottom"  style="display:none;">
-                                        <a href="../lecturer/lecture_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">일자별 운항계획</div>
-                                        </a>
-                                        <a href="../lecturer/career_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">비행 종합정보</div>
-                                        </a>
-                                        <a href="./board/resource_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">학생교육 정보</div>
-                                        </a>
-                                        <a href="../board/qna_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">비행스케줄 등록/수정</div>
-                                        </a>
-                                    </div>
-                                    <!-- } -->
-
-                                    <!-- 교관  {-->
-                                    <div class="bottom" style="display:none;">
-                                        <a href="../instructor/student_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">교육대상</div>
-                                        </a>
-                                        <a href="../instructor/traning_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">비행운행 실습</div>
-                                        </a>
-                                        <a href="../board/notice_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">공지사항</div>
-                                        </a>
-                                        <a href="../board/resource_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">자료실</div>
-                                        </a>
-                                        <a href="../board/qna_list.html">
-                                            <div class="d-flex align-items-center justify-content-center">1:1 문의</div>
-                                        </a>
-                                    </div>
-                                    <!-- } -->
                                 </div>
+                                <!-- 학생 {-->
+                                <div class="bottom">
+                                    <a href="../student/curriculum_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">교육이수</div>
+                                    </a>
+                                    <a href="../student/traning_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">검진/예방 검사</div>
+                                    </a>
+                                    <a href="../student/expense_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">나의 실습</div>
+                                    </a>
+                                    <a href="../student/expense_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">자료실</div>
+                                    </a>
+                                    <a href="../board/qna_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">1:1 문의</div>
+                                    </a>
+                                </div>
+                                <!-- } -->
+
+                                <!-- 위탁기간 { -->
+                                <div class="bottom" style="display:none;">
+                                    <a href="../lecturer/lecture_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">일자별 운항계획</div>
+                                    </a>
+                                    <a href="../lecturer/career_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">비행 종합정보</div>
+                                    </a>
+                                    <a href="./board/resource_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">학생교육 정보</div>
+                                    </a>
+                                    <a href="../board/qna_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">비행스케줄 등록/수정</div>
+                                    </a>
+                                </div>
+                                <!-- } -->
+
+                                <!-- 교관  {-->
+                                <div class="bottom" style="display:none;">
+                                    <a href="../instructor/student_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">교육대상</div>
+                                    </a>
+                                    <a href="../instructor/traning_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">비행운행 실습</div>
+                                    </a>
+                                    <a href="../board/notice_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">공지사항</div>
+                                    </a>
+                                    <a href="../board/resource_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">자료실</div>
+                                    </a>
+                                    <a href="../board/qna_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">1:1 문의</div>
+                                    </a>
+                                </div>
+                                <!-- } -->
+                            </div>
                             <!-- } -->
                         </div>
                     </div>
@@ -211,7 +215,7 @@
 
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
 
         });
         var visualSwiper = new Swiper('.main-visual .swiper-container', {
@@ -228,7 +232,7 @@
                 clickable: true,
             },
             on: {
-                slideChangeTransitionEnd: function(){
+                slideChangeTransitionEnd: function () {
                     $('.main-visual .swiper-slide').removeClass('active');
                     $('.main-visual .swiper-slide-active').addClass('active');
                 }
@@ -261,4 +265,5 @@
     </script>
 
 </body>
+
 </html>

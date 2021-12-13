@@ -122,17 +122,13 @@ h1.logo{
 
 .visual{
     height: 320px;background-repeat: no-repeat;background-position: 50% 50%;background-size: cover; 
-    &.edu{background-image: url('../images/visual-edu.png');}
-    &.curriculum{background-image: url('../images/visual-curriculum.png');}
-    &.traning{background-image: url('../images/visual-traning.png');}
-    &.expense{background-image: url('../images/visual-expense.png');}
-    &.personal{background-image: url('../images/visual-personal.png');}
-    &.board{background-image: url('../images/visual-board.png');}
-
-    &.flight-1{background-image: url('../images/visual-flight-1.png');}
-    &.flight-2{background-image: url('../images/visual-flight-2.png');}
-    &.flight-3{background-image: url('../images/visual-flight-3.png');}
-    &.flight-4{background-image: url('../images/visual-flight-4.png');}
+    &.nurse-01{background-image: url('../images/visual-nurse-01.png');}
+    &.nurse-02{background-image: url('../images/visual-nurse-02.png');}
+    &.nurse-03{background-image: url('../images/visual-nurse-03.png');}
+    &.nurse-04{background-image: url('../images/visual-nurse-04.png');}
+    &.nurse-05{background-image: url('../images/visual-nurse-05.png');}
+    &.nurse-06{background-image: url('../images/visual-nurse-06.png');}
+    &.nurse-07{background-image: url('../images/visual-nurse-07.png');}
 
     .title{
         color:$white; font-size: 44px;font-weight: bold; text-align: center; padding-top:115px;

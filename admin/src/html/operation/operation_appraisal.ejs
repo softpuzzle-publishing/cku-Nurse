@@ -18,13 +18,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">학년별 실습배치표</h1>
+                            <h1 class="title">운영관리</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">학생관리</a></li>
-                                <li class="breadcrumb-item">학년별 실습배치표</li>
+                                <li class="breadcrumb-item"><a href="#">운영관리</a></li>
+                                <li class="breadcrumb-item">교과목정보</li>
                             </ol>
                         </div>
                     </div>
@@ -33,55 +33,43 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content" data-menu="practice-student">
+            <div class="content" data-menu="operation">
                 <div class="container-fluid">
                     <div class="inquery-area">
                         <table class="table table-bordered">
+                            <colgroup>
+                                <col style="width: 150px">
+                                <col>
+                                <col style="width: 150px">
+                                <col>
+                            </colgroup>
                             <tbody>
-                                <colgroup>
-                                    <col style="width: 150px">
-                                    <col>
-                                    <col style="width: 150px">
-                                    <col>
-                                </colgroup>
                                 <tr>
                                     <th>연도 선택</th>
                                     <td>
-                                        <select name="" id="" class="custom-select">
+                                        <select name="" id="" class="custom-select width-200px">
                                             <option value="">연도 선택</option>
+                                        </select>
+                                    </td>
+                                    <th>학년</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">전체</option>
                                         </select>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>실습 학기</th>
+                                    <th>평가자</th>
                                     <td>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label">1분기</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-2">
-                                            <label for="chk1-2" class="custom-control-label">2분기</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-3">
-                                            <label for="chk1-3" class="custom-control-label">3분기</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-3">
-                                            <label for="chk1-3" class="custom-control-label">4분기</label>
-                                        </div>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">전체</option>
+                                        </select>
                                     </td>
-                                    <th>실습 학년</th>
+                                    <th>실습교과목</th>
                                     <td>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label">3학년</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-2">
-                                            <label for="chk1-2" class="custom-control-label">4학년</label>
-                                        </div>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">전체</option>
+                                        </select>
                                     </td>
                                 </tr>
                             </tbody>
@@ -90,20 +78,14 @@
                             <button type="button" class="btn btn-dark min-width-90px">검색</button>
                         </div>
                     </div>
-                    
-                    
-                    <div class="row justify-content-between align-items-end mb-0">
-                        <div class="col-auto">
-                           <b class="text-danger">2022</b>학년도 <b class="text-danger">3</b>학년 <b class="text-danger">1</b>분기 실습배치표
-                        </div>
-                    </div>
+
                     <div class="row justify-content-between align-items-end mb-3">
-                        
                         <div class="col-auto">
                             <b>Total : 000</b>,
                             Page 1/3
                         </div>
                         <div class="col-auto">
+                            <button type="button" class="btn btn-primary mr-1" data-toggle="modal" data-target="#modal-training-form">평가표등록</button>
                             <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
                             <select class="custom-select w-auto">
                                 <option>10</option>
@@ -123,30 +105,31 @@
                                 <col>
                                 <col>
                                 <col>
-                                <col>
-                                <col>
-                                <col>
+                               
                             </colgroup>
                             <thead>
                                 <tr>
                                     <th class="text-center">번호</th>
+                                    <th class="text-center">연도</th>
                                     <th class="text-center">학년</th>
-                                    <th class="text-center">학번</th>
-                                    <th class="text-center">이름</th>
-                                    <th class="text-center">실습교과목</th>
+                                    <th class="text-center">교과목수</th>
+                                    <th class="text-center">교과목명</th>
+                                    <th class="text-center">등록일</th>
                                     <th class="text-center">관리</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <% for(var i = 10; i > 0 ; i--){ %>
                                 <tr>
-                                    <td class="text-center"><%= i %></td>
-                                    <td class="text-center">4학년</td>
-                                    <td class="text-center"><a href="student_detail.html" class="text-underline">20211012011</a></td>
-                                    <td class="text-center">김학생</td>
-                                    <td class="text-center">기본간호학 실습 I, 성인간호학실습 I, 모성간호학실습 I, 아동간호학실습I</td>
+                                    <td class="text-center"><%= i%></td>
+                                    <td class="text-center">2021년</td>
+                                    <td class="text-center">3학년</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center"><a href="operation_form.html">아동간호실습 II, 성인간호실습 II, 정신간호실습 II</a></td>
+                                    <td class="text-center">2022.01.01</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#modal-training-designation-common">관리</button>
+                                        <a href="flight_detail.html" class="btn btn-sm btn-secondary">삭제</a>
+                                        <a href="flight_detail.html" class="btn btn-sm btn-secondary">수정</a>
                                     </td>
                                 </tr>
                                 <% } %>
@@ -170,7 +153,7 @@
 
     <script>
         $(document).ready(function () {
-            // $("#modal-flights-info").modal("show");
+            // $("#modal-training-designation-common").modal("show");
         });
     </script>
 </body>

@@ -157,12 +157,12 @@
 
 
 <!-- ---------- -->
-<!-- 모달 : 훈련과목 지정(체크한 목록으로 지정)-->
+<!-- 모달 : 실습학생 지정 팝업(학생 개별지정)-->
 <div class="modal" tabindex="-1" role="dialog" id="modal-training-designation-common">
     <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 740px">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title">훈련과목 지정</h1>
+                <h1 class="modal-title">실습학생 과목지정</h1>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -176,34 +176,32 @@
                     <thead>
                         <tr>
                             <th class="text-center">구분</th>
-                            <th class="text-center">내용</th>
+                            <th class="text-center">실습교과목</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-center">비행훈련</td>
+                            <td class="text-center">3학년</td>
                             <td class="text-left">
                                 <div class="custom-control custom-checkbox my-2">
                                     <input class="custom-control-input" type="checkbox" id="chkPractice1">
-                                    <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
+                                    <label for="chkPractice1" class="custom-control-label">기본간호학 실습 I</label>
                                 </div>
                                 <div class="custom-control custom-checkbox my-2">
                                     <input class="custom-control-input" type="checkbox" id="chkPractice1">
-                                    <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
+                                    <label for="chkPractice1" class="custom-control-label">기본간호학 실습 II</label>
                                 </div>
                                 <div class="custom-control custom-checkbox my-2">
                                     <input class="custom-control-input" type="checkbox" id="chkPractice1">
-                                    <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
+                                    <label for="chkPractice1" class="custom-control-label">성인간호학실습 I</label>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">시뮬레이터교육</td>
-                            <td class="text-left">
                                 <div class="custom-control custom-checkbox my-2">
-                                    <input class="custom-control-input" type="checkbox" id="chkPractice4">
-                                    <label for="chkPractice4" class="custom-control-label">시뮬레이터교육 (IR 4Basic, VOR Intercept)
-                                    </label>
+                                    <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                    <label for="chkPractice1" class="custom-control-label">성인간호학실습 II</label>
+                                </div>
+                                <div class="custom-control custom-checkbox my-2">
+                                    <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                    <label for="chkPractice1" class="custom-control-label">성인간호학실습 III</label>
                                 </div>
                             </td>
                         </tr>
@@ -211,19 +209,75 @@
                 </table>
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
                 <button type="button" class="btn btn-primary">저장</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- 모달 : 훈련과목 지정(학생 개별지정)-->
+<!-- 모달 : 실습교과목 팝업-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-training-none-check">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 740px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">2022년도 실습교과목 목록</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered mb-0 m-t-20">
+                    <colgroup>
+                        <col style="width: 25%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">구분</th>
+                            <th class="text-center">실습교과목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">3학년</td>
+                            <td class="text-left">
+                                <p>기본간호학 실습 I</p>
+                                <p>기본간호학 실습 II</p>
+                                <p>성인간호학실습 I</p>
+                                <p>성인간호학실습 II</p>
+                                <p>성인간호학실습 III</p>
+                                <p>성인간호학실습 IV</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">4학년</td>
+                            <td class="text-left">
+                                <p>기본간호학 실습 I</p>
+                                <p>기본간호학 실습 II</p>
+                                <p>성인간호학실습 I</p>
+                                <p>성인간호학실습 II</p>
+                                <p>성인간호학실습 III</p>
+                                <p>성인간호학실습 IV</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary">저장</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 실습학생 지정 팝업(학생 개별지정)-->
 <div class="modal" tabindex="-1" role="dialog" id="modal-training-designation">
     <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 740px">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title">학생 훈련과목</h1>
+                <h1 class="modal-title">실습학생 과목지정</h1>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -299,12 +353,12 @@
     </div>
 </div>
 
-<!-- 모달 : 훈련과목 지정 등록-->
+<!-- 모달 : 실습교과목 관리 팝업 -->
 <div class="modal" tabindex="-1" role="dialog" id="modal-training-form">
     <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 740px">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title">학생훈련과목 관리</h1>
+                <h1 class="modal-title">실습교과목 관리</h1>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -330,19 +384,18 @@
                     </colgroup>
                     <thead>
                         <tr>
-                            <th class="text-center">구분</th>
-                            <th class="text-center">훈련과목</th>
+                            <th class="text-center">학년</th>
+                            <th class="text-center">실기 과목</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- 비행훈련 -->
+                        <!-- 3학년 -->
                         <tr>
-                            <td class="text-center" rowspan="3">비행훈련</td>
+                            <td class="text-center" rowspan="3">3학년</td>
                             <td class="text-left">
                                 <div class="row">
                                     <div class="col-auto">
-                                        <input type="text" class="form-control min-width-400px" value="(Checklist,4Basic,PPL Maneuver)
-                                        ">
+                                        <input type="text" class="form-control min-width-400px" value="노인간호학실습 I">
                                     </div>
                                     <div class="col-auto">
                                         <button class="btn increase-btn btn-outline-borderColor">+</button>
@@ -355,8 +408,7 @@
                             <td class="text-left">
                                 <div class="row">
                                     <div class="col-auto">
-                                        <input type="text" class="form-control min-width-400px" value="(Checklist,4Basic,PPL Maneuver)
-                                        ">
+                                        <input type="text" class="form-control min-width-400px" value="아동간호학실습 I">
                                     </div>
                                     <div class="col-auto">
                                         <button class="btn increase-btn btn-outline-borderColor">+</button>
@@ -369,8 +421,7 @@
                             <td class="text-left">
                                 <div class="row">
                                     <div class="col-auto">
-                                        <input type="text" class="form-control min-width-400px" value="(Checklist,4Basic,PPL Maneuver)
-                                        ">
+                                        <input type="text" class="form-control min-width-400px" value="성인간호학실습 I">
                                     </div>
                                     <div class="col-auto">
                                         <button class="btn increase-btn btn-outline-borderColor">+</button>
@@ -381,11 +432,11 @@
                         </tr>
                         <!-- 시뮬레이터교육 -->
                         <tr>
-                            <td class="text-center" rowspan="2">시뮬레이터교육</td>
+                            <td class="text-center" rowspan="2">4학년</td>
                             <td class="text-left">
                                 <div class="row">
                                     <div class="col-auto">
-                                        <input type="text" class="form-control min-width-400px" value="전문교육과정자가  (Checklist,4Basic,PPL Maneuver)">
+                                        <input type="text" class="form-control min-width-400px" value="성인간호학실습 III">
                                     </div>
                                     <div class="col-auto">
                                         <button class="btn increase-btn btn-outline-borderColor">+</button>
@@ -398,7 +449,7 @@
                             <td class="text-left">
                                 <div class="row">
                                     <div class="col-auto">
-                                        <input type="text" class="form-control min-width-400px" value="시뮬레이터교육 (IR 4Basic, VOR Intercept)">
+                                        <input type="text" class="form-control min-width-400px" value="모성간호학실습 I">
                                     </div>
                                     <div class="col-auto">
                                         <button class="btn increase-btn btn-outline-borderColor">+</button>
@@ -418,7 +469,13 @@
         </div>
     </div>
 </div>
-
+<div class="row row-0 justify-content-between align-items-end mb-3">
+    <div class="col-auto bg-gray-1 p-3">
+        <p class="text-danger mb-2 font-weight-bold">유의사항</p>
+        <p>※ 실습을 진행 중인 학생들의 예방접종현황과 보안서약서를 열람할 수 있으며, 출석부 및 평가서를 작성할 수 있습니다.</p>
+        <p>※ 출석부 최초 저장시 해당 학생의 담당 현장지도자로 지정되며, 이후에는 변경할 수 없으니 유의하세요.</p>
+    </div>
+</div> 
 <!-- 모달 : 훈련일정 -->
 <div class="modal" tabindex="-1" role="dialog" id="modal-flights-schedule">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -506,12 +563,13 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title">비행정보</h1>
+                <h1 class="modal-title">예방접종자가점검표</h1>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
             <div class="modal-body">
+                <p class="font-size-18px font-weight-bold mb-1 mt-2">기본정보</p>
                 <table class="table table-bordered table-fixed">
                     <colgroup>
                         <col style="width:170px">
@@ -521,9 +579,6 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th class="text-center">학번(아이디)<strong class="text-danger">*</strong></th>
-                            <td>201901000</td>
-
                             <th class="text-center" rowspan="3">사진</th>
                             <td rowspan="3">
                                 <div class="row row-10 align-items-end">
@@ -535,26 +590,40 @@
                                 </div>
 
                             </td>
+                            <th class="text-center">휴대폰<strong class="text-danger"></strong></th>
+                            <td>010-2233-4455</td>
                         </tr>
                         <tr>
-                            <th class="text-center">이름<strong class="text-danger">*</strong></th>
-                            <td>홍길동</td>
+                            <th class="text-center">이름<strong class="text-danger"></strong></th>
+                            <td>김학생</td>
                         </tr>
                         <tr>
-                            <th class="text-center">생년월일<strong class="text-danger">*</strong></th>
-                            <td>19940707</td>
+                            <th class="text-center">학번<strong class="text-danger"></strong></th>
+                            <td>981016</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">학년<strong class="text-danger"></strong></th>
+                            <td>3</td>
+                            <th class="text-center">이메일<strong class="text-danger"></strong></th>
+                            <td>abvdd@naver.com</td>
+                        </tr>
+                        <tr colspan="4">
+                            <th class="text-center">주소<strong class="text-danger"></strong></th>
+                            <td colspan="3">우(1211) 강원도 강릉시 강동 호림아파트 102동 100호</td>
                         </tr>
                     </tbody>
                 </table>
-
-                <table class="table table-bordered mb-0 mt-4">
+                <div class="row row-0 justify-content-between align-items-end mb-3">
+                    <div class="col-auto bg-gray-1 p-3">
+                        <p class="text-danger mb-2 font-weight-bold">유의사항</p>
+                        <p>※ 개인정보를 외부에 유출할 경우, 법적 책임을 받을 수 있으므로 유의하세요.</p>
+                        <p class="text-danger">※ 각 항목에 맞추어 항체유무와 접종유무(차수)를 체크하세요.</p>
+                    </div>
+                </div>  
+                <p class="font-size-18px font-weight-bold mb-2">결핵(흉부 x선) 검사</p>
+                <table class="table table-bordered mb-0 mt-2">
                     <colgroup>
-                        <col style="width: 60px">
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
+                        <col width="10%">
                         <col>
                         <col>
                         <col>
@@ -562,42 +631,190 @@
                     </colgroup>
                     <thead>
                         <tr>
-                            <th class="text-center">번호</th>
-                            <th class="text-center">비행일</th>
-                            <th class="text-center">담당교관</th>
-                            <th class="text-center">기번(운항번호)</th>
-                            <th class="text-center">Hobbs(before)</th>
-                            <th class="text-center">Hobbs(after)</th>
-                            <th class="text-center">비행시간</th>
-                            <th class="text-center">L/D Cyle</th>
-                            <th class="text-center">상태</th>
-                            <th class="text-center">탑승</th>
+                            <th class="text-center">항목</th>
+                            <th class="text-center">검사유무</th>
+                            <th class="text-center">검사결과</th>
+                            <th class="text-center">검사일</th>
+                            <th class="text-center">증빙자료(결과지)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <% for(var i = 10; i > 0 ; i--){ %>
                         <tr>
-                            <td class="text-center"><%= i %></td>
-                            <td class="text-center">2021-10-26</td>
-                            <td class="text-center">이교관</td>
-                            <td class="text-center">HL1156
+                            <td class="text-center text-danger">b형간염</td>
+                            <td>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                    <label for="chk1-1" class="custom-control-label">실시</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                    <label for="chk1-2" class="custom-control-label">미실시</label>
+                                </div>
                             </td>
-                            <td class="text-center">10:00
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                    <label for="chk1-1" class="custom-control-label">정상소견</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                    <label for="chk1-2" class="custom-control-label">이상소견</label>
+                                </div>
                             </td>
-                            <td class="text-center">12:00</td>
-                            <td class="text-center">02:00
+                            <td class="text-center">
+                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
                             </td>
-                            <td class="text-center">6403.3</td>
-                            <td class="text-center">예정</td>
-                            <td class="text-center">2h</td>
+                            <td class="text-center">
+                                <div class="form-group mb-0">
+                                    <!-- <label for="customFile">첨부파일</label> -->
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile" lang="ko">Choose file</label>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
-                        <% } %>
                     </tbody>
                 </table>
-                <%- include('../layout/_pagination.ejs')%>
+
+                <p class="font-size-18px font-weight-bold mb-1 mt-4">항체검사 및 예방접종</p>
+                <table class="table table-bordered mb-0 mt-2">
+                    <colgroup>
+                        <col width="12%">
+                        <col width="20%">
+                        <col>
+                        <col>
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">항목</th>
+                            <th class="text-center">검사유무</th>
+                            <th class="text-center">검사결과</th>
+                            <th class="text-center">검사일</th>
+                            <th class="text-center">증빙자료(결과지)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center text-danger">b형간염*<br><span class="text-dark font-size-11px">*6개월에 3회 접종</span></td>
+                            <td>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                    <label for="chk1-1" class="custom-control-label">실시</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                    <label for="chk1-2" class="custom-control-label">미실시</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                    <label for="chk1-1" class="custom-control-label">정상소견</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                    <label for="chk1-2" class="custom-control-label">이상소견</label>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="mt-1">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                        <label for="chk1-1" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                    <input type="text" readonly="" class="form-control form-datepicker d-inline" placeholder="0000-00-00">
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="form-group mb-0">
+                                    <!-- <label for="customFile">첨부파일</label> -->
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label text-left" for="customFile" lang="ko">Choose file</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-danger">결핵*</td>
+                            <td>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                    <label for="chk1-1" class="custom-control-label">실시</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                    <label for="chk1-2" class="custom-control-label">미실시</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                    <label for="chk1-1" class="custom-control-label">정상소견</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                    <label for="chk1-2" class="custom-control-label">이상소견</label>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="mt-1">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                        <label for="chk1-1" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                    <input type="text" readonly="" class="form-control form-datepicker d-inline" placeholder="0000-00-00">
+                                </div>
+                                <div class="mt-1">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                        <label for="chk1-1" class="custom-control-label">실시 2차</label>
+                                    </div>
+                                    <input type="text" readonly="" class="form-control form-datepicker d-inline" placeholder="0000-00-00">
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="form-group mb-0">
+                                    <!-- <label for="customFile">첨부파일</label> -->
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label text-left" for="customFile" lang="ko">Choose file</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row row-0 mt-4">
+                    <div class="col-12 font-weight-bold">
+                        <span>현장지도자 예방접종자가점검표 버튼 활성화 여부 :</span>
+                        <div class="custom-control custom-radio custom-control-inline ml-2">
+                            <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio" checked>
+                            <label for="customRadio1" class="custom-control-label font-weight-bold">활성화</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" id="customRadio2" name="customRadio">
+                            <label for="customRadio2" class="custom-control-label font-weight-bold">비활성화</label>
+                        </div>
+                    </div>
+                    <div class="col-12 font-weight-bold mt-2">
+                        <span>현장지도자 증빙 자료 다운로드 지정 여부:</span>
+                        <div class="custom-control custom-radio custom-control-inline ml-2">
+                            <input class="custom-control-input" type="radio" id="customRadio3" name="customRadio2" checked>
+                            <label for="customRadio3" class="custom-control-label font-weight-bold">다운로드 가능</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" id="customRadio4" name="customRadio2">
+                            <label for="customRadio4" class="custom-control-label font-weight-bold">다운로드 불가</label>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">확인</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">저장</button>
+                <button type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">취소</button>
             </div>
         </div>
     </div>
