@@ -110,6 +110,15 @@ button {
   }
 }
 
+.table-sm{
+  th, td{
+    padding:0.75rem 0.5rem;
+  }
+  label{font-size:14px;}
+  button{font-size:14px;}
+}
+
+
 .table-top-info {
   &+table {
     border-top: 2px solid #111;

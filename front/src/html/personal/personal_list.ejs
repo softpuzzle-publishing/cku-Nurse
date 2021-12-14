@@ -14,7 +14,7 @@
         <div id="container-block">
             <div id="content">
 
-                <div class="visual personal">
+                <div class="visual nurse-05">
                     <div class="container">
                         <h1 class="title">나의 정보</h1>
                     </div>
@@ -40,28 +40,8 @@
                         <p class="text-gray5">※ 개인정보가 정확하지 않아 발생하는 불이익은 회원 본인의 과실로 인정되오니, 이 점 참고하시어 최신정보로 수정하여 주시기 바랍니다.</p>
                     </div>
 
-                    <!-- 강사 -->
-                    <div>
-                        <p class="font-weight-semibold font-18px d-flex align-items-center">
-                            <i class="icon-info-black m-r-10"></i>
-                            강사님의 개인정보를 수정해주세요!
-                        </p>
-                        <p class="text-gray5">※ 개인정보가 정확하지 않아 발생하는 불이익은 강사 본인의 과실로 인정되오니, 이 점 참고하시어 최신정보로 수정하여 주시기 바랍니다.</p>
-                    </div>
-
-                    <!-- 교관 -->
-                    <div>
-                        <p class="font-weight-semibold font-18px d-flex align-items-center">
-                            <i class="icon-info-black m-r-10"></i>
-                            교관님의 개인정보를 수정해주세요!
-                        </p>
-                        <p class="text-gray5">※ 개인정보가 정확하지 않아 발생하는 불이익은 교관 본인의 과실로 인정되오니, 이 점 참고하시어 최신정보로 수정하여 주시기 바랍니다.</p>
-                    </div>
-
-
                     <div class="table-title table-top-info">학생정보<strong>*필수</strong></div>
-                    <div class="table-title table-top-info">강사정보<strong>*필수</strong></div>
-                    <div class="table-title table-top-info">교관정보<strong>*필수</strong></div>
+
                     <table class="table table-bordered table-fixed">
                         <colgroup>
                             <col style="width:230px">
@@ -76,16 +56,6 @@
                                 <td>201901000</td>
                                 <!-- } -->
 
-                                <!-- 강사{ -->
-                                <!-- <th>강사번호<strong class="text-danger">*</strong></th>
-                                <td>201901000</td> -->
-                                <!-- } -->
-
-                                <!-- 교관{ -->
-                                <!-- <th>교관번호<strong class="text-danger">*</strong></th>
-                                <td>201901000</td> -->
-                                <!-- } -->
-
                                 <th rowspan="3">사진</th>
                                 <td rowspan="3">
                                     <div class="row row-10 align-items-end">
@@ -97,15 +67,12 @@
                                         </div>
                                         <div class="col-auto">
                                             <!-- 삭제 -->
-                                            <div class="d-flex align-items-center">
-                                                <label class="checkbox-inline without-label">
-                                                    <input type="checkbox" name="mb_mailling" value="1" id="reg_mb_mailling" checked="">
-                                                    <span class="sr-only">삭제</span>
-                                                </label>
-                                                <button class="btn btn-sm  text-gray5">삭제</button>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input"  name="mb_mailling" id="reg_mb_mailling">
+                                                <label class="custom-control-label" for="reg_mb_mailling">삭제</label>
                                             </div>
                                         </div>
-                                        <div class="col-auto">
+                                        <div class="col-auto  m-l-20">
                                             <!-- 파일 업로드 -->
                                             <div class="d-inline-flex">
                                                 <div class="custom-file-img">
@@ -126,15 +93,6 @@
                                 <th>생년월일<strong class="text-danger">*</strong></th>
                                 <td>19940707</td>
                             </tr>
-
-                            <!-- 강사 / 교관 {-->
-                            <tr>
-                                <th>아이디<strong class="text-danger">*</strong></th>
-                                <td colspan="3">
-                                    gildong2
-                                </td>
-                            </tr>
-                            <!-- } -->
 
                             <tr>
                                 <th>비밀번호<strong class="text-danger">*</strong></th>
@@ -221,70 +179,6 @@
                             </tr>
                         </tbody>
                     </table>
-
-
-                    <!-- 학생 { -->
-                    <div class="table-title table-top-info m-t-50">부가정보</div>
-                    <table class="table table-bordered table-fixed">
-                        <colgroup>
-                            <col style="width:230px">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>소속반</th>
-                                <td>2반</td>
-                            </tr>
-                            <tr>
-                                <th>최근 신체검사일</th>
-                                <td>2021년 3월 26일 (남은 검사일  105일)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- } -->
-
-                    <!-- 강사 / 교관 { -->
-                    <div class="table-title table-top-info m-t-50 d-flex justify-content-between align-items-center">
-                        <div>자격정보<strong>*필수</strong></div> <button type="button" class="btn btn-primary">항목 추가</button>
-                    </div>
-                    <table class="table table-bordered table-fixed">
-                        <colgroup>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col style="width:140px;">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>자격증명</th>
-                                <th>자격증번호</th>
-                                <th>발급처</th>
-                                <th>취득일</th>
-                                <th>관리</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td class="text-center">
-                                    <button class="btn btn-gray5 btn-sm-round" data-toggle="modal" data-target="#modal-cancel">삭제</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- } -->
 
                     <div class="d-flex justify-content-end align-items-center m-t-60">
                         <button type="button" class="btn btn-primary btn-lg width-120px">저장</button>

@@ -55,6 +55,7 @@
 .font-18px{font-size: 18px !important;}
 
 
+.width-70px{width: 70px!important;}
 .width-90px{width: 90px!important;}
 .width-120px{width: 120px;}
 .width-140px{width: 140px;}
@@ -74,7 +75,10 @@
 .max-width-570px{max-width: 570px;}
 .max-width-700px{max-width: 700px;}
 
+.break-all{word-break: break-all;}
+
 .min-height-200px{min-height:200px;}
+.height-32px{height:32px;}
 .height-40px{height:40px;}
 
 .form-control:focus, .custom-file-input:focus, .custom-file-input:focus ~ .custom-file-label{
@@ -85,6 +89,10 @@
 
 .offset-263px{margin-left:263px;}
 
+//모달 오버랩
+.modal-backdrop ~ .modal-backdrop { z-index: 1051 !important; }
+.modal-backdrop ~ .modal-backdrop ~ .modal-backdrop { z-index: 1053 !important; }
+.modal[data-overlap=true] { z-index: 1052 !important; }
 
 @include media-breakpoint-down(md) {
     .btn-xl{padding-top: .75rem;padding-bottom: .75rem;}
@@ -374,7 +382,7 @@ select.form-control{
     .select2-selection--single .select2-selection__arrow{width: 40px;height: 100%;position: absolute;right: 0;top: 0;}
     .select2-selection--single .select2-selection__arrow b{background: url('../images/arrow-down.svg') no-repeat 50% 50%;border: 0;width: 12px;height: 8px;margin-top: -4px;position: absolute;right: 0;top: 50%;transition: transform .2s}
 
-    .select2-dropdown{border: 1px solid $lightgray;box-sizing: content-box;transform: translate(-10px, -2px);_padding: 10px;border-radius:0; margin-left:10px;}
+    .select2-dropdown{border: 1px solid $lightgray;box-sizing: content-box;transform: translate(-10px, 7px);_padding: 10px;border-radius:0; margin-left:10px;}
     .select2-results__option{padding: .5rem .75rem;transition: .1s;color: #666;font-size: 14px;}
     .select2-results__option--selected{_text-decoration: underline;color: #000; background: #f5f5f4}
     .select2-results__option--highlighted.select2-results__option--selectable{color: #000; background: #e9e9e9}
