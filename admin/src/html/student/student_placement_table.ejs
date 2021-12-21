@@ -162,9 +162,10 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <% for(var i = 4; i > 0 ; i--){ %>
                                 <tr>
                                     <td class="text-center">1</td>
-                                    <td class="text-center">4학년</td>
+                                    <td class="text-center"><%= i %>학년</td>
                                     <td class="text-center"><a href="student_detail.html" class="text-underline">20211012011</a></td>
                                     <td class="text-center">김학생</td>
                                     <td class="bg-primary">
@@ -216,7 +217,7 @@
                                     <td></td>
                                     <td></td>
                                 </tr>
-                                
+                                <% } %>
                             </tbody>
                         </table>
                     </div>

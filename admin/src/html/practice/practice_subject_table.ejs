@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">실습관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">실습관리</a></li>
+                                <li class="breadcrumb-item">실습배치표 관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="operation">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+                        <p class="font-size-18px font-weight-bold">● 실습과목별 실습배치표</p>
+                        <table class="table table-bordered m-t-30">
+                            <colgroup>
+                                <col style="width: 150px">
+                                <col>
+                                <col style="width: 150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>연도 선택</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">연도 선택</option>
+                                        </select>
+                                    </td>
+                                    <th>실습 분기</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>실습 교과목</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                    <th></th>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button type="button" class="btn btn-dark min-width-90px">검색</button>
+                        </div>
+                    </div>
+
+                    <p class="font-size-18px font-weight-bold">● 임상실습 목록</p>
+                    <div class="row row-0 justify-content-between align-items-end mb-3 mt-3">
+                        <div class="col-auto bg-gray-1 p-4">
+                            <p class="text-danger mb-2 font-weight-bold">유의사항</p>
+                            <p>※ 실습기관 수, 학생배치 대상, 실습대상 학생이 입력되지 않은 과목의 실습배치표는 확인할 수 없습니다</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-end mb-0 mt-5">
+                        <div class="col-auto">
+                            2022년도 교과목별 실습배치표
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-end mb-3">
+                        <div class="col-auto">
+                            <b>Total : 000</b>,
+                            Page 1/3
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-outline-dark mr-1">선택삭제</button>
+                            <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
+                            <select class="custom-select w-auto">
+                                <option>10</option>
+                                <option>30</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                    </div>
+                <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center">
+                                        <div class="custom-control custom-checkbox my-2">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label"></label>
+                                        </div>
+                                    </th>
+                                    <th class="text-center">번호</th>
+                                    <th class="text-center">실습분기</th>
+                                    <th class="text-center">실습 배치 과목</th>
+                                    <th class="text-center">배정교수</th>
+                                    <th class="text-center">실습기관수</th>
+                                    <th class="text-center">실습배치인원</th>
+                                    <th class="text-center">실습배치표</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 4; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox my-2">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><%= i %></td>
+                                    <td class="text-center">1분기</td>
+                                    <td class="text-center">성인간호실습I</td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center"><a href="#modal-training-list" data-toggle="modal" class="text-underline">3</a></td>
+                                    <td class="text-center"><a href="#modal-training-name" data-toggle="modal" class="text-underline">14</a></td>
+                                    <td class="text-center"><a href="practice_table_detail.html" class="btn btn-sm btn-secondary">관리</a></td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>
