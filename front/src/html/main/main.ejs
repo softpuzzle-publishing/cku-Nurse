@@ -5,7 +5,7 @@
     <%- include('../layout/_head.ejs')%>
 </head>
 
-<body>
+<body class="body-main">
 
     <div id="wrap">
 
@@ -204,6 +204,83 @@
 
             </div>
         </div>
+        <!-- 모달 : 시스템 모달  -->
+        <div class="system-popup">
+            <div class="popup-body bg-primary text-center text-white">
+                <!-- 아래}} 이미지로 쓰실거면 디자인 요청해주세요 -->
+                <!-- <img src="../../assets/images/@landscape.jpg" alt="팝업배너"> -->
+
+                <!-- 아래}} 이미지 안쓸경우  -->
+                <div class="p-3">
+                    <img src="../../assets/images/logo-white.svg" alt="관동대학교 로고" width="120" class="" style="opacity: 0.5;">
+
+                    <div class="m-t-20 border-top py-5  px-5">
+                        <p class="h5">현재 베타 서비스 테스트 중입니다.</p>
+                        <p class="font-14px font-weight-semibold m-t-20">- 12월 중 오픈 예정 -</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <div class="form-check pl-0">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="checkbox2">
+                        <label class="custom-control-label" for="checkbox2">오늘 하루 그만 보기</label>
+                    </div>
+                </div>
+
+                <a href="javascript:void(0)" class="btn btn-sm btn-gray5 width-60px">닫기</a>
+            </div>
+        </div>
+        <div class="modal fade main-modal" role="dialog" tabindex="-1" aria-modal="true" style=" top: 100px; left: 50px;">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                <div class="modal-content" style="width: 500px; height: 500px;">
+                    <div class="modal-header">
+                        <div class="modal-title">왜지</div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="popup-modal">
+                            <div class="popup">
+                                <div class="popup" style="border: 1px solid rgb(221, 221, 221); padding: 30px;">
+                                    <p>&nbsp;</p>
+    
+                                    <p>감자</p>
+    
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade main-modal" role="dialog" tabindex="-1" aria-modal="true" style=" top: 100px; left: 700px;">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                <div class="modal-content" style="width: 300px; height: 300px;">
+                    <div class="modal-header">
+                        <div class="modal-title">test</div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="popup-modal">
+                            <div class="popup">
+                                <div class="popup" style="border: 1px solid rgb(221, 221, 221); padding: 30px;">
+                                    <p>&nbsp;</p>
+    
+                                    <p>test</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- 모달-->
         <%- include('../modal/modal.ejs')%>
         <!-- 공통모달(로그인/ 삭제 관련) -->
@@ -216,7 +293,7 @@
 
     <script>
         $(document).ready(function () {
-
+            $('.main-modal').modal('show');
         });
         var visualSwiper = new Swiper('.main-visual .swiper-container', {
             loop: true,

@@ -92,6 +92,51 @@ button {
     font-size: 15px;
     font-weight: normal;
   }
+
+}
+
+.sitemap-wrap {
+  align-items: flex-start;
+
+  .title {
+    &::after {
+      content: '';
+      width: 100px;
+      height: 2px;
+      background: $lightprimary;
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 30px;
+    }
+  }
+
+  .sitemap {
+    font-weight: 500;
+
+    >ul {
+      display: flex;
+
+      >li {
+        font-weight: 600;
+        font-size: 18px;
+        width: 160px;
+        text-align: center;
+        margin-left: 0;
+
+        >ul {
+          margin-top: 10px;
+
+          >li {
+            color: $middlegray;
+            line-height: 40px;
+            width: 100%;
+            text-align: center;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 .table-title {
@@ -110,12 +155,27 @@ button {
   }
 }
 
-.table-sm{
-  th, td{
-    padding:0.75rem 0.5rem;
+.table-sm {
+
+  th,
+  td {
+    padding: 0.75rem 0.5rem;
   }
-  label{font-size:14px;}
-  button{font-size:14px;}
+
+  label {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+// 테이블에 있는 슬래쉬
+.slash {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="100%" x2="100%" y2="0" stroke="gray" /></svg>');
+  padding:0!important;
+  opacity: 0.3;
 }
 
 
@@ -241,14 +301,15 @@ button {
     color: $gray-300;
     padding-left: 10px;
     display: inline-block;
-    font-weight: normal!important;
+    font-weight: normal !important;
   }
 
   i {
     margin-left: 5px;
   }
-  & + .attachments{
-    margin-top:10px;
+
+  &+.attachments {
+    margin-top: 10px;
   }
 }
 
@@ -329,38 +390,51 @@ button {
 
   @at-root.qna-area {
     padding: 50px 30px;
-    border-bottom:1px solid $border-color;
-    display:flex;
+    border-bottom: 1px solid $border-color;
+    display: flex;
     font-size: 18px;
     font-weight: 500;
     align-items: flex-start;
+
     .sort {
       font-size: 30px;
       font-weight: bold;
       margin-right: 35px;
       line-height: 30px;
     }
-    >div:not(.sort){
-      display:flex; flex-direction: column;
+
+    >div:not(.sort) {
+      display: flex;
+      flex-direction: column;
     }
-    &.question{
-      .sort{color:$lightprimary}
+
+    &.question {
+      .sort {
+        color: $lightprimary
+      }
     }
-    &.answer{
-      background:$gray-100;
-      .sort{color:$black;}
-      .writer{
+
+    &.answer {
+      background: $gray-100;
+
+      .sort {
+        color: $black;
+      }
+
+      .writer {
         font-size: 20px;
         font-weight: 600;
       }
-      .date{
+
+      .date {
         font-size: 18px;
-        color:$middlegray;
-        margin-left:15px;
+        color: $middlegray;
+        margin-left: 15px;
         font-weight: normal;
       }
-      .content{
-        margin-top:28px;
+
+      .content {
+        margin-top: 28px;
         font-weight: normal;
       }
     }
@@ -369,21 +443,35 @@ button {
 
 }
 
-.student-courses-profile{
-  dl{
-      display: flex;flex-wrap: wrap;
-      & + dl{margin-top: .5rem;}
-      dt{
-          font-weight: 500;
-          &::after{content: ' : ';margin-right: 5px;}
+.student-courses-profile {
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+
+    &+dl {
+      margin-top: .5rem;
+    }
+
+    dt {
+      font-weight: 500;
+
+      &::after {
+        content: ' : ';
+        margin-right: 5px;
       }
-      dd{margin-right: 20px;color: #666;margin-bottom: 0;}
+    }
+
+    dd {
+      margin-right: 20px;
+      color: #666;
+      margin-bottom: 0;
+    }
   }
 }
 
 
-.modal{
-  .pagination{
+.modal {
+  .pagination {
     margin: 28px 0 40px 0;
   }
 }
@@ -394,60 +482,61 @@ button {
   // height: 36px;
 
   .ui-datepicker-calendar {
-      display: none;
+    display: none;
   }
 
   .ui-datepicker {
-      border: 0;
+    border: 0;
   }
 
   .ui-datepicker-buttonpane {
-      display: none;
+    display: none;
   }
 
   .ui-widget.ui-datepicker {
-      width: auto;
+    width: auto;
   }
 
   .ui-state-hover {
-      border: 0;
-      background: none;
+    border: 0;
+    background: none;
   }
 
   .ui-widget select {
-      font-family: inherit;
+    font-family: inherit;
   }
 
   .ui-datepicker .ui-datepicker-title {
-      line-height: normal;
-      font-weight: 500;
-      font-size: 16px;
-      min-width: 190px;
+    line-height: normal;
+    font-weight: 500;
+    font-size: 16px;
+    min-width: 190px;
   }
 
   .ui-datepicker .ui-datepicker-prev,
   .ui-datepicker .ui-datepicker-next {
-      top: 50%;
-      transform: translateY(-50%);
-      width: 36px;
-      height: 36px;
-      cursor: pointer;
-      border:1px solid $input-border-color;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    border: 1px solid $input-border-color;
   }
 
   .ui-datepicker .ui-datepicker-prev {
-      left: 0;
+    left: 0;
   }
 
   .ui-datepicker .ui-datepicker-next {
-      right: 0;
+    right: 0;
   }
 
   .ui-widget.ui-datepicker {
+    padding: 0;
+
+    .ui-widget-header {
       padding: 0;
-      .ui-widget-header{
-          padding:0;
-      }
+    }
   }
 }
 
@@ -466,13 +555,60 @@ button {
   border-top: 2px solid #111;
 }
 
-.fc-scrollgrid-sync-inner{
-  padding:1rem;
+.fc-scrollgrid-sync-inner {
+  padding: 1rem;
 }
 
-.fc-myCustomButton-button{
-  border:1px solid $dark!important;
-  background:transparent!important;
-  color:$dark!important;
-  font-weight: 600!important;
+.fc-myCustomButton-button {
+  border: 1px solid $dark !important;
+  background: transparent !important;
+  color: $dark !important;
+  font-weight: 600 !important;
 }
+
+
+//서약서 관리 
+
+.ag-title {
+  font-weight: bold;
+  font-size: 34px;
+  padding-left: 30px;
+}
+
+.ag-sub-title {
+  font-weight: bold;
+  font-size: 22px;
+  padding: 27px 30px;
+}
+
+.ag-content {
+  font-weight: normal;
+  border-top: 2px solid #111;
+  padding: 50px 30px 60px 30px;
+  background: $light;
+
+  li {
+    line-height: 34px;
+  }
+
+  ol {
+    >li {
+      padding-top: 20px;
+    }
+  }
+}
+
+.ag-area {
+  border-top: 1px solid $border-color;
+  padding: 30px;
+}
+
+
+.input-next-div{
+  display: none;
+  align-items: center;
+  &.show{
+    display: block;
+  }
+}
+

@@ -144,8 +144,8 @@
                                         <a href="#modal-practice-log-meeting" class="text-underline" data-toggle="modal">2</a>
                                     </td>
                                     <td class="text-center">
-                                        <button class="btn btn-sm btn-outline-light width-70px" data-target="#modal-attendance" data-toggle="modal"> 작성전</button>
-                                        <button class="btn btn-sm btn-gray3 width-70px" data-target="#modal-attendance" data-toggle="modal">수정</button>
+                                        <button class="btn btn-sm btn-outline-light width-70px" onclick="window.open('../util/attendance.html', '출석부팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')"> 작성전</button>
+                                        <button class="btn btn-sm btn-gray3 width-70px" onclick="window.open('../util/attendance.html', '출석부팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">수정</button>
                                     </td>
                                     <td class="text-center">
                                         <button class="btn btn-sm btn-outline-light width-70px" data-target="#modal-pledge" data-toggle="modal">등록전</button>
@@ -158,7 +158,7 @@
                                     <td class="text-center">
                                         <p class="text-lightprimary font-weight-semibold">실습완료</p>
                                         <p class="text-danger font-weight-semibold">실습대기</p>
-                                        <p class="text-gray4 font-weight-semibold">실습진행</p>
+                                        <p class="">실습진행</p>
                                     </td>
                                 </tr>
                                 <% } %>
@@ -180,13 +180,107 @@
 
     </div>
 
-
     <script>
-        $(document).ready(function () {
+        /** 캘린더 id 불러오기 */
+        var calendarEl = document.getElementById('calendar');
+        /** 캘린더 설정 */
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            /** 플러그인 모음 */
+            plugins: ['interaction', 'dayGrid', 'timeGrid'],
+            /** default 값 */
+            defaultView: 'dayGridMonth',
+            /** 한글 설정 */
+            locale: 'kr',
+            /** 하루종일 슬롯 ->false*/
+            allDaySlot: false,
+            /** 커스텀 버튼 */
+            customButtons: {
+                /** 커스텀 옵션 */
+                myCustomButton: {
+                    /** 제목 */
+                    text: '일정 등록',
+                    /** 클릭 시 */
+                    click: function () {
+                        /** 날짜 형식 */
+                        var regex = RegExp(/^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/);
+                        /** 시간 형식 */
+                        var timeFormat = /^([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/;
 
-            // $("#modal-report").modal("show");
-            
+                        /** 날짜 팝업 */
+                        var dateStr = prompt('YYYY-MM-DD 날짜 형식에 맞게 입력해주세요');
+
+                        /** 시작 날짜 미입력 시 */
+                        if (dateStr == '' || dateStr == null) {
+                            /** 미입력 시 알람 */
+                            alert("날짜를 입력해주세요");
+                            /** 리턴 */
+                            return
+                        }
+                        /** 형식에 맞지 않으면 */
+                        else if (regex.test(dateStr) == false) {
+                            /** 형식 맞지 않으면 */
+                            alert("날짜 형식에 맞게 입력해주세요");
+                            /** 리턴 */
+                            return
+                        }
+
+                        /** 시간 팝업 */
+                        var timeStr = prompt('00:00:00 시작 시간을 형식에 맞게 입력해주세요')
+
+                        /** 시작 시간 미입력 시 */
+                        if (timeStr == '' || timeStr == null) {
+                            /** 미입력 시 알람 */
+                            alert("시간을 입력해주세요");
+                            /** 리턴 */
+                            return
+                        }
+                        /** 형식에 맞지 않으면 */
+                        else if (timeFormat.test(timeStr) == false) {
+                            /** 형식 맞지 않으면 */
+                            alert("시간 형식에 맞게 입력해주세요");
+                            /** 리턴 */
+                            return
+                        }
+
+                        /** date에 담기 */
+                        var date = new Date(dateStr + 'T' + timeStr);
+
+                        /** date 값이 있으면 */
+                        if (!isNaN(date.valueOf())) {
+                            /** 캘린더에 이벤트 추가 */
+                            calendar.addEvent({
+                                'id': 'a',
+                                'title': '',
+                                'start': date
+                            });
+                        }
+                        /** date 값이 없으면 */
+                        else {
+                            /** 입력 형식에 맞지 않을 시 알람 */
+                            alert('형식에 맞춰 입력해주세요');
+                        }
+                    }
+                }
+            },
+            /** 툴바 */
+            header: {
+                /** 왼쪽 설정 */
+                left: 'prev,next today myCustomButton',
+                /** 가운데 설정 */
+                center: 'title',
+                /** 오른쪽 설정 */
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+
+            /** 이벤트 html 추가 */
+            eventRender: function (eventInfo) {
+                /** 셀렉트 버튼 추가 */
+                eventInfo.el.querySelector('.fc-content').innerHTML += "<select class='fa fa-external-link pull-right'><option>출석</option><option>미지정</option></select>";
+            },
         });
+
+        /** 캘린더 불러오기 */
+        calendar.render();
     </script>
 
 </body>
