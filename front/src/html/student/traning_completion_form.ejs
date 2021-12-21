@@ -97,9 +97,11 @@
                                                     <label class="custom-file-label" for="customFile" lang="ko">찾아보기</label>
                                                 </div>
                                             </div>
+                                            <!-- 아래 { 기획서엔 없는데 확인하시고 안쓰시면 지워주세요 -->
                                             <div class="col-auto">
                                                 <button type="button" class="btn btn-outline-dark">파일삭제</button>
                                             </div>
+                                            <!-- }    -->
                                         </div>
                                     </td>
                                 </tr>
@@ -113,6 +115,13 @@
                     <div class="main_search_result_list m-t-60">
                         <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
                         <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:30%">
+                                <col style="width:10%">
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th>등록일</th>
@@ -128,7 +137,7 @@
                                     <td class="text-center">2021-10-11</td>
                                     <td class="text-center">1시간</td>
                                     <td class="text-center">안전교육센터</td>
-                                    <td class="text-center">
+                                    <td class="text-center text-truncate">
                                         <a href="javascript:;">안전교육이수증1.pdf</a>
                                     </td>
                                     <td class="text-center">

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual nurse-02">
+                    <div class="container">
+                        <h1 class="title">실습배치표</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">실습배치표</div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>실습배치표</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <tbody>
+                            </tbody>
+                            <colgroup>
+                                <col style="width: 150px">
+                                <col>
+                                <col style="width: 150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>연도 선택</th>
+                                    <td>
+                                        <select name="" id="" class="form-control width-240px">
+                                            <option value="">연도 선택</option>
+                                        </select>
+                                    </td>
+                                    <th>실습 분기</th>
+                                    <td>
+                                        <select name="" id="" class="form-control width-240px">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button class="btn btn-primary">검색</button>
+                        </div>
+                    </div>
+
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">실습 연도 : <span>2020</span>년</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-light width-140px">
+                                엑셀다운로드
+                                <i class="icon-excel m-l-10"></i>
+                            </button>
+                            <select name="" id="" class="form-control width-90px">
+                                <option value="">50</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered table-sm" id="datatable1">
+                            <colgroup>
+                                <col style="width:5%">
+                                <col style="width:10%">
+                                <col style="width:8%;">
+                                <col style="width:9%">
+                                <col style="width:7%;">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:3%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">학기</th>
+                                    <th rowspan="2">실습<br>교과목</th>
+                                    <th rowspan="2">실습<br>기관</th>
+                                    <th rowspan="2">실습<br>부서</th>
+                                    <th rowspan="2">실습<br>단위</th>
+                                    <th>1차</th>
+                                    <th>2차</th>
+                                    <th>3차</th>
+                                    <th>4차</th>
+                                    <th>5차</th>
+                                    <th>6차</th>
+                                    <th>7차</th>
+                                    <th>8차</th>
+                                    <th>9차</th>
+                                    <th>10차</th>
+                                    <th>11차</th>
+                                    <th>12차</th>
+                                    <th rowspan="2">인원</th>
+                                </tr>
+                                <tr>
+                                    <th class="font-12px">01.19 ∼ 02.26</th>
+                                    <th class="font-12px">01.29 ∼ 02.09</th>
+                                    <th class="font-12px">02.12 ∼ 02.23</th>
+                                    <th class="font-12px">02.26 ∼ 03.09</th>
+                                    <th class="font-12px">03.12 ∼ 03.23</th>
+                                    <th class="font-12px">03.26 ∼ 04.06</th>
+                                    <th class="font-12px">04.09 ∼ 04.20</th>
+                                    <th class="font-12px">04.23 ∼ 05.04</th>
+                                    <th class="font-12px">05.07 ∼ 05.18</th>
+                                    <th class="font-12px">05.21 ∼ 06.01</th>
+                                    <th class="font-12px">06.04 ∼ 06.15</th>
+                                    <th class="font-12px">06.18 ∼ 06.29</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center" rowspan="2">30분기</td>
+                                    <td class="text-center" rowspan="2">지역 사회 간호실습2</td>
+                                    <td class="text-center" rowspan="2">강릉 성심 병원</td>
+                                    <td class="text-center" rowspan="2">신생아집중 치료실</td>
+                                    <td class="text-center" rowspan="2">응급의학 병동</td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center" rowspan="2">12</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center slash"></td>
+                                    <td class="text-center slash"></td>
+                                    <td class="text-center slash"></td>
+                                    <td class="text-center slash"></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                    <td class="text-center"><div class="font-14px">김학생<p class="font-12px">(200984)</p></div></td>
+                                </tr>
+
+                                <tr class="bg-lightblue">
+                                    <td class="text-center font-weight-semibold" colspan="5">인원수</td>
+                                    <td class="text-center font-weight-semibold">4</td>
+                                    <td class="text-center font-weight-semibold">4</td>
+                                    <td class="text-center font-weight-semibold">4</td>
+                                    <td class="text-center font-weight-semibold">4</td>
+                                    <td class="text-center font-weight-semibold">4</td>
+                                    <td class="text-center font-weight-semibold">4</td>
+                                    <td class="text-center font-weight-semibold">4</td>
+                                    <td class="text-center font-weight-semibold">4</td>
+                                    <td class="text-center font-weight-semibold">2</td>
+                                    <td class="text-center font-weight-semibold">2</td>
+                                    <td class="text-center font-weight-semibold">2</td>
+                                    <td class="text-center font-weight-semibold">2</td>
+                                    <td class="text-center font-weight-semibold">18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-practice-history").modal("show");
+        });
+    </script>
+
+</body>
+
+</html>

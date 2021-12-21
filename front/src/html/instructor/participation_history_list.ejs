@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual nurse-03">
+                    <div class="container">
+                        <h1 class="title">참여이력조회</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">참여이력조회</div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>참여이력조회</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <tbody>
+                            </tbody>
+                            <colgroup>
+                                <col style="width: 150px">
+                                <col>
+                                <col style="width: 150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>연도 선택</th>
+                                    <td>
+                                        <select name="" id="" class="form-control width-240px">
+                                            <option value="">연도 선택</option>
+                                        </select>
+                                    </td>
+                                    <th>실습 분기</th>
+                                    <td>
+                                        <select name="" id="" class="form-control width-240px">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>검색</th>
+                                    <td colspan="3">
+                                        <input type="text" class="form-control" placeholder="실습단위 명으로 검색">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button class="btn btn-primary">검색</button>
+                        </div>
+                    </div>
+
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">참여이력 목록</p>
+                        </div>
+                    </div>
+
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered table-sm" id="datatable1">
+                            <colgroup>
+                                <col style="width:80px">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>연도</th>
+                                    <th>실습분기</th>
+                                    <th>실습단위</th>
+                                    <th>실습기간</th>
+                                    <th>인원</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 10; i > 0; i--){ %>
+                                <tr>
+                                    <td class="text-center"><%= i %></td>
+                                    <td class="text-center">2022</td>
+                                    <td class="text-center"><%= i %>분기</td>
+                                    <td class="text-center">신생아실</td>
+                                    <td class="text-center">2021. 03. 26 ∼ 2021. 04.06</td>
+                                    <td class="text-center">5</td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+
+                </div>
+
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#modal-system-info").modal("show");
+        });
+    </script>
+
+</body>
+
+</html>

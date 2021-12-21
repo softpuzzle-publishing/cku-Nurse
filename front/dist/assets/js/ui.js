@@ -121,6 +121,21 @@ var Common = {
 				$('#ui-datepicker-div').addClass('datepicker-wrapper');
 			}
 		});
+
+		//length check
+		$('textarea, input').on("input", function () {
+			if ($(this).attr('maxlength') !== "") {
+				var maxlength = $(this).attr("maxlength");
+				var content = $(this).val();
+
+				$($(this).attr('data-byte-target')).html(content.length);
+
+				if (content.length > maxlength) {
+					$(this).val(content.substring(0, maxlength));
+					$($(this).attr('data-byte-target')).html();
+				}
+			}
+		});
 	},
 	common: function () {
 		$('select.form-control').select2({

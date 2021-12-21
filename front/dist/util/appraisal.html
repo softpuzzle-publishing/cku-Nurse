@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>간호학과 | 가톨릭관동대학교</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" sizes="192x192">
+
+    <!-- jquery-ui css  -->
+    <link rel="stylesheet" href="../assets/lib/jquery-ui/jquery-ui.min.css">
+
+    <!-- 풀캘린더 css-->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css' rel='stylesheet' />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.print.css " rel="stylesheet" type="text/css" media="print" />
+
+    <!-- 부트스트랩 css  -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+
+    <!-- 프린트 css  -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/print.css" media="screen" />
+    <link rel="stylesheet" href="../assets/css/print.css" media="print" />
+
+    <!-- jquery js  -->
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- 풀캘린더 js  -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
+
+    <!-- 부트스트랩 js  -->
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style>
+    @page {
+        /*A4*/
+        size: A4 portrait;
+        margin: 30mm 22mm 30mm 22mm;
+    }
+
+    @media print {
+        .page {
+            margin: 0 auto;
+        }
+
+    }
+
+    .custom-control-label {
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    .custom-control-inline {
+        margin-right: 0;
+    }
+</style>
+
+<body class="popup">
+
+    <div class="no-print-page">
+        <div class="popup-header">
+            <h1>평가서</h1>
+            <a href="javascipt:;" class="close" onclick="self.close();">
+                <img src="../../assets/images/icon-close-white.svg" alt="닫기 버튼">
+            </a>
+        </div>
+    </div>
+    <div class="page">
+        <!-- 프린트 시에만 보이게 하는 영역 {-->
+        <div class="only-print-page"></div>
+        <!-- } -->
+
+        <div class="sector">
+            <br>
+            <div class="table-title  table-top-info d-flex align-items-center justify-content-between" style="margin-top:0;">
+                기본정보
+                <div class="no-print-page">
+                    <a href="javascript:;" class=" printBtn">
+                        인쇄
+                    </a>
+                </div>
+            </div>
+            <table class="table table-bordered table-fixed">
+                <colgroup>
+                    <col style="width:170px">
+                    <col>
+                    <col style="width:170px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th rowspan="3">사진</th>
+                        <td rowspan="3">
+                            <div class="row row-10 align-items-end justify-content-center">
+                                <div class="col-auto">
+                                    <div class="profile-thumb">
+                                        <span style="display:none;">NO IMAGE</span>
+                                        <img src="../../assets/images/@landscape.jpg" alt="학생사진">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                        <th>이름<strong class="text-danger"></strong></th>
+                        <td>김학생</td>
+
+                    </tr>
+                    <tr>
+                        <th>학번<strong class="text-danger"></strong></th>
+                        <td>981016</td>
+                    </tr>
+                    <tr>
+                        <th>학년<strong class="text-danger"></strong></th>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰<strong class="text-danger"></strong></th>
+                        <td>010-2233-4455</td>
+                        <th>이메일<strong class="text-danger"></strong></th>
+                        <td>abvdd@naver.com</td>
+                    </tr>
+                    <tr colspan="4">
+                        <th>주소<strong class="text-danger"></strong></th>
+                        <td colspan="3">우(1211) 강원도 강릉시 강동 호림아파트 102동 100호</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="sector">
+            <div class="table-title table-top-info">실습정보</div>
+            <table class="table table-bordered table-fixed">
+                <colgroup>
+                    <col style="width:170px">
+                    <col>
+                    <col style="width:170px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>기관</th>
+                        <td>국제 성모</td>
+                        <th>단위</th>
+                        <td>제7병동</td>
+                    </tr>
+                    <tr>
+                        <th>학기/차수</th>
+                        <td>2학기 / 2차</td>
+                        <th>실습기간</th>
+                        <td>2021. 10. 11 ∼ 2021. 04.22</td>
+                    </tr>
+                    <tr>
+                        <th>실습교과</th>
+                        <td>지역사회간호실습 I</td>
+                        <th>실습교과목 평가자</th>
+                        <td>최간호</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="sector" style="padding-top: 15px;">
+            <div class="table-title table-top-info">평가사항</div>
+            <table class="table table-bordered table-fixed">
+                <colgroup>
+                    <col>
+                    <col style="width:9%;">
+                    <col style="width:20%;">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="2">대분류</th>
+                        <th rowspan="2">중분류</th>
+                        <th rowspan="2">소분류</th>
+                        <th colspan="5">평가점수</th>
+                    </tr>
+                    <tr>
+                        <th>10점</th>
+                        <th>9점</th>
+                        <th>8점</th>
+                        <th>7점</th>
+                        <th>6점</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">
+                            <p>PO1</p>
+                            <p>(총점 : 30)</p>
+                        </td>
+                        <td rowspan="3">지식</td>
+                        <td>이해력</td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">10점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">9점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">8점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">7점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">6점</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>판단력</td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">10점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">9점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">8점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">7점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">6점</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>지식 적응력</td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">10점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">9점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">8점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">7점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">6점</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">
+                            <p>PO4</p>
+                            <p>(총점 : 30)</p>
+                        </td>
+                        <td rowspan="3">기술</td>
+                        <td>관찰력</td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">10점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">9점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">8점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">7점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">6점</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>종합적 사고능력</td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">10점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">9점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">8점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">7점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">6점</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>의사소통력</td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">10점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">9점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">8점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">7점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">6점</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">
+                            <p>PO8</p>
+                            <p>(총점 : 40)</p>
+                        </td>
+                        <td rowspan="4">태도</td>
+                        <td>용모</td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">10점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">9점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">8점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">7점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">6점</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>협조성</td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">10점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">9점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">8점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">7점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">6점</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>적극성</td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">10점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">9점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">8점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">7점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">6점</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>책임감</td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">10점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">9점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">8점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">7점</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">6점</label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 총점 -->
+                    <tr>
+                        <th colspan="3">총점(%)</th>
+                        <th colspan="5">100점</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="sector">
+            <div class="table-title table-top-info">
+                총평
+            </div>
+            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input" id="textarea-input" maxlength="400" data-byte-target="#byte-check-cont"></textarea>
+
+            <div class="no-print-page">
+                (<span id="byte-check-cont">0</span>/400)
+            </div>
+
+            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+            <div id="textarea-output" class="only-print-area">
+                출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래출력할때 내용 잘 나와야해 제발 나와주길 바래
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+    <div class="no-print-page">
+        <div class="popup-footer row">
+            <div></div>
+            <div>
+                <button type="button" class="btn btn-primary">저장</button>
+                <button class="btn-secondary btn" onclick="self.close();">취소</button>
+            </div>
+            <div><button type="button" class="btn btn-dark submint-btn" data-target="#modal-not-modified" data-toggle="modal">제출</button></div>
+        </div>
+    </div>
+
+    <!-- 모달 : 출석팝업 >> 수정 불가능 안내 -->
+    <div class="modal fade" id="modal-not-modified" tabindex="-1" aria-labelledby="not-modified" aria-hidden="true" style="padding-right:0;">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <!-- <h2 class="modal-title">알림</h2> -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="../../assets/images/icon-close.png" alt="" width="24px" height="24px">
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="p-2 mt-3">
+                        제출하시면 수정이 불가능합니다.
+                        제출 하시겠습니까?
+                    </div>
+
+                </div>
+                <div class="modal-footer border-0">
+                    <div class="row row-10 w-100">
+                        <div class="col">
+                            <button type="button" class="btn btn-lg btn-primary btn-block">확인</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-lg btn-secondary btn-block" data-dismiss="modal">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    /*
+     * 글자수 입력 제한
+     */
+    $('textarea, input').on("input", function() {
+        if ($(this).attr('maxlength') !== "") {
+            var maxlength = $(this).attr("maxlength");
+            var content = $(this).val();
+
+            $($(this).attr('data-byte-target')).html(content.length);
+
+            if (content.length > maxlength) {
+                $(this).val(content.substring(0, maxlength));
+                $($(this).attr('data-byte-target')).html();
+            }
+        }
+    });
+
+
+    /*
+     * 프린트 미리보기 실행 
+     */
+    $('.printBtn').on('click', function() {
+        window.print();
+    });
+
+    /*
+     * 캘린더 
+     */
+
+    $(document).ready(function() {
+        $(function() {
+            // calendar element 취득
+            var calendarEl = document.getElementById('calendar');
+            // full-calendar 생성하기
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                /** 플러그인 모음 */
+                // 캘린더 불러오는 버전차이때문인지 플러그인 인터랙션때문에  호출이 안되서 일단 주석처리 해놨습니다. html 옮긴후 주석풀고 확인해주세요
+                // plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+                /** default 값 */
+                defaultView: 'dayGridMonth',
+                /** 한글 설정 */
+                locale: 'kr',
+                /** 하루종일 슬롯 ->false*/
+                allDaySlot: false,
+                /** 커스텀 버튼 */
+                customButtons: {
+                    /** 커스텀 옵션 */
+                    myCustomButton: {
+                        /** 제목 */
+                        text: '일정 등록',
+                        /** 클릭 시 */
+                        click: function() {
+                            /** 날짜 형식 */
+                            var regex = RegExp(/^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/);
+                            /** 시간 형식 */
+                            var timeFormat = /^([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/;
+
+                            /** 날짜 팝업 */
+                            var dateStr = prompt('YYYY-MM-DD 날짜 형식에 맞게 입력해주세요');
+
+                            /** 시작 날짜 미입력 시 */
+                            if (dateStr == '' || dateStr == null) {
+                                /** 미입력 시 알람 */
+                                alert("날짜를 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+                            /** 형식에 맞지 않으면 */
+                            else if (regex.test(dateStr) == false) {
+                                /** 형식 맞지 않으면 */
+                                alert("날짜 형식에 맞게 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+
+                            /** 시간 팝업 */
+                            var timeStr = prompt('00:00:00 시작 시간을 형식에 맞게 입력해주세요')
+
+                            /** 시작 시간 미입력 시 */
+                            if (timeStr == '' || timeStr == null) {
+                                /** 미입력 시 알람 */
+                                alert("시간을 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+                            /** 형식에 맞지 않으면 */
+                            else if (timeFormat.test(timeStr) == false) {
+                                /** 형식 맞지 않으면 */
+                                alert("시간 형식에 맞게 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+
+                            /** date에 담기 */
+                            var date = new Date(dateStr + 'T' + timeStr);
+
+                            /** date 값이 있으면 */
+                            if (!isNaN(date.valueOf())) {
+                                /** 캘린더에 이벤트 추가 */
+                                calendar.addEvent({
+                                    'id': 'a',
+                                    'title': '',
+                                    'start': date
+                                });
+                            }
+                            /** date 값이 없으면 */
+                            else {
+                                /** 입력 형식에 맞지 않을 시 알람 */
+                                alert('형식에 맞춰 입력해주세요');
+                            }
+                        }
+                    }
+                },
+                /** 툴바 */
+                header: {
+                    /** 왼쪽 설정 */
+                    left: 'prev,next today myCustomButton',
+                    /** 가운데 설정 */
+                    center: 'title',
+                    /** 오른쪽 설정 */
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+
+                /** 이벤트 html 추가 */
+                eventRender: function(eventInfo) {
+                    /** 셀렉트 버튼 추가 */
+                    eventInfo.el.querySelector('.fc-content').innerHTML += "<select class='fa fa-external-link pull-right'><option>출석</option><option>미지정</option></select>";
+                },
+            });
+
+
+            // 캘린더 랜더링
+            calendar.render();
+        });
+    });
+</script>

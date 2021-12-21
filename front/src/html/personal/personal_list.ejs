@@ -31,7 +31,7 @@
                         </div>
                     </div>
 
-                    <!-- 학생 -->
+                    <!-- 학생 {-->
                     <div>
                         <p class="font-weight-semibold font-18px d-flex align-items-center">
                             <i class="icon-info-black m-r-10"></i>
@@ -51,11 +51,8 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <!-- 학생{ -->
                                 <th>학번(아이디)<strong class="text-danger">*</strong></th>
                                 <td>201901000</td>
-                                <!-- } -->
-
                                 <th rowspan="3">사진</th>
                                 <td rowspan="3">
                                     <div class="row row-10 align-items-end">
@@ -68,7 +65,7 @@
                                         <div class="col-auto">
                                             <!-- 삭제 -->
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input"  name="mb_mailling" id="reg_mb_mailling">
+                                                <input type="checkbox" class="custom-control-input" name="mb_mailling" id="reg_mb_mailling">
                                                 <label class="custom-control-label" for="reg_mb_mailling">삭제</label>
                                             </div>
                                         </div>
@@ -165,20 +162,216 @@
                                 <th>주소</th>
                                 <td colspan="3">
                                     <div class="row row-10 align-items-center">
-                                        <div class="col-auto">
-                                            <input type="text" name="" value="" id="" class="form-control min-width-370px">
+                                        <div class="col">
+                                            <input type="text" id="sZip" class="form-control" placeholder="우편번호" readonly>
                                         </div>
                                         <div class="col-auto">
-                                            <input type="text" name="" value="" id="" class="form-control min-width-370px">
+                                            <input type="text" id="sAddr" class="form-control min-width-370px" placeholder="주소 검색을 클릭해주세요." readonly>
                                         </div>
                                         <div class="col-auto">
-                                            <button type="button" class="btn btn-sm-round btn-gray5" onclick="">주소 검색</button>
+                                            <input type="text" id="sAddrDetail" class="form-control min-width-370px" placeholder="상세주소를 입력해주세요.">
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-sm-round btn-gray5 widht-100px" onclick="daumPostcode();">주소 검색</button>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                    <!-- } -->
+
+                    <!-- 현장지도자 { -->
+                    <div class="table-title table-top-info">부서정보</div>
+
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:230px">
+                            <col>
+                            <col style="width:230px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><strong class="text-danger">실습기관*</strong></th>
+                                <td colspan="3">강릉제일병원</td>
+                            </tr>
+                            <tr>
+                                <th><strong class="text-danger">부서분류*</strong></th>
+                                <td>
+                                    <input type="text" class="form-control width-240px">
+                                </td>
+                                <th><strong class="text-danger">단위*</strong></th>
+                                <td>
+                                    <input type="text" class="form-control width-240px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><strong class="text-danger">부서전화번호*</strong></th>
+                                <td>
+                                    <input type="text" class="form-control width-240px">
+                                </td>
+                                <th>팩스번호</th>
+                                <td>
+                                    <input type="text" class="form-control width-240px" placeholder="대시(-)없이 번호만 입력해 주세요!">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="table-title table-top-info">현장지도자 정보</div>
+
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:230px">
+                            <col>
+                            <col style="width:230px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><strong class="text-danger">현장지도자 명*</strong></th>
+                                <td>
+                                    <input type="text" class="form-control width-240px">
+                                </td>
+                                <th><strong class="text-danger">직위*</strong></th>
+                                <td>
+                                    <input type="text" class="form-control width-240px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><strong class="text-danger">연락처*</strong></th>
+                                <td>
+                                    <input type="text" class="form-control width-240px">
+                                </td>
+                                <th>이메일</th>
+                                <td>
+                                    <input type="text" class="form-control width-240px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><strong class="text-danger">해당분야 경력*</strong></th>
+                                <td colspan="3">
+                                    <div class="row row-20 align-items-center">
+                                        <div class="col-auto">경력 시작일</div>
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control form-datepicker" placeholder="0000-00-00">
+                                        </div>
+                                        <div class="col m-l-20">
+                                            현재 기준 경력일 : <span> 11년 9개월</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><strong class="text-danger">최종학력*</strong></th>
+                                <td>
+                                    <select name="" id="" class="form-control  width-240px">
+                                        <option value="">학력 선택</option>
+                                    </select>
+                                </td>
+                                <th>졸업학교명</th>
+                                <td>
+                                    <input type="text" class="form-control width-240px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><strong class="text-danger">간호사 면허*</strong></th>
+                                <td>
+                                    <div class="m-l-10">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                            <label class="custom-control-label" for="radio1">유</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="radio2" name="radio">
+                                            <label class="custom-control-label" for="radio2">무</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>기타면허 및 자격</th>
+                                <td>
+                                    <div class="row row-5 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="radio1" name="">
+                                                <label class="custom-control-label" for="radio1">조산사</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="radio1" name="">
+                                                <label class="custom-control-label" for="radio1">보건 교사</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- 기획서랑 다르게 기타를 클릭하면 기타 자격면허이름을 입력할 수 있는 폼이 나와야 될것같아서 임의로 추가했습니다. -->
+                                        <div class="col-auto">
+                                            <div class="row row-0 align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                                        <input type="checkbox" class="custom-control-input" id="license-etc" name="license-etc" data-pair="#license-name">
+                                                        <label class="custom-control-label" for="license-etc">기타</label>
+                                                    </div>
+                                                </div>
+
+                                                <!-- <div class="col">
+                                                    <div class="input-next-div"  id="license-name">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                        <script>
+                                            $('[data-pair]').each(function () {
+                                                if ($('[data-pair]').is(':checked')) {
+                                                    $($(this).attr('data-pair')).addClass('show');
+                                                }
+                                            })
+                                            $('[name=license-etc]').on('change', function (e) {
+                                                if ($('[data-pair]').prop('checked')) {
+                                                    $($('[data-pair]').attr('data-pair')).addClass('show');
+                                                } else {
+                                                    $($('[data-pair]').attr('data-pair')).removeClass('show');
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="table-title table-top-info">비밀번호 변경</div>
+
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:230px">
+                            <col>
+                            <col style="width:230px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>등록아이디</th>
+                                <td colspan="3">
+                                    <p class="m-l-10">dkdlel123</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호</th>
+                                <td>
+                                    <input type="password" class="form-control width-240px">
+                                </td>
+                                <th>비밀번호 확인</th>
+                                <td>
+                                    <input type="password" class="form-control width-240px">
+                                    <div class="invalid-feedback">비밀번호가 일치하지 않습니다.</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- } -->
 
                     <div class="d-flex justify-content-end align-items-center m-t-60">
                         <button type="button" class="btn btn-primary btn-lg width-120px">저장</button>

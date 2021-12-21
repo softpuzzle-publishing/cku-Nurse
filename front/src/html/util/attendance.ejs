@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>간호학과 | 가톨릭관동대학교</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" sizes="192x192">
+
+    <!-- jquery-ui css  -->
+    <link rel="stylesheet" href="../assets/lib/jquery-ui/jquery-ui.min.css">
+
+    <!-- 풀캘린더 css-->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css' rel='stylesheet' />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.print.css " rel="stylesheet" type="text/css" media="print" />
+
+    <!-- 부트스트랩 css  -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+
+    <!-- 프린트 css  -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/print.css" media="screen" />
+    <link rel="stylesheet" href="../assets/css/print.css" media="print" />
+
+    <!-- jquery js  -->
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- 풀캘린더 js  -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
+
+    <!-- 부트스트랩 js  -->
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style>
+    @page {
+        /*A4*/
+        size: A4 portrait;
+        margin:30mm 22mm 30mm 22mm;
+    }
+    @media print {
+        .page{margin:0 auto;}
+    }
+</style>
+
+<body class="popup">
+
+    <div class="no-print-page">
+        <div class="popup-header">
+            <h1>출석부</h1>
+            <a href="javascipt:;" class="close" onclick="self.close();">
+                <img src="../../assets/images/icon-close-white.svg" alt="닫기 버튼">
+            </a>
+        </div>
+    </div>
+    <div class="page">
+        <!-- 프린트 시에만 보이게 하는 영역 {-->
+        <div class="only-print-page"></div>
+        <!-- } -->
+
+        <div class="sector">
+            <br>
+            <div class="table-title  table-top-info d-flex align-items-center justify-content-between" style="margin-top:0;">
+                기본정보
+                <div class="no-print-page">
+                    <a href="javascript:;" class="printBtn">
+                        인쇄
+                    </a>
+                </div>
+            </div>
+            <table class="table table-bordered table-fixed">
+                <colgroup>
+                    <col style="width:170px">
+                    <col>
+                    <col style="width:170px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th rowspan="3">사진</th>
+                        <td rowspan="3">
+                            <div class="row row-10 align-items-end justify-content-center">
+                                <div class="col-auto">
+                                    <div class="profile-thumb">
+                                        <span style="display:none;">NO IMAGE</span>
+                                        <img src="../../assets/images/@landscape.jpg" alt="학생사진">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                        <th>이름<strong class="text-danger"></strong></th>
+                        <td>김학생</td>
+
+                    </tr>
+                    <tr>
+                        <th>학번<strong class="text-danger"></strong></th>
+                        <td>981016</td>
+                    </tr>
+                    <tr>
+                        <th>학년<strong class="text-danger"></strong></th>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰<strong class="text-danger"></strong></th>
+                        <td>010-2233-4455</td>
+                        <th>이메일<strong class="text-danger"></strong></th>
+                        <td>abvdd@naver.com</td>
+                    </tr>
+                    <tr colspan="4">
+                        <th>주소<strong class="text-danger"></strong></th>
+                        <td colspan="3">우(1211) 강원도 강릉시 강동 호림아파트 102동 100호</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="sector">
+            <div class="table-title table-top-info">실습정보</div>
+            <table class="table table-bordered table-fixed">
+                <colgroup>
+                    <col style="width:170px">
+                    <col>
+                    <col style="width:170px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>기관</th>
+                        <td>국제 성모</td>
+                        <th>단위</th>
+                        <td>제7병동</td>
+                    </tr>
+                    <tr>
+                        <th>학기/차수</th>
+                        <td>2학기 / 2차</td>
+                        <th>실습기간</th>
+                        <td>2021. 10. 11 ∼ 2021. 04.22</td>
+                    </tr>
+                    <tr>
+                        <th>실습교과</th>
+                        <td>지역사회간호실습 I</td>
+                        <th>실습교과목 평가자</th>
+                        <td>최간호</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="sector page-divide">
+            <div class="table-title table-top-info">출결사항</div>
+            <table class="table table-bordered table-fixed">
+                <colgroup>
+                    <col style="width:170px">
+                    <col>
+                    <col style="width:170px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>출석일 수</th>
+                        <td> 0 일</td>
+                        <th>결석일 수</th>
+                        <td> 0 일</td>
+                    </tr>
+                    <tr>
+                        <th>지각일 수</th>
+                        <td> 0 일</td>
+                        <th>조퇴일 수</th>
+                        <td> 0 일</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br class="no-print-page">
+        <div class="sector">
+            <div class="table-title table-top-info">
+                <p>실습 출석 지정</p>
+                <table class="table table-div table-bordered">
+                    <colgroup>
+                        <col style="width:30%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <th>실습기간</th>
+                        <td>2021. 10. 11 ∼ 2021. 04.22</td>
+                    </tbody>
+                </table>
+            </div>
+            <div class="calendar-wrap">
+                <!-- 캘린더 영역 { -->
+                <div id="calendar"></div>
+                <!-- }-->
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+    <div class="no-print-page">
+        <div class="popup-footer">
+            <button type="button" class="btn-primary btn">저장</button>
+            <button class="btn-secondary btn" onclick="self.close();">취소</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    /*
+     * 프린트 미리보기 실행 
+     */
+    $('.printBtn').on('click', function () {
+        window.print();
+    });
+    /*
+     * 캘린더 
+     */
+
+    $(document).ready(function () {
+        $(function () {
+            // calendar element 취득
+            var calendarEl = $('#calendar')[0];
+            // full-calendar 생성하기
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                // height: '00px', // calendar 높이 설정
+                expandRows: true, // 화면에 맞게 높이 재설정
+                slotMinTime: '06:00', // Day 캘린더에서 시작 시간
+                slotMaxTime: '24:00', // Day 캘린더에서 종료 시간
+                // 해더에 표시할 툴바
+                headerToolbar: {
+                    left: 'title',
+                    center: '',
+                    right: 'prev,next'
+                    // right: 'prev,next today'
+                },
+                initialView: '', // 초기 로드 될때 보이는 캘린더 화면(기본 설정: 달)
+                //initialDate: '', // 초기 날짜 설정 (설정하지 않으면 오늘 날짜가 보인다.)
+                navLinks: true, // 날짜를 선택하면 Day 캘린더나 Week 캘린더로 링크
+                editable: true, // 수정 가능?
+                selectable: true, // 달력 일자 드래그 설정가능
+                nowIndicator: true, // 현재 시간 마크
+                dayMaxEvents: true, // 이벤트가 오버되면 높이 제한 (+ 몇 개식으로 표현)
+                locale: 'ko', // 한국어 설정
+                eventAdd: function (obj) { // 이벤트가 추가되면 발생하는 이벤트
+                    console.log(obj);
+                },
+                eventChange: function (obj) { // 이벤트가 수정되면 발생하는 이벤트
+                    console.log(obj);
+                },
+                eventRemove: function (obj) { // 이벤트가 삭제되면 발생하는 이벤트
+                    console.log(obj);
+                },
+                select: function (arg) { // 캘린더에서 드래그로 이벤트를 생성할 수 있다.
+                    var title = prompt('Event Title:');
+                    if (title) {
+                        calendar.addEvent({
+                            title: title,
+                            start: arg.start,
+                            end: arg.end,
+                            allDay: arg.allDay
+                        })
+                    }
+                    calendar.unselect()
+                },
+                // 이벤트
+                events: [{
+                    title: 'All Day Event',
+                    start: '2021-12-01',
+                }]
+            });
+            // 캘린더 랜더링
+            calendar.render();
+        });
+    });
+</script>
