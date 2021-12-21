@@ -19,13 +19,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">교관별 비행스케줄</h1>
+                            <h1 class="title">분기정보</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">비행훈련관리</a></li>
-                                <li class="breadcrumb-item">교관별 비행스케줄</li>
+                                <li class="breadcrumb-item"><a href="#">운영관리</a></li>
+                                <li class="breadcrumb-item">분기정보</li>
                             </ol>
                         </div>
                     </div>
@@ -34,29 +34,152 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content" data-menu="instructor-schedule">
+            <div class="content" data-menu="operation">
                 <div class="container-fluid">
                     <div class="inquery-area">
                         <table class="table table-bordered">
                             <colgroup>
-                                <col style="width:150px">
-                                <col>
+                                <col style="width: 150px">
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th>교관</th>
+                                    <th>연도 선택</th>
                                     <td>
                                         <select name="" id="" class="custom-select width-200px">
-                                            <option value="">김교관</option>
-                                            <option value="">20</option>
+                                            <option value="">연도 선택</option>
                                         </select>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="btns">
+                            <button type="button" class="btn btn-dark min-width-90px">검색</button>
+                        </div>
                     </div>
-                    <div class="row justify-content-between align-items-end mb-5 pb-5 border-bottom">
+
+                    <p class="font-size-18px font-weight-bold">● 운영중인 임상실습 현황</p>
+                    <div class="row row-0 justify-content-between align-items-end mb-3 mt-3">
+                        <div class="col-auto bg-gray-1 p-4">
+                            <p class="text-danger mb-2 font-weight-bold">유의사항</p>
+                            <p>※ 임상실습 신규 생성 버튼을 통해 학기를 생성하고 운영관리 할 수 있습니다.</p>
+                            <p>※ 실습기관수, 실습학생수가 등록되어 있을 경우 해당 학기를 삭제할 수 없으니 유의하세요.</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-end mb-0 mt-5">
                         <div class="col-auto">
+                            임상실습 목록
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-end mb-3">
+                        <div class="col-auto">
+                            <b>Total : 000</b>,
+                            Page 1/3
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-outline-dark mr-1">선택삭제</button>
+                            <a href="operation_term_form.html" class="btn btn-primary mr-1">연간 실습학기 등록</a>
+                            <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
+                            <select class="custom-select w-auto">
+                                <option>10</option>
+                                <option>30</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center" style="width: 50px">
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="checkAll">
+                                            <label class="custom-control-label" for="checkAll"><label>
+                                        </div>
+                                    </th>
+                                    <th class="text-center">번호</th>
+                                    <th class="text-center">연도</th>
+                                    <th class="text-center">실습학기</th>
+                                    <th class="text-center">임상실습명</th>
+                                    <th class="text-center">전체 실습기간</th>
+                                    <th class="text-center">등록일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 4; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="check<%= i %>">
+                                            <label class="custom-control-label" for="check<%= i %>"><label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><%= i%></td>
+                                    <td class="text-center">2021년</td>
+                                    <td class="text-center">3분기</td>
+                                    <td class="text-center"><a href="operation_term_detail.html">2022년 4분기 임상실습</a></td>
+                                    <td class="text-center">2021.10.01~2021.12.30</td>
+                                    <td class="text-center">2022.01.01</td>
+
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+                <div class="container-fluid m-t-100">
+                    <p class="font-size-18px font-weight-bold">● 완료된 임상실습 현황</p>
+                    <div class="inquery-area">
+                        <table class="table table-bordered mt-4">
+                            <colgroup>
+                                <col style="width: 150px">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>연도 선택</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">연도 선택</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button type="button" class="btn btn-dark min-width-90px">검색</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row row-0 justify-content-between align-items-end mb-3 mt-3">
+                        <div class="col-auto bg-gray-1 p-4">
+                            <p class="text-danger mb-2 font-weight-bold">유의사항</p>
+                            <p>※ 과거에 완료된 임상실습 현황을 확인할 수 있습니다. </p>
+                            <p>※ 실습배치표를 클릭하여 해당 임상실습의 상세 배치정보를 확인할 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-end mb-0 mt-5">
+                        <div class="col-auto">
+                            임상실습 목록
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-end mb-3">
+                        <div class="col-auto">
+                            <b>Total : 000</b>,
+                            Page 1/3
                         </div>
                         <div class="col-auto">
                             <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
@@ -68,9 +191,57 @@
                             </select>
                         </div>
                     </div>
-                    <!-- 캘린더 영역 { -->
-                    <div id='calendar'></div>
-                    <!-- }-->
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center" style="width: 50px">
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="checkAll">
+                                            <label class="custom-control-label" for="checkAll"><label>
+                                        </div>
+                                    </th>
+                                    <th class="text-center">번호</th>
+                                    <th class="text-center">연도</th>
+                                    <th class="text-center">실습학기</th>
+                                    <th class="text-center">임상실습명</th>
+                                    <th class="text-center">전체 실습기간</th>
+                                    <th class="text-center">실습기관수</th>
+                                    <th class="text-center">실습학생수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 4; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="check<%= i %>">
+                                            <label class="custom-control-label" for="check<%= i %>"><label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><%= i%></td>
+                                    <td class="text-center">2021년</td>
+                                    <td class="text-center">3분기</td>
+                                    <td class="text-center"><a href="operation_term_detail.html">2022년 4분기 임상실습</a></td>
+                                    <td class="text-center">2021.10.01~2021.12.30</td>
+                                    <td class="text-center"><a href="#modal-agency-info" data-toggle="modal">14</a></td>
+                                    <td class="text-center">221</td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- /.content -->
@@ -86,120 +257,7 @@
 
     <script>
         $(document).ready(function () {
-            $(function () {
-                // calendar element 취득
-                var calendarEl = $('#calendar')[0];
-                // full-calendar 생성하기
-                var calendar = new FullCalendar.Calendar(calendarEl, {
-                    height: '700px', // calendar 높이 설정
-                    expandRows: true, // 화면에 맞게 높이 재설정
-                    slotMinTime: '06:00', // Day 캘린더에서 시작 시간
-                    slotMaxTime: '24:00', // Day 캘린더에서 종료 시간
-                    // 해더에 표시할 툴바
-                    headerToolbar: {
-                        left: '',
-                        center: 'title',
-                        right: 'prev,next today'
-                    },
-                    initialView: 'timeGridWeek', // 초기 로드 될때 보이는 캘린더 화면(기본 설정: 달)
-                    //initialDate: '', // 초기 날짜 설정 (설정하지 않으면 오늘 날짜가 보인다.)
-                    navLinks: true, // 날짜를 선택하면 Day 캘린더나 Week 캘린더로 링크
-                    editable: true, // 수정 가능?
-                    selectable: true, // 달력 일자 드래그 설정가능
-                    nowIndicator: true, // 현재 시간 마크
-                    dayMaxEvents: true, // 이벤트가 오버되면 높이 제한 (+ 몇 개식으로 표현)
-                    locale: 'ko', // 한국어 설정
-                    eventAdd: function (obj) { // 이벤트가 추가되면 발생하는 이벤트
-                        console.log(obj);
-                    },
-                    eventChange: function (obj) { // 이벤트가 수정되면 발생하는 이벤트
-                        console.log(obj);
-                    },
-                    eventRemove: function (obj) { // 이벤트가 삭제되면 발생하는 이벤트
-                        console.log(obj);
-                    },
-                    select: function (arg) { // 캘린더에서 드래그로 이벤트를 생성할 수 있다.
-                        var title = prompt('Event Title:');
-                        if (title) {
-                            calendar.addEvent({
-                                title: title,
-                                start: arg.start,
-                                end: arg.end,
-                                allDay: arg.allDay
-                            })
-                        }
-                        calendar.unselect()
-                    },
-                    // 이벤트
-                    events: [{
-                        title: 'All Day Event',
-                        start: '2021-12-01',
-                    }]
-                });
-                // 캘린더 랜더링
-                calendar.render();
-                myDatepicker();
-
-                // 월만 선택할수있는 데이트 피커
-                function myDatepicker() {
-                    $(".fc-toolbar-chunk:first-child").prepend('<div class="datepicker-area scheduler-date" id="month-datepicker-area"></div>');
-                    $.datepicker.monthpicker = {
-                        closeText: '닫기',
-                        nextText: '다음 달',
-                        prevText: '이전 달',
-                        currentText: "오늘",
-                        changeMonth: true,
-                        changeYear: true,
-                        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-                        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-                        dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
-                        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-                        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-                        weekHeader: "주",
-                        firstDay: 0,
-                        isRTL: false,
-                        showMonthAfterYear: true,
-                        yearSuffix: "년",
-                        showOn: 'both',
-                        // buttonText: "달력",
-                        showButtonPanel: true,
-                        dateFormat: 'yy-mm',
-                        yearRange: "-10:+0",
-                    };
-
-                    $.datepicker.setDefaults($.datepicker.monthpicker);
-
-                    var datepicker_default = {
-                        showOn: 'both',
-                        buttonText: "달력",
-                        currentText: "이번달",
-                        changeMonth: true,
-                        changeYear: true,
-                        showButtonPanel: true,
-                        yearRange: 'c-5:c+5',//년도 범위 선택
-                        showOtherMonths: true,
-                        selectOtherMonths: true
-                    }
-                    datepicker_default.closeText = "선택";
-                    datepicker_default.dateFormat = "yy-mm";
-                    datepicker_default.onClose = function (dateText, inst) {
-                        var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
-                        var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-                        $(this).datepicker("option", "defaultDate", new Date(year, month, 1));
-                        $(this).datepicker('setDate', new Date(year, month, 1));
-                    }
-                    datepicker_default.beforeShow = function () {
-                        var selectDate = $("#sdate").val().split("-");
-                        var year = Number(selectDate[0]);
-                        var month = Number(selectDate[1]) - 1;
-                        $(this).datepicker("option", "defaultDate", new Date(year, month, 1));
-                    }
-                    $("#month-datepicker-area").datepicker(datepicker_default);
-
-                    ///
-                }
-            });
-
+            // $("#modal-training-designation-common").modal("show");
         });
     </script>
 </body>

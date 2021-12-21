@@ -18,13 +18,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">운영관리</h1>
+                            <h1 class="title">평가서관리</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">운영관리</a></li>
-                                <li class="breadcrumb-item">교과목정보</li>
+                                <li class="breadcrumb-item">평가서관리</li>
                             </ol>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                             Page 1/3
                         </div>
                         <div class="col-auto">
-                            <button type="button" class="btn btn-primary mr-1" data-toggle="modal" data-target="#modal-training-form">평가표등록</button>
+                            <a href="operation_appraisal_form.html" class="btn btn-primary mr-1" >평가표등록</a>
                             <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
                             <select class="custom-select w-auto">
                                 <option>10</option>
@@ -111,9 +111,10 @@
                                 <tr>
                                     <th class="text-center">번호</th>
                                     <th class="text-center">연도</th>
+                                    <th class="text-center">평가자</th>
                                     <th class="text-center">학년</th>
-                                    <th class="text-center">교과목수</th>
-                                    <th class="text-center">교과목명</th>
+                                    <th class="text-center">실습교과목</th>
+                                    <th class="text-center">평가서명</th>
                                     <th class="text-center">등록일</th>
                                     <th class="text-center">관리</th>
                                 </tr>
@@ -123,9 +124,10 @@
                                 <tr>
                                     <td class="text-center"><%= i%></td>
                                     <td class="text-center">2021년</td>
+                                    <td class="text-center">교수</td>
                                     <td class="text-center">3학년</td>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center"><a href="operation_form.html">아동간호실습 II, 성인간호실습 II, 정신간호실습 II</a></td>
+                                    <td class="text-center">아동간호실습1</td>
+                                    <td class="text-center"><a href="">아동간호1-교수용</a></td>
                                     <td class="text-center">2022.01.01</td>
                                     <td class="text-center">
                                         <a href="flight_detail.html" class="btn btn-sm btn-secondary">삭제</a>
