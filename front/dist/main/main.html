@@ -48,7 +48,7 @@
                             <!-- 학생일경우에만 {-->
                             <a href="../board/clinical_list.html" class="btn btn-lightprimary text-white px-4 m-r-15 height-40px">임상실습안내</a>
                             <!-- } -->
-                            <li><a href="../main/main.html"><i class="icon-top-home"></i> HOME</a></li>
+                            <li><a href="../student/dashboard.html"><i class="icon-top-home"></i> HOME</a></li>
                             <li><a href="#modal-login" data-toggle="modal"><i class="icon-top-user"></i> LOGIN</a></li>
                             <li><a href="javascript:;"><i class="icon-top-user"></i>LOGOUT</a></li>
                             <li><a href="../sitemap/sitemap.html"><i class="icon-top-sitemap"></i> SITEMAP</a></li>
@@ -157,7 +157,7 @@
                     <div class="container">
                         <div class="main-login">
                             <!-- 로그인 전 { -->
-                            <div class="box" style="display:none;">
+                            <div class="box" style="">
                                 <form action="">
                                     <fieldset>
                                         <legend>LOGIN</legend>
@@ -171,11 +171,11 @@
                             <!-- } -->
 
                             <!-- 로그인 후 현장지도자 일경우만 보입니다.{ -->
-                            <div class="box dark" style="">
+                            <div class="box dark" style="display:none;">
                                 <div class="top">
                                     <div class="row row-25">
                                         <div class="col-auto">
-                                            <div class="profile" style="background-image: url('../../assets/images/@portrait.jpg');"></div>
+                                            <div class="profile" style="background-image: url('../assets/images/@portrait.jpg');"></div>
                                         </div>
                                         <div class="col">
                                             <div class="d-flex flex-column">
@@ -228,7 +228,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-auto">
-                                            <a href="" class="more" aria-label="더보기"><i class="icon-plus-white"></i></a>
+                                            <a href="../board/notice_list.html" class="more" aria-label="더보기"><i class="icon-plus-white"></i></a>
                                         </div>
                                     </div>
                                     <div class="notice-swiper">
@@ -355,7 +355,7 @@
 
                 <!-- 아래}} 이미지 안쓸경우  -->
                 <div class="p-3">
-                    <img src="../../assets/images/logo-white.svg" alt="관동대학교 로고" width="120" class="" style="opacity: 0.5;">
+                    <img src="../assets/images/logo-white.svg" alt="관동대학교 로고" width="120" class="" style="opacity: 0.5;">
 
                     <div class="m-t-20 border-top py-5  px-5">
                         <p class="h5">현재 베타 서비스 테스트 중입니다.</p>
@@ -1050,7 +1050,7 @@
 
     <script>
         $(document).ready(function() {
-            $('.main-modal').modal('show');
+            // $('.main-modal').modal('show');
         });
         var visualSwiper = new Swiper('.main-visual .swiper-container', {
             loop: true,

@@ -51,8 +51,9 @@
     }
 
     @media print {
-        .page {
-            margin: 0 auto;
+        body.print .page {
+            width: 210mm !important;
+            margin: 0 auto !important;
         }
     }
 </style>
@@ -403,7 +404,7 @@
                                 <colgroup>
                                     <col style="width:75px">
                                     <col style="width:75px">
-                                    <col style="width:12%">
+                                    <col style="width:15%">
                                     <col>
                                     <col style="width: 150px">
                                     <col>
@@ -469,6 +470,259 @@
                                             <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
                                             <div class="only-print-area">
                                                 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">83병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">82병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">신생아 집중 치료실</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" rowspan="2">집담회</th>
+                                        <th class="text-center">장소</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-meeting" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <input type="text" class="form-control no-print-page" id="form-input">
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div id="form-output" class="only-print-area">
+                                                1층 회의실
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                순회지도를 통해 실습에 대한 에로사항을 경청하고, 함께 방법을 강구하였음
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th class="text-center" rowspan="7">1주차</th>
+                                        <th class="text-center" rowspan="5">순회지도</th>
+                                        <th class="text-center">부서</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-tour" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">92병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2" rowspan="4">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">83병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">82병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">응급병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" rowspan="2">집담회</th>
+                                        <th class="text-center">장소</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-meeting" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <input type="text" class="form-control no-print-page" id="form-input">
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div id="form-output" class="only-print-area">
+                                                1층 회의실
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                순회지도를 통해 실습에 대한 에로사항을 경청하고, 함께 방법을 강구하였음
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" rowspan="7">1주차</th>
+                                        <th class="text-center" rowspan="5">순회지도</th>
+                                        <th class="text-center">부서</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-tour" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">92병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2" rowspan="4">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래
                                             </div>
                                         </td>
                                     </tr>
