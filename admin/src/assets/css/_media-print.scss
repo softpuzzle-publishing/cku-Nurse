@@ -1,8 +1,9 @@
-
 @page {
-    size: 210mm 297mm;
+    // size: 210mm 297mm;
     /*A4*/
-    margin: 0mm
+    size: A4 portrait;
+    // margin: 0mm
+    margin: 30mm auto;
 }
 
 @media print {
@@ -12,17 +13,206 @@
         margin: 0;
         padding: 0;
         page-break-after: avoid;
-        page-break-before: avoid
+        page-break-before: avoid;
+        /*해당 엘리먼트의 앞 페이지 넘김을 금지*/
+        font-family: 'Malgun Gothic', ' dotum', 'gulim', sans-serif;
     }
 
+    // 인쇄페이지 영역 나누기
     .page-divide {
         page-break-after: always;
+        height: 0;
+        margin: 0;
+        border: 0;
     }
 
+    //페이지 인쇄 안되는 영역
     .no-print-page {
         display: none;
     }
+
+    //인쇄 시에만 보이는 영역
+    .only-print-area {
+        display: block !important;
+        ;
+    }
+
+    .body,
+    .page {
+        margin-top: -1px
+    }
+
+    /*서브픽셀 해결1*/
+
+    .page:first-child {
+        page-break-before: auto;
+        page-break-inside: avoid
+    }
+
+    // 가상 요소 인쇄 스타일
+    ::before,
+    ::after {
+        color: inherit !important;
+        text-shadow: inherit !important;
+        background: inherit !important;
+        -webkit-box-shadow: inherit !important;
+        box-shadow: inherit !important;
+    }
+
+    header,
+    footer,
+    aside,
+    nav,
+    form,
+    iframe,
+    .menu,
+    .hero,
+    .adslot {
+        display: none;
+    }
+
+    .table-fixed {
+        table-layout: fixed;
+    }
+
+    .table-sm {
+
+        th,
+        td {
+            padding: 0.75rem 0.5rem;
+        }
+
+        label {
+            font-size: 14px;
+        }
+
+        button {
+            font-size: 14px;
+        }
+    }
+
+    // 캘린더 버튼 그룹 안보이게
+    .fc-toolbar-chunk {
+        button {
+            display: none !important;
+        }
+    }
+
+    // 캘린더 타이틀 보이게
+    .fc-toolbar-title {
+        display: block !important;
+    }
+
+    // 캘린더 타이틀 높이 영역 잡아주기
+    .fc .fc-toolbar.fc-header-toolbar {
+        height: 40px;
+    }
+
+    // 캘린더 a태그 스타일
+    #calendar a {
+        text-decoration: none;
+        ;
+    }
+
+
+    // .popup {
+    //     .table {
+    //         th {
+    //             background-color: #f7f8f8 !important;
+    //             -webkit-print-color-adjust: exact;
+    //         }
+    //     }
+    // }
+
+    .fc-scrollgrid-sync-inner:not(.fc-daygrid-day-frame) {
+        padding: 0.5rem;
+        background-color: #f7f8f8 !important;
+        -webkit-print-color-adjust: exact;
+        ;
+    }
+
+    textarea {
+        overflow: visible !important;
+        white-space: pre;
+        white-space: pre-wrap;
+    }
+
+    .table {
+        border-collapse: collapse !important;
+        font-size: 14px;
+        page-break-inside: auto;
+
+        td,
+        th {
+            background-color: $white !important;
+        }
+
+        th {
+            background-color: #f7f8f8 !important;
+            -webkit-print-color-adjust: exact;
+        }
+
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+
+        thead {
+            display: table-header-group
+        }
+
+        tfoot {
+            display: table-footer-group
+        }
+    }
+
+    //커스텀 inuput[check ~ radio] print css
+    .custom-control-label {
+        color: #efefef;
+        opacity: 0.5 !important;
+    }
+
+    //선택된 input만 강조 
+    .custom-control-input:checked~.custom-control-label {
+        color: $black;
+        opacity: 1 !important;
+    }
+
+    .custom-control-input:checked~.custom-control-label::before {
+        color: #fff !important;
+        border-color: $black !important;
+        background: $black !important;
+        border: 4px solid $black !important;
+        ;
+
+    }
+
+    .custom-control-input:checked~.custom-control-label::after {
+        -webkit-print-color-adjust: exact;
+    }
+
+    // 테이블 백그라운드 속성
+    .table-bg {
+        background-color: #f2f2f2 !important;
+    }
+
+    body {
+        font-family: 'Malgun Gothic', ' dotum', 'gulim', sans-serif;
+        &.print{
+            width:210mm!important;
+            .content-wrapper{
+                margin-left:0!important;
+            }
+            .content{
+                min-width: none!important;
+            }
+        }
+    }
+
+
 }
+
+// -------------아래부터는 프린트 속성이 아니라 웹스타일 입니다.---------------
 
 h1,
 h2,
@@ -30,34 +220,55 @@ h3,
 h4,
 h5 {
     page-break-after: avoid;
+    display: flex;
+    justify-content: center;
 }
 
-table,
 figure,
-.sector {
-    page-break-inside: avoid;
+.sector,
+.table {
+    // page-break-inside: avoid;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
 }
+
+.no-print-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.page {
+    position: relative;
+    width: 210mm;
+    page-break-before: always;
+    margin: auto;
+}
+
 
 .table {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 1rem;
-}
+    border-collapse: collapse !important;
+    font-size: 14px;
+    page-break-inside: auto;
 
-thead {
-    display: table-header-group;
-    vertical-align: middle;
-    border-color: inherit;
-    text-align: center;
-}
+    td,
+    th {
+        background-color: $white !important;
+    }
 
-tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto
+    }
+
+    thead {
+        display: table-header-group
+    }
+
+    tfoot {
+        display: table-footer-group
+    }
 }
 
 .table td,
@@ -65,11 +276,366 @@ tbody {
     padding: .75rem;
     vertical-align: middle;
     border-top: 1px solid #eceeef;
-    border-left: 1px solid #eceeef;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.table-bordered {
+
+    th,
+    td {
+        border: 1px solid $gray-300;
+    }
+
+    th {
+        background: #f7f8f8 !important;
+    }
+}
+
+.table-fixed {
+    table-layout: fixed;
+}
+
+.invoice {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        margin-top: 20px;
+        list-style: none;
+        color: $gray-600;
+
+        li {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+.sector-footer {
+    page-break-inside: avoid;
+    padding-top: 30px;
+    position: relative;
+
+    h1 {
+        font-size: 30px;
+        position: relative;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .seal {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 13%;
+        z-index: -1;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    p {
+        margin-top: 20px;
+        color: #427079;
+        text-align: center;
+    }
+
+    &.certificate {
+        .seal {
+            right: 13%;
+            top: 60%;
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+    }
+}
+
+
+.list-style {
+    padding-left: 20px;
+
+    li {
+        list-style: circle;
+        font-weight: bold;
+    }
+}
+
+.perforation {
+    height: 150px;
+    font-size: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        vertical-align: middle;
+        border-bottom: 1px dashed #ddd;
+        width: 45%;
+    }
+
+    .perforation-text {
+        width: 10%;
+        text-align: center;
+    }
+}
+
+.only-print-area {
+    display: none;
+}
+
+
+
+// 웹상에서 보이는 바디 스타일
+body {
+    // 윈도우 팝업 출력
+    &.popup {
+        margin: 0;
+        min-width: 850px !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        pointer-events: auto;
+        height: 100%;
+        min-height: calc(100% - 3.5rem);
+        max-height: calc(100% - 3.5rem);
+        padding: 0 !important;
+
+        .popup-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 1rem 1rem;
+            border-bottom: 1px solid #efefef;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            background-color: #0c6276 !important;
+            flex-shrink: 0;
+            max-width: 1000px;
+            margin: auto;
+
+            h1 {
+                color: #fff !important;
+                margin: 0;
+                line-height: 1.5;
+                font-size: 20px;
+                font-weight: 500;
+                letter-spacing: -1px;
+            }
+
+            .close {
+                opacity: 1;
+                width: 30px;
+                height: 30px;
+                z-index: 1;
+            }
+        }
+
+        .popup-footer {
+            margin: auto;
+            max-width: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem;
+            border-top: 1px solid #efefef;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            flex-shrink: 0;
+
+            &.row {
+                >div {
+                    width: 33.33%;
+
+                    &:last-child {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .btn {
+                width: 120px;
+            }
+        }
+
+        .table {
+            th {
+                background: #f7f8f8 !important;
+            }
+
+            td {
+                text-align: center;
+            }
+        }
+
+        .table-sm {
+
+            th,
+            td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .btn {
+                font-size: 12px !important;
+            }
+        }
+
+
+        .table-title {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 8px;
+            justify-content: space-between;
+
+            strong {
+                font-size: 14px;
+                color: $danger;
+                margin-top: 3px;
+                margin-left: 4px;
+            }
+
+            >p {
+                width: 50%;
+            }
+        }
+
+        .table-top-info {
+            &+table {
+                border-top: 2px solid #111;
+            }
+        }
+
+        .profile-thumb {
+            width: 110px;
+            height: 146px;
+            overflow: hidden;
+            vertical-align: middle;
+            background-color: $border-color;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+
+            span {
+                font-size: 12px;
+                line-height: 146px;
+                color: $gray-300;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .printBtn {
+            text-decoration: none;
+            padding: 0.4rem 0.75rem;
+            border: 1px solid #efefef;
+            color: #111;
+            font-size: 14px;
+            display: block;
+        }
+
+        .table-div {
+            width: 50%;
+            text-align: right;
+        }
+
+        .calendar-wrap {
+            padding-top: 2rem;
+            border-top: 1px solid #efefef;
+        }
+
+        .btn {
+            &+.btn {
+                margin-left: 10px;
+            }
+
+            // &.btn-primary{
+            //     background:#0c6276;
+            //     color:#fff;
+            // }
+            // &.btn-secondary{
+            //     background:#7c7f82;
+            //     color:#fff;
+            // }
+            // &.btn-dark{
+            //     background:#111;
+            //     color:#fff;
+            // }
+        }
+    }
+    // 페이지 내 출력
+    &.print{
+        .page{
+            width: 80%;
+            margin:0!important;
+        }
+    }
+}
+
+
+// 풀캘린더 스타일
+.fc-toolbar-title {
+    font-size: 18px !important;
+    font-weight: 700;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 0.5rem;
+}
+
+.fc-scrollgrid-sync-inner:not(.fc-daygrid-day-frame) {
+    padding: 0.5rem;
+    background: #f7f8f8;
+}
+
+.fc-header-toolbar {
+    position: relative;
+}
+
+.fc-daygrid-day-frame {
+    padding: 0;
+}
+
+.fc .fc-daygrid-day-number {
+    font-size: 12px;
+}
+
+.fc .fc-col-header-cell-cushion {
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+    border: 1px solid #efefef;
+    outline: 0;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+.textarea-input {
+    min-height: 138px;
+}
+
+
+.table-bg {
+    background-color: #f2f2f2 !important;
 }

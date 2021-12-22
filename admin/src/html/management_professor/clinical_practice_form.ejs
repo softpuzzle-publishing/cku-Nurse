@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+    <!-- 프린트 css  -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/print.css" media="screen" />
+    <link rel="stylesheet" href="../assets/css/print.css" media="print" />
+</head>
+
+<style>
+    @page {
+        /*A4*/
+        size: A4 portrait;
+        margin: 30mm 22mm 30mm 22mm;
+    }
+
+    @media print {
+        .page {
+            margin: 0 auto;
+        }
+    }
+</style>
+
+<body class="hold-transition sidebar-mini print">
+    <div class="wrapper">
+
+        <div class="no-print-page">
+            <%- include('../layout/_header.ejs')%>
+
+            <%- include('../layout/_sidebar.ejs')%>
+        </div>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header no-print-page">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="table-title justify-content-start">교수업무관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">교수업무관리</a></li>
+                                <li class="breadcrumb-item">임상실습지도관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="clinical_practice">
+                <div class="container-fluid ">
+                    <!-- 프린트 영역 -->
+                    <div class="page">
+
+                        <div class="row justify-content-between align-items-end no-print-page">
+                            <div class="col-auto">
+                                <h3 class="table-title">임상실습 순회지도 및 집단회 지도일지(단일기관)</h3>
+                            </div>
+                            <div class="col-auto pb-2">
+                                <button type="button" class="btn btn-outline-dark printBtn">인쇄</button>
+                            </div>
+                        </div>
+
+                        <div class="only-print-area">
+                            <h2 class="table-title text-center">임상실습 순회지도 및 집단회 지도일지(단일기관)</h2>
+                        </div>
+                        <br class="only-print-area">
+                        <div class="sector">
+                            <table class="table table-bordered table-fixed">
+                                <colgroup>
+                                    <col style="width:75px">
+                                    <col style="width:75px">
+                                    <col style="width:12%">
+                                    <col>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center table-bg" colspan="2">과목명</th>
+                                        <td class="text-center" colspan="2">성인 간호학1</td>
+                                        <th class="text-center table-bg">지도교수</th>
+                                        <td class="text-center">김교수</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" colspan="2">실습기간</th>
+                                        <td class="text-center" colspan="2">2021. 01. 05 ∼ 2021. 01. 08</td>
+                                        <th class="text-center">실습기관</th>
+                                        <td class="text-center">강릉제일병원</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" colspan="2">실습부서</th>
+                                        <th class="text-center">임상실습<br> 현장지도자</th>
+                                        <th class="text-center" colspan="3">실습학생</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" colspan="2">120병동</th>
+                                        <td class="text-center">김간호</td>
+                                        <td class="text-center" colspan="3">김학생, 이학생, 진학생, 민학생,김학생, 이학생, 진학생, 민학생, 이학생, 진학생, 민학생,김학생, 이학생, 진학생, , 이학생, 진학생, 민학생,김학생, 이학생, 진학생
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" rowspan="7">1주차</th>
+                                        <th class="text-center" rowspan="5">순회지도</th>
+                                        <th class="text-center">부서</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-tour" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">92병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2" rowspan="4">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">83병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">82병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">응급병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" rowspan="2">집담회</th>
+                                        <th class="text-center">장소</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-meeting" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <input type="text" class="form-control no-print-page" id="form-input">
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div id="form-output" class="only-print-area">
+                                                1층 회의실
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                순회지도를 통해 실습에 대한 에로사항을 경청하고, 함께 방법을 강구하였음
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" colspan="2">비고</th>
+                                        <td colspan="4">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                성실하고 착하고 친절하고 성품이 올바라요
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row row-10 justify-content-between mt-3 no-print-page">
+                            <div class="col-auto">
+                                <a href="javascript:history.back()" class="btn btn-primary min-width-90px">목록</a>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-primary min-width-90px" onclick="window.location.href='student_form.html'">수정</button>
+                                <button type="button" class="btn btn-primary min-width-90px" data-toggle="modal" data-target="#modal-delete">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.print -->
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        /*
+         * 프린트 시  바디 사이즈 정렬
+         */
+        $('.printBtn').on('click', function () {
+            window.print();
+        });
+        $(document).ready(function () {
+            // $("#modal-practice-log-meeting").modal("show");
+        });
+    </script>
+</body>
+
+</html>
