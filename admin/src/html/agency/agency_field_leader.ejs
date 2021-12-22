@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">실습기관관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">실습기관관리</a></li>
+                                <li class="breadcrumb-item">부서 및 현장지도자정보</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="agency-leader">
+                <div class="container-fluid">
+                    <div class="row row-0 justify-content-between align-items-end mb-3">
+                        <div class="col-auto bg-gray-1 p-3">
+                            <p class="text-danger mb-2 font-weight-bold">유의사항</p>
+                            <p>※ 부서등록은 학교관리자만 할 수 있습니다. 부서등록이 필요한 경우 가톨릭관동대학교 간호학과에 문의하세요 (전화 033-1234-5687)</p>
+                        </div>
+                    </div>                       
+                    <div class="row justify-content-between align-items-end mb-3 ">
+                        <div class="col-auto">
+                            <b>Total : 000</b>
+                            Page 1/3
+                        </div>
+                        <div class="col-auto">
+                            <a href="field_leader_enrollment.html" class="btn btn-primary mr-1" >등록</a>
+                            <select class="custom-select w-auto">
+                                <option>10</option>
+                                <option>30</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center" style="width: 50px">
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="checkAll">
+                                            <label class="custom-control-label" for="checkAll"><label>
+                                        </div>
+                                    </th>
+                                    <th class="text-center">번호</th>
+                                    <th class="text-center">실습기관</th>
+                                    <th class="text-center">부서분류</th>
+                                    <th class="text-center text-danger">실습단위</th>
+                                    <th class="text-center">부서전화번호</th>
+                                    <th class="text-center">현장지도자</th>
+                                    <th class="text-center">직위</th>
+                                    <th class="text-center">해당분야경력</th>
+                                    <th class="text-center">최종학력</th>
+                                    <th class="text-center">간호사면허</th>
+                                    <th class="text-center">아이디</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 10; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="check<%= i %>">
+                                            <label class="custom-control-label" for="check<%= i %>"><label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><%= i %></td>
+                                    <td class="text-center"><a href="field_leader_detail.html" class="text-underline">강릉제일병원</a></td>
+                                    <td class="text-center">신생아실</td>
+                                    <td class="text-center">신생아실1동</td>
+                                    <td class="text-center">033-1234-9897</td>
+                                    <td class="text-center">김현장</td>
+                                    <td class="text-center text-danger">간호부팀장</td>
+                                    <td class="text-center">8년 2개월</td>
+                                    <td class="text-center">서울간호대학교</td>
+                                    <td class="text-center">유</td>
+                                    <td class="text-center">asdf1234</td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>

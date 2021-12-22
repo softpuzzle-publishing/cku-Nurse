@@ -18,13 +18,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">교과목별 실습배치표</h1>
+                            <h1 class="title">실습관리</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">학생관리</a></li>
-                                <li class="breadcrumb-item">교과목별 실습배치표</li>
+                                <li class="breadcrumb-item"><a href="#">실습관리</a></li>
+                                <li class="breadcrumb-item">교과목별 실습평가</li>
                             </ol>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content" data-menu="practice-student">
+            <div class="content" data-menu="practice-subject">
                 <div class="container-fluid">
                     <div class="inquery-area">
                         <p class="font-size-18px font-weight-bold">● 실습과목별 실습배치표</p>
@@ -133,6 +133,7 @@
                                     <th class="text-center">10차</th>
                                     <th class="text-center">11차</th>
                                     <th class="text-center">12차</th>
+                                    <th class="text-center" rowspan="2">인원수</th>
                                 </tr>
                                 <tr>
                                     <th class="text-center">01.19∼<br>02.26</th>
@@ -150,13 +151,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <% for(var i = 4; i > 0 ; i--){ %>
+                                <!-- 1번째 -->
+                                <% for(var i = 2; i > 0 ; i--){ %>
                                 <tr>
-                                    <td class="text-center">1분기</td>
-                                    <td class="text-center">아동간호실습1</td>
-                                    <td class="text-center">강릉성심병원</td>
-                                    <td class="text-center">소아과</td>
-                                    <td class="text-center">소아병동</td>
+                                    <td class="text-center" rowspan="2">1분기</td>
+                                    <td class="text-center" rowspan="2">아동간호실습1</td>
+                                    <td class="text-center" rowspan="2">강릉성심병원</td>
+                                    <td class="text-center" rowspan="2">소아과</td>
+                                    <td class="text-center" rowspan="2">소아병동</td>
                                     <td>
                                         <a href="#modal-table-list" data-toggle="modal">
                                             <div>
@@ -175,8 +177,12 @@
                                             </div>
                                         </a>
                                     </td>
-                                    <td></td>
-                                    <td></td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
                                     <td>
                                         <a href="#modal-table-list" data-toggle="modal">
                                             <div>
@@ -213,14 +219,114 @@
                                             </div>
                                         </a>
                                     </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
+                                    <td class="text-center" rowspan="2">11</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#modal-table-list" data-toggle="modal">
+                                            <div>
+                                                <p class="class font-size-12px">성인간호실습I</p>
+                                                <p class="hospital font-size-12px">강릉성심병원</p>
+                                                <p class="place font-size-12px">101병동</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#modal-table-list" data-toggle="modal">
+                                            <div>
+                                                <p class="class font-size-12px">성인간호실습I</p>
+                                                <p class="hospital font-size-12px">강릉성심병원</p>
+                                                <p class="place font-size-12px">101병동</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
+                                    <td>
+                                        <a href="#modal-table-list" data-toggle="modal">
+                                            <div>
+                                                <p class="class font-size-12px">성인간호실습I</p>
+                                                <p class="hospital font-size-12px">강릉성심병원</p>
+                                                <p class="place font-size-12px">101병동</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#modal-table-list" data-toggle="modal">
+                                        <div>
+                                            <p class="class font-size-12px">성인간호실습I</p>
+                                            <p class="hospital font-size-12px">강릉성심병원</p>
+                                            <p class="place font-size-12px">101병동</p>
+                                        </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#modal-table-list" data-toggle="modal">
+                                            <div>
+                                                <p class="class font-size-12px">성인간호실습I</p>
+                                                <p class="hospital font-size-12px">강릉성심병원</p>
+                                                <p class="place font-size-12px">101병동</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#modal-table-list" data-toggle="modal">
+                                            <div>
+                                                <p class="class font-size-12px">성인간호실습I</p>
+                                                <p class="hospital font-size-12px">강릉성심병원</p>
+                                                <p class="place font-size-12px">101병동</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
+                                    <td class="td-none-data">
+                                        <div class="none-data"></div>
+                                    </td>
                                 </tr>
                                 <% } %>
+                               
                             </tbody>
                             <tfoot>
-                                
+                                <tr>
+                                    <th class="text-center" colspan="5">인원수</th>
+                                    <th class="text-center">4</th>
+                                    <th class="text-center">4</th>
+                                    <th class="text-center">0</th>
+                                    <th class="text-center">0</th>
+                                    <th class="text-center">4</th>
+                                    <th class="text-center">4</th>
+                                    <th class="text-center">4</th>
+                                    <th class="text-center">4</th>
+                                    <th class="text-center">0</th>
+                                    <th class="text-center">0</th>
+                                    <th class="text-center">0</th>
+                                    <th class="text-center">0</th>
+                                    <th class="text-center">18</th>
+                                </tr>
                             </tfoot>
                         </table>
                     </div>

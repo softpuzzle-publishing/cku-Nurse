@@ -191,15 +191,21 @@
                             <a href="../faculty/faculty_list.html" class="nav-link">
                                 <i class="nav-icon fas fa-chalkboard-teacher"></i>
                                 <p>
-                                    전문교육학과관리
+                                    실습기관관리
                                     <i class="right fas fa-angle-right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../faculty/faculty_list.html" class="nav-link" data-menu="faculty">
+                                    <a href="../agency/agency_info.html" class="nav-link" data-menu="agency-info">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>전문교육학과시간관리</p>
+                                        <p>실습기관정보</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../agency/agency_field_leader.html" class="nav-link" data-menu="agency-leader">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>부서 및 현장지도자정보</p>
                                     </a>
                                 </li>
                             </ul>
@@ -208,7 +214,7 @@
                             <a href="../task/safety_list.html" class="nav-link">
                                 <i class="nav-icon fas fa-tasks"></i>
                                 <p>
-                                    업무관리
+                                    프로그램관리
                                     <i class="right fas fa-angle-right"></i>
                                 </p>
                             </a>
@@ -216,19 +222,19 @@
                                 <li class="nav-item">
                                     <a href="../task/safety_list.html" class="nav-link" data-menu="safety">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>안전보고현황</p>
+                                        <p>교육현황관리</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../task/consignment_list.html" class="nav-link" data-menu="consignment">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>위탁기관관리</p>
+                                        <p>교육프로그램관리</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../task/instructor_list.html" class="nav-link" data-menu="instructor">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>교관관리</p>
+                                        <p>검진/예방검사 관리</p>
                                     </a>
                                 </li>
                             </ul>
@@ -2109,93 +2115,29 @@
     </div>
 
 
-    <!-- 모달 : 납입관리-->
-    <div class="modal" tabindex="-1" role="dialog" id="modal-payment-management">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
+    <!-- 모달 : 부서등록 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-department">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content p-0">
                 <div class="modal-header">
-                    <h1 class="modal-title">납입관리</h1>
+                    <h1 class="modal-title">부서 등록</h1>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
-
-                    <div class="form-group row row-30 align-items-center justify-content-center">
-                        <div class="col-auto">
-                            <strong>연도 선택</strong>
-                        </div>
-                        <div class="col-auto">
-                            <select name="" id="" class="custom-select width-200px">
-                                <option value="">2022년</option>
-                                <option value=""></option>
-                            </select>
-                        </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <input type="text" class="form-control" placeholder="추가할 부서명 입력">
                     </div>
-
-                    <table class="table table-bordered mb-0 ">
-                        <colgroup>
-                            <col style="width:80px">
-                            <col>
-                            <col>
-                            <col>
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th class="text-center">구분</th>
-                                <th class="text-center">납입일</th>
-                                <th class="text-center">납입내용</th>
-                                <th class="text-center">납입금액(원)</th>
-                                <th class="text-center"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center">1차</td>
-                                <td class="text-center">
-                                    <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td class="text-center">
-                                    <div class="d-flex">
-                                        <button class="btn increase-btn btn-outline-borderColor">+</button>
-                                        <button class="btn increase-btn btn-outline-borderColor m-l-5">-</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">2차</td>
-                                <td class="text-center">
-                                    <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td class="text-center">
-                                    <div class="d-flex">
-                                        <button class="btn increase-btn btn-outline-borderColor">+</button>
-                                        <button class="btn increase-btn btn-outline-borderColor m-l-5">-</button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
                     <button type="button" class="btn btn-primary">저장</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- 모달 : 납입내역 -->
     <div class="modal" tabindex="-1" role="dialog" id="modal-payment-management-view">
