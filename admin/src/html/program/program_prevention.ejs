@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">프로그램관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">프로그램관리</a></li>
+                                <li class="breadcrumb-item">검진/예방검사 관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="program-prevention">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+                        <p class="font-size-18px font-weight-bold mb-3">결핵(흉부 x선) 검사</p>
+                        <table class="table table-bordered mb-0 mt-2">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">항목</th>
+                                    <th class="text-center">설명</th>
+                                    <th class="text-center">검사결과 (항체유무)</th>
+                                    <th class="text-center">검사일 지정</th>
+                                    <th class="text-center">증빙자료(결과지)</th>
+                                    <th class="text-center">항목노출</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center text-danger">
+                                        <input type="text" class="form-control">
+                                    </td>
+                                    <td class="text-center">
+                                        <input type="text" class="form-control">
+                                    </td>
+                                    <td>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio" checked>
+                                            <label for="customRadio1" class="custom-control-label">노출</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio2" name="customRadio">
+                                            <label for="customRadio2" class="custom-control-label">비노출</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio3" name="customRadio2" checked>
+                                            <label for="customRadio1" class="custom-control-label">지정</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio4" name="customRadio2">
+                                            <label for="customRadio2" class="custom-control-label">미지정</label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio4" name="customRadio3" checked>
+                                            <label for="customRadio1" class="custom-control-label">첨부필수</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio5" name="customRadio3">
+                                            <label for="customRadio2" class="custom-control-label">미첨부(비노출)</label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio6" name="customRadio4" checked>
+                                            <label for="customRadio1" class="custom-control-label">노출</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio7" name="customRadio4">
+                                            <label for="customRadio2" class="custom-control-label">비노출</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+                        <div class="d-flex align-items-center justify-content-between mb-3 mt-4">
+                            <p class="font-size-18px font-weight-bold ">항체검사 및 예방접종</p>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-primary width-90px mr-2">항목 추가</button>
+                                <button type="button" class="btn btn-secondary width-90px">항목 빼기</button>
+                            </div>
+                        </div>
+                        <table class="table table-bordered mb-0 mt-2">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">항목</th>
+                                    <th class="text-center">설명</th>
+                                    <th class="text-center">검사결과 (항체유무)</th>
+                                    <th class="text-center">검사일 지정</th>
+                                    <th class="text-center">증빙자료(결과지)</th>
+                                    <th class="text-center">접종차수</th>
+                                    <th class="text-center">항목노출</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 4; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center text-danger">
+                                        <input type="text" class="form-control">
+                                    </td>
+                                    <td class="text-center">
+                                        <input type="text" class="form-control">
+                                    </td>
+                                    <td>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio" checked>
+                                            <label for="customRadio1" class="custom-control-label">노출</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio2" name="customRadio">
+                                            <label for="customRadio2" class="custom-control-label">비노출</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio3" name="customRadio2" checked>
+                                            <label for="customRadio1" class="custom-control-label">지정</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio4" name="customRadio2">
+                                            <label for="customRadio2" class="custom-control-label">미지정</label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <select name="" id="" class="custom-select">
+                                            <option value="">1차</option>
+                                        </select>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio4" name="customRadio3" checked>
+                                            <label for="customRadio1" class="custom-control-label">첨부필수</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio5" name="customRadio3">
+                                            <label for="customRadio2" class="custom-control-label">미첨부(비노출)</label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio6" name="customRadio4" checked>
+                                            <label for="customRadio1" class="custom-control-label">노출</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio7" name="customRadio4">
+                                            <label for="customRadio2" class="custom-control-label">비노출</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                        <div class="d-flex justify-content-center mt-5">
+                            <button type="button" class="btn btn-primary width-90px mr-2">저장</button>
+                            <button type="button" class="btn btn-secondary width-90px">취소</button>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>
