@@ -1,6 +1,6 @@
 body{
     -webkit-font-smoothing: antialiased;
-    &:not(.pop){min-width:1340px;}
+    &:not(.pop):not(.print){min-width:1340px;}
     .content{
         min-width:1090px; // - sidebar width
     }

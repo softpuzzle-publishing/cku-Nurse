@@ -38,320 +38,341 @@
     <script src="/assets/js/ui.js" defer></script>
 
 
+    <!-- 프린트 css  -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/print.css" media="screen" />
+    <link rel="stylesheet" href="../assets/css/print.css" media="print" />
 </head>
 
-<body class="hold-transition sidebar-mini">
+<style>
+    @page {
+        /*A4*/
+        size: A4 portrait;
+        margin: 30mm 22mm 30mm 22mm;
+    }
+
+    @media print {
+        body.print .page {
+            width: 210mm !important;
+            margin: 0 auto !important;
+        }
+    }
+</style>
+
+<body class="hold-transition sidebar-mini print">
     <div class="wrapper">
 
-        <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <div class="ml-auto">
-                <div class="d-flex align-items-center pr-2">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-user-circle mr-2 font-size-30px"></i>
-                        <a href="">관리자</a>
+        <div class="no-print-page">
+            <!-- Navbar -->
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <div class="ml-auto">
+                    <div class="d-flex align-items-center pr-2">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-user-circle mr-2 font-size-30px"></i>
+                            <a href="">관리자</a>
+                        </div>
+                        <button type="button" class="btn btn-light btn-round ml-4">로그아웃</button>
                     </div>
-                    <button type="button" class="btn btn-light btn-round ml-4">로그아웃</button>
                 </div>
-            </div>
-        </nav>
-        <!-- /.navbar -->
+            </nav>
+            <!-- /.navbar -->
 
-        <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary">
-            <!-- Brand Logo -->
-            <a href="#none" class="brand-link text-center">
-                <!-- <span class="brand-image"><img src="//assets/images/logo.svg" alt="서초구 Logo" class="img-circle"></span> -->
-                <img src="/assets/images/logo.svg" alt="" style="width:162px">
-                <div class="mt-1">간호학과</div>
-            </a>
+            <!-- Main Sidebar Container -->
+            <aside class="main-sidebar sidebar-dark-primary">
+                <!-- Brand Logo -->
+                <a href="#none" class="brand-link text-center">
+                    <!-- <span class="brand-image"><img src="//assets/images/logo.svg" alt="서초구 Logo" class="img-circle"></span> -->
+                    <img src="/assets/images/logo.svg" alt="" style="width:162px">
+                    <div class="mt-1">간호학과</div>
+                </a>
 
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <nav>
-                    <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
-                        <li class="nav-item has-treeview">
-                            <a href="../student/student_list.html" class="nav-link">
-                                <i class="nav-icon fas fa-user"></i>
-                                <p>
-                                    학생관리
-                                    <i class="right fas fa-angle-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../student/student_list.html" class="nav-link" data-menu="student">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>재학생관리</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../student/student_practice_list.html" class="nav-link" data-menu="practice-student">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>실습학생관리</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../student/student_join.html" class="nav-link" data-menu="join-student">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>학생 참여관리</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../student/student_placement_table.html" class="nav-link" data-menu="student-placement-student">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>학년별 실습배치표</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="../operation/operation_list.html" class="nav-link">
-                                <i class="nav-icon fas fa-school"></i>
-                                <p>
-                                    운영관리
-                                    <i class="right fas fa-angle-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../operation/operation_list.html" class="nav-link" data-menu="operation-subject">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>교과목정보</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../operation/operation_appraisal.html" class="nav-link" data-menu="operation-appraisal">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>평가서관리</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../operation/operation_term.html" class="nav-link" data-menu="operation-term">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>분기정보</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../operation/operation_agency.html" class="nav-link" data-menu="operation-agency">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>실습기관배정</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../operation/operation_charge.html" class="nav-link" data-menu="operation-charge">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>담당/평가표/실습과목 배정</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="../practice/practice_student_placement.html" class="nav-link">
-                                <i class="nav-icon fas fa-plane"></i>
-                                <p>
-                                    실습관리
-                                    <i class="right fas fa-angle-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../practice/practice_student_placement.html" class="nav-link" data-menu="practice-placement">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>학생배치 대상관리</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../practice/practice_target.html" class="nav-link" data-menu="practice-target">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>실습대상 관리</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../practice/practice_subject_table.html" class="nav-link" data-menu="practice-table">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>실습배치표 관리</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../practice/practice_table.html" class="nav-link" data-menu="practice-subject">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>교과목별 실습배치표</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../practice/practice_subject_evaluation.html" class="nav-link" data-menu="practice-evalutaion">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>교과목별 실습평가</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="../faculty/faculty_list.html" class="nav-link">
-                                <i class="nav-icon fas fa-chalkboard-teacher"></i>
-                                <p>
-                                    전문교육학과관리
-                                    <i class="right fas fa-angle-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../faculty/faculty_list.html" class="nav-link" data-menu="faculty">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>전문교육학과시간관리</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="../task/safety_list.html" class="nav-link">
-                                <i class="nav-icon fas fa-tasks"></i>
-                                <p>
-                                    업무관리
-                                    <i class="right fas fa-angle-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../task/safety_list.html" class="nav-link" data-menu="safety">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>안전보고현황</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../task/consignment_list.html" class="nav-link" data-menu="consignment">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>위탁기관관리</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../task/instructor_list.html" class="nav-link" data-menu="instructor">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>교관관리</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="../management_professor/" class="nav-link">
-                                <i class="nav-icon fas fa-archive"></i>
-                                <p>
-                                    교수업무관리
-                                    <i class="right fas fa-angle-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../management_professor/traning_history_list.html" class="nav-link" data-menu="training-history">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>교수개발 참여실적</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../management_professor/settlement_list.html" class="nav-link" data-menu="settlement">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>핵심간호술 관리</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../management_professor/settlement_list.html" class="nav-link" data-menu="settlement">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>핵심간호술 종합</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../management_professor/clinical_practice_list.html" class="nav-link" data-menu="clinical_practice">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>임상실습지도관리</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="../board/notice_list.html" class="nav-link">
-                                <i class="nav-icon fas fa-clipboard"></i>
-                                <p>
-                                    게시판관리
-                                    <i class="right fas fa-angle-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../board/notice_list.html" class="nav-link" data-menu="notice">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>공지사항</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../board/resource_list.html" class="nav-link" data-menu="resource">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>자료실</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../board/qna_list.html" class="nav-link" data-menu="qna">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>1:1문의</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../board/popup_list.html" class="nav-link" data-menu="popup">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>팝업관리</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="../system/insider_list.html" class="nav-link">
-                                <i class="nav-icon fas fa-cog"></i>
-                                <p>
-                                    시스템관리
-                                    <i class="right fas fa-angle-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../system/insider_list.html" class="nav-link" data-menu="insider">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>내부사용자관리</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../system/password_change.html" class="nav-link" data-menu="password">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>비밀번호변경</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../system/academic_import.html" class="nav-link" data-menu="academic">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>학사정보 가져오기</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- /.sidebar -->
-        </aside>
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <nav>
+                        <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-item has-treeview">
+                                <a href="../student/student_list.html" class="nav-link">
+                                    <i class="nav-icon fas fa-user"></i>
+                                    <p>
+                                        학생관리
+                                        <i class="right fas fa-angle-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="../student/student_list.html" class="nav-link" data-menu="student">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>재학생관리</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../student/student_practice_list.html" class="nav-link" data-menu="practice-student">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>실습학생관리</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../student/student_join.html" class="nav-link" data-menu="join-student">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>학생 참여관리</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../student/student_placement_table.html" class="nav-link" data-menu="student-placement-student">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>학년별 실습배치표</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="../operation/operation_list.html" class="nav-link">
+                                    <i class="nav-icon fas fa-school"></i>
+                                    <p>
+                                        운영관리
+                                        <i class="right fas fa-angle-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="../operation/operation_list.html" class="nav-link" data-menu="operation-subject">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>교과목정보</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../operation/operation_appraisal.html" class="nav-link" data-menu="operation-appraisal">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>평가서관리</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../operation/operation_term.html" class="nav-link" data-menu="operation-term">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>분기정보</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../operation/operation_agency.html" class="nav-link" data-menu="operation-agency">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>실습기관배정</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../operation/operation_charge.html" class="nav-link" data-menu="operation-charge">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>담당/평가표/실습과목 배정</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="../practice/practice_student_placement.html" class="nav-link">
+                                    <i class="nav-icon fas fa-plane"></i>
+                                    <p>
+                                        실습관리
+                                        <i class="right fas fa-angle-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="../practice/practice_student_placement.html" class="nav-link" data-menu="practice-placement">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>학생배치 대상관리</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../practice/practice_target.html" class="nav-link" data-menu="practice-target">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>실습대상 관리</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../practice/practice_subject_table.html" class="nav-link" data-menu="practice-table">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>실습배치표 관리</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../practice/practice_table.html" class="nav-link" data-menu="practice-subject">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>교과목별 실습배치표</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../practice/practice_subject_evaluation.html" class="nav-link" data-menu="practice-evalutaion">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>교과목별 실습평가</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="../faculty/faculty_list.html" class="nav-link">
+                                    <i class="nav-icon fas fa-chalkboard-teacher"></i>
+                                    <p>
+                                        전문교육학과관리
+                                        <i class="right fas fa-angle-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="../faculty/faculty_list.html" class="nav-link" data-menu="faculty">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>전문교육학과시간관리</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="../task/safety_list.html" class="nav-link">
+                                    <i class="nav-icon fas fa-tasks"></i>
+                                    <p>
+                                        업무관리
+                                        <i class="right fas fa-angle-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="../task/safety_list.html" class="nav-link" data-menu="safety">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>안전보고현황</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../task/consignment_list.html" class="nav-link" data-menu="consignment">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>위탁기관관리</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../task/instructor_list.html" class="nav-link" data-menu="instructor">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>교관관리</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="../management_professor/" class="nav-link">
+                                    <i class="nav-icon fas fa-archive"></i>
+                                    <p>
+                                        교수업무관리
+                                        <i class="right fas fa-angle-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="../management_professor/traning_history_list.html" class="nav-link" data-menu="training-history">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>교수개발 참여실적</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../management_professor/settlement_list.html" class="nav-link" data-menu="settlement">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>핵심간호술 관리</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../management_professor/settlement_list.html" class="nav-link" data-menu="settlement">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>핵심간호술 종합</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../management_professor/clinical_practice_list.html" class="nav-link" data-menu="clinical_practice">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>임상실습지도관리</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="../board/notice_list.html" class="nav-link">
+                                    <i class="nav-icon fas fa-clipboard"></i>
+                                    <p>
+                                        게시판관리
+                                        <i class="right fas fa-angle-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="../board/notice_list.html" class="nav-link" data-menu="notice">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>공지사항</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../board/resource_list.html" class="nav-link" data-menu="resource">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>자료실</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../board/qna_list.html" class="nav-link" data-menu="qna">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>1:1문의</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../board/popup_list.html" class="nav-link" data-menu="popup">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>팝업관리</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="../system/insider_list.html" class="nav-link">
+                                    <i class="nav-icon fas fa-cog"></i>
+                                    <p>
+                                        시스템관리
+                                        <i class="right fas fa-angle-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="../system/insider_list.html" class="nav-link" data-menu="insider">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>내부사용자관리</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../system/password_change.html" class="nav-link" data-menu="password">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>비밀번호변경</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../system/academic_import.html" class="nav-link" data-menu="academic">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>학사정보 가져오기</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- /.sidebar -->
+            </aside>
+        </div>
+
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <div class="content-header">
+            <div class="content-header no-print-page">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">학생관리</h1>
+                            <h1 class="table-title justify-content-start">교수업무관리</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">학생관리</a></li>
-                                <li class="breadcrumb-item">재학생관리</li>
+                                <li class="breadcrumb-item"><a href="#">교수업무관리</a></li>
+                                <li class="breadcrumb-item">임상실습지도관리</li>
                             </ol>
                         </div>
                     </div>
@@ -360,225 +381,463 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content" data-menu="student">
-                <div class="container-fluid">
-                    <div class="row justify-content-between align-items-end">
-                        <div class="col-auto">
-                            <h3 class="table-title">학생기본정보</h3>
+            <div class="content" data-menu="clinical_practice">
+                <div class="container-fluid ">
+                    <!-- 프린트 영역 -->
+                    <div class="page">
+
+                        <div class="row justify-content-between align-items-end no-print-page">
+                            <div class="col-auto">
+                                <h3 class="table-title">임상실습 순회지도 및 집단회 지도일지(단일기관)</h3>
+                            </div>
+                            <div class="col-auto pb-2">
+                                <button type="button" class="btn btn-outline-dark printBtn">인쇄</button>
+                            </div>
                         </div>
-                        <div class="col-auto pb-2">
-                            <button type="button" class="btn btn-primary" data-target="#modal-reset-password" data-toggle="modal">비밀번호 초기화</button>
+
+                        <div class="only-print-area">
+                            <h2 class="table-title text-center">임상실습 순회지도 및 집단회 지도일지(단일기관)</h2>
+                        </div>
+                        <br class="only-print-area">
+                        <div class="sector">
+                            <table class="table table-bordered table-fixed">
+                                <colgroup>
+                                    <col style="width:75px">
+                                    <col style="width:75px">
+                                    <col style="width:15%">
+                                    <col>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center table-bg" colspan="2">과목명</th>
+                                        <td class="text-center" colspan="2">성인 간호학1</td>
+                                        <th class="text-center table-bg">지도교수</th>
+                                        <td class="text-center">김교수</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" colspan="2">실습기간</th>
+                                        <td class="text-center" colspan="2">2021. 01. 05 ∼ 2021. 01. 08</td>
+                                        <th class="text-center">실습기관</th>
+                                        <td class="text-center">강릉제일병원</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" colspan="2">실습부서</th>
+                                        <th class="text-center">임상실습<br> 현장지도자</th>
+                                        <th class="text-center" colspan="3">실습학생</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" colspan="2">120병동</th>
+                                        <td class="text-center">김간호</td>
+                                        <td class="text-center" colspan="3">김학생, 이학생, 진학생, 민학생,김학생, 이학생, 진학생, 민학생, 이학생, 진학생, 민학생,김학생, 이학생, 진학생, , 이학생, 진학생, 민학생,김학생, 이학생, 진학생
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" rowspan="7">1주차</th>
+                                        <th class="text-center" rowspan="5">순회지도</th>
+                                        <th class="text-center">부서</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-tour" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">92병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2" rowspan="4">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">83병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">82병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">신생아 집중 치료실</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" rowspan="2">집담회</th>
+                                        <th class="text-center">장소</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-meeting" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <input type="text" class="form-control no-print-page" id="form-input">
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div id="form-output" class="only-print-area">
+                                                1층 회의실
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                순회지도를 통해 실습에 대한 에로사항을 경청하고, 함께 방법을 강구하였음
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th class="text-center" rowspan="7">1주차</th>
+                                        <th class="text-center" rowspan="5">순회지도</th>
+                                        <th class="text-center">부서</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-tour" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">92병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2" rowspan="4">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">83병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">82병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">응급병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" rowspan="2">집담회</th>
+                                        <th class="text-center">장소</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-meeting" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <input type="text" class="form-control no-print-page" id="form-input">
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div id="form-output" class="only-print-area">
+                                                1층 회의실
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                순회지도를 통해 실습에 대한 에로사항을 경청하고, 함께 방법을 강구하였음
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" rowspan="7">1주차</th>
+                                        <th class="text-center" rowspan="5">순회지도</th>
+                                        <th class="text-center">부서</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-tour" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">92병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2" rowspan="4">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래 출력할때 내용 잘 나와야해 제발 나와주길 바래
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">83병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">82병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">응급병동</td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" rowspan="2">집담회</th>
+                                        <th class="text-center">장소</th>
+                                        <th class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    지도일시
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="no-print-page">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-target="#modal-practice-log-meeting" data-toggle="modal">일시 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" colspan="2">지도내용</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <input type="text" class="form-control no-print-page" id="form-input">
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div id="form-output" class="only-print-area">
+                                                1층 회의실
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="row row-10 align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    7월 21일
+                                                </div>
+                                                <div class="col-auto">
+                                                    09:00 ~ 10:00
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center" colspan="2">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                순회지도를 통해 실습에 대한 에로사항을 경청하고, 함께 방법을 강구하였음
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" colspan="2">비고</th>
+                                        <td colspan="4">
+                                            <!--아래}} 웹상에서만 보임 (내용 입력하는 영역)-->
+                                            <textarea name="" id="" cols="30" rows="5" class="no-print-page textarea-input form-control"></textarea>
+
+                                            <!-- 아래}} 출력시 보임 (입력된 내용을 출력하기 위해 아래 영역에 textarea 값을 받아서 뿌려주세요.) -->
+                                            <div class="only-print-area">
+                                                성실하고 착하고 친절하고 성품이 올바라요
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row row-10 justify-content-between mt-3 no-print-page">
+                            <div class="col-auto">
+                                <a href="javascript:history.back()" class="btn btn-primary min-width-90px">목록</a>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-primary min-width-90px" onclick="window.location.href='student_form.html'">수정</button>
+                                <button type="button" class="btn btn-primary min-width-90px" data-toggle="modal" data-target="#modal-delete">삭제</button>
+                            </div>
                         </div>
                     </div>
-                    <table class="table table-bordered table-fixed">
-                        <colgroup>
-                            <col style="width:150px">
-                            <col style="width: 34%;">
-                            <col style="width:150px">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>이름 <strong class="text-danger">*</strong></th>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                                <th>학생상태</th>
-                                <td>
-                                    <div class="row row-10 align-items-center">
-                                        <div class="col-auto">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input class="custom-control-input" type="radio" id="normal" name="userStatus" checked>
-                                                <label for="normal" class="custom-control-label">정상</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline mr-0">
-                                                <input class="custom-control-input" type="radio" id="stop" name="userStatus" data-pair="#stop-reason">
-                                                <label for="stop" class="custom-control-label">정지</label>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="input-next-radio" id="stop-reason">
-                                                <label for="reason">- 정지사유</label>
-                                                <input type="text" class="form-control" id="reason">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <script>
-                                        $('[data-pair]').each(function() {
-                                            if ($('[data-pair]').is(':checked')) {
-                                                $($(this).attr('data-pair')).addClass('show');
-                                            }
-                                        })
-                                        $('[name=userStatus]').on('change', function(e) {
-                                            if ($('[data-pair]').prop('checked')) {
-                                                $($('[data-pair]').attr('data-pair')).addClass('show');
-                                            } else {
-                                                $($('[data-pair]').attr('data-pair')).removeClass('show');
-                                            }
-                                        });
-                                    </script>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>학번 <strong class="text-danger">*</strong></th>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                                <th>입학일</th>
-                                <td>
-                                    2021.03.08 / 차단사유 : 관리자 차단(2021.03.01 10:20)
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>휴대폰번호 <strong class="text-danger">*</strong></th>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                                <th>최근 접속일</th>
-                                <td>
-                                    2021.03.08 17:08
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>생년월일 <strong class="text-danger">*</strong></th>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                                <th>부모연락처</th>
-                                <td>
-                                    <div class="row row-10 align-items-center">
-                                        <div class="col-auto">부</div>
-                                        <div class="col">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <div class="col-auto pl-3">모</div>
-                                        <div class="col">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>학년소속 <strong class="text-danger">*</strong></th>
-                                <td>
-                                    <select name="" id="" class="custom-select">
-                                        <option value="">4학년</option>
-                                    </select>
-                                </td>
-                                <th>반 <strong class="text-danger">*</strong></th>
-                                <td>
-                                    2반
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>학생연락처 <strong class="text-danger">*</strong></th>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                                <th>학생주소 <strong class="text-danger">*</strong></th>
-                                <td>
-                                    <div class="row row-10 align-items-center">
-                                        <div class="col-auto">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-dark">주소검색</button>
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" class="form-control" placeholder="상세 주소">
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>최근 신체검사일</th>
-                                <td colspan="3">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            2021년 3월 26일 (남은 검사일 105일)
-                                        </div>
-                                        <div class="col-auto">
-                                            <input type="text" readonly="" class="form-control form-datepicker  min-width-200px" placeholder="0000-00-00">
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h3 class="table-title">휴학관리</h3>
-                    <table class="table table-bordered table-fixed">
-                        <colgroup>
-                            <col style="width:150px">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>휴학일</th>
-                                <td>
-                                    <div class="row row-10 align-items-center">
-                                        <div class="col-auto">
-                                            <input type="text" class="form-control form-datepicker min-width-200px" id="leave-date">
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-dark min-width-70px" id="leave-date-confirm">적용</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-dark" disabled id="btn-leave-cancel">휴학취소</button>
-                                        </div>
-                                    </div>
-                                    <script>
-                                        //적용 버튼 클릭
-                                        $('#leave-date-confirm').on('click', function() {
-                                            if ($('#leave-date').val() !== '') {
-                                                $('#leave-date').addClass('text-danger font-weight-bold');
-                                                $('#btn-leave-cancel').prop('disabled', false);
-                                            }
-                                        });
-                                        //휴학취소 버튼 클릭
-                                        $('#btn-leave-cancel').on('click', function() {
-                                            $('#leave-date').removeClass('text-danger font-weight-bold');
-                                            $('#btn-leave-cancel').prop('disabled', true);
-                                        });
-                                    </script>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>휴학사유</th>
-                                <td>
-                                    <div class="row row-10 align-items-center">
-                                        <div class="col-auto">
-                                            <select name="" id="leave-reason" class="custom-select min-width-200px">
-                                                <option value="">휴학사유 선택</option>
-                                                <option value="">병역휴학</option>
-                                                <option value="">일반휴학</option>
-                                                <option value="">질병휴학</option>
-                                                <option value="">임신/출산/육아휴학</option>
-                                                <option value="">기타사유</option>
-                                            </select>
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" class="form-control" placeholder="기타사유 입력" id="leave-reason-etc" style="display: none;">
-                                        </div>
-                                    </div>
-                                    <script>
-                                        $('#leave-reason').change(function() {
-                                            if ($('#leave-reason option:selected').text() == '기타사유') {
-                                                $('#leave-reason-etc').show().focus();
-                                            }
-                                        });
-                                    </script>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="row row-10 justify-content-center mt-3">
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-secondary min-width-90px" onclick="history.back();">취소</button>
-                        </div>
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-primary min-width-90px" data-toggle="modal" data-target="#modal-reset-studentInfo">저장</button>
-                        </div>
-                    </div>
+                    <!-- /.print -->
                 </div>
             </div>
             <!-- /.content -->
@@ -2527,7 +2786,15 @@
 
 
     <script>
-        $(document).ready(function() {});
+        /*
+         * 프린트 시  바디 사이즈 정렬
+         */
+        $('.printBtn').on('click', function() {
+            window.print();
+        });
+        $(document).ready(function() {
+            // $("#modal-practice-log-meeting").modal("show");
+        });
     </script>
 </body>
 

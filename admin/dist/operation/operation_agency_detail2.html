@@ -234,30 +234,36 @@
                             </ul>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="../expense/traning_history_list.html" class="nav-link">
-                                <i class="nav-icon fas fa-receipt"></i>
+                            <a href="../management_professor/" class="nav-link">
+                                <i class="nav-icon fas fa-archive"></i>
                                 <p>
-                                    교육비관리
+                                    교수업무관리
                                     <i class="right fas fa-angle-right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../expense/traning_history_list.html" class="nav-link" data-menu="training-history">
+                                    <a href="../management_professor/traning_history_list.html" class="nav-link" data-menu="training-history">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>교육내역</p>
+                                        <p>교수개발 참여실적</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../expense/settlement_list.html" class="nav-link" data-menu="settlement">
+                                    <a href="../management_professor/settlement_list.html" class="nav-link" data-menu="settlement">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>정산내역</p>
+                                        <p>핵심간호술 관리</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../expense/payment_list.html" class="nav-link" data-menu="payment">
+                                    <a href="../management_professor/settlement_list.html" class="nav-link" data-menu="settlement">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>납입관리</p>
+                                        <p>핵심간호술 종합</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../management_professor/clinical_practice_list.html" class="nav-link" data-menu="clinical_practice">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>임상실습지도관리</p>
                                     </a>
                                 </li>
                             </ul>
@@ -2222,6 +2228,226 @@
                                 </td>
                                 <td class="text-center">
                                     3,000,000
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                    <button type="button" class="btn btn-primary">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ---------- -->
+    <!-- 간호 모달  -->
+    <!-- ---------- -->
+
+    <!-- 모달 :  순회지도 일시 지정  -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-practice-log-tour">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">순회지도 일시 지정</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group row row-30 align-items-center justify-content-center">
+                        <div class="col-auto">
+                            <strong>순회지도일</strong>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered mb-0 ">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center">부서(실습단위)</th>
+                                <th class="text-center">시작시간</th>
+                                <th class="text-center">종료시간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">92병동</td>
+                                <td class="text-center">
+                                    <div class="row row-10 justify-content-center">
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">09시</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">00분</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-10 justify-content-center">
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">09시</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">00분</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">92병동</td>
+                                <td class="text-center">
+                                    <div class="row row-10 justify-content-center">
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">09시</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">00분</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-10 justify-content-center">
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">09시</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">00분</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">92병동</td>
+                                <td class="text-center">
+                                    <div class="row row-10 justify-content-center">
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">09시</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">00분</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-10 justify-content-center">
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">09시</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">00분</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                    <button type="button" class="btn btn-primary">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 모달 :  집담회 일시 지정  -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-practice-log-meeting">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">집담회 일시 지정</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group row row-30 align-items-center justify-content-center">
+                        <div class="col-auto">
+                            <strong>집담회 지도일</strong>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered mb-0 ">
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center">시작시간</th>
+                                <th class="text-center">종료시간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <div class="row row-10 justify-content-center">
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">09시</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">00분</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-10 justify-content-center">
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">09시</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">00분</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
