@@ -185,6 +185,14 @@ button {
   }
 }
 
+.list-title-wrap{
+  & + .main_search_result_list{
+    table{
+      border-top: 2px solid #111;
+    }
+  }
+}
+
 .custom-file-img {
   input {
     position: absolute;
