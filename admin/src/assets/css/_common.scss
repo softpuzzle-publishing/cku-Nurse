@@ -11,7 +11,9 @@ button{background: transparent;border: 0;margin: 0;padding: 0;line-height: 1;}
 *:focus{
     outline: 0;
 }
-
+textarea{
+    width:100%; resize: none; border-color:#ddd;
+}
 /* icons */
 [class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 50% 50%;font-size: 0;line-height: 1;}
 
@@ -316,4 +318,11 @@ ul.box{
     &.show{
         display: inline-flex;
     }
+}
+
+.td-none-data{
+    padding: 0; position: relative;
+}
+.none-data{
+    width: calc(100% + 17px);height:2px;background-color: #000; transform: rotate(35deg); position: absolute; top:47%;left: -9px;
 }
