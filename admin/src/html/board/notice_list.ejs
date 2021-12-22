@@ -49,7 +49,15 @@
                                     <td colspan="3">
                                         <div class="row">
                                             <div class="col-auto">
-                                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                <div class="row row-10 align-items-center">
+                                                    <div class="col-auto">
+                                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                    </div>
+                                                    <div class="col-auto">~</div>
+                                                    <div class="col-auto">
+                                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="col">
                                                 <div class="btn-group" role="group">
@@ -93,7 +101,7 @@
                                     <td>
                                         <div class="custom-control custom-checkbox custom-control-inline">
                                             <input class="custom-control-input" type="checkbox" id="chk2-0>">
-                                            <label for="chk2-0" class="custom-control-label">전체</label>
+                                            <label for="chk2-0" class="custom-control-label">학생전체</label>
                                         </div>
                                         <% for(var i = 1; i < 5; i++){ %>
                                         <div class="custom-control custom-checkbox custom-control-inline">
@@ -101,6 +109,10 @@
                                             <label for="chk2-<%= i %>" class="custom-control-label"><%= i %>학년</label>
                                         </div>
                                         <% } %>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chk2-0>">
+                                            <label for="chk2-0" class="custom-control-label">현장지도자</label>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -140,10 +152,11 @@
                                 <col>
                                 <col>
                                 <col>
+                                <col style="width:800px">
                                 <col>
                                 <col>
                                 <col>
-                                <col>
+                                <col style="width:10%">
                             </colgroup>
                             <thead>
                                 <tr>
@@ -174,7 +187,9 @@
                                     <td class="text-center">노출</td>
                                     <td class="text-left">
                                         <a href="notice_detail.html">
-                                            <span>제목제목제목 제목제목제목 제목제목제목</span>
+                                            <span  class="text-truncate d-inline-block width-700px align-middle" >
+                                                제목제목제목 제목제목제목 제목제목제목제목제목제목 제목제목제목 제목제목제목제목제목제목 제목제목제목 제목제목제목제목제목제목 제목제목제목 제목제목제목
+                                            </span>
                                         </a>
                                         <span class="badge badge-danger ml-2">NEW</span>
                                     </td>
@@ -197,8 +212,10 @@
                                     <td class="text-center"><%= i %></td>
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
-                                        <a href="notice_detail.html">
-                                            <span>제목제목제목</span>
+                                        <a href="notice_detail.html"  class="text-truncate">
+                                            <span class="text-truncate d-inline-block width-700px align-middle">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+
+                                            </span>
                                         </a>
                                     </td>
                                     <td class="text-center">1,234</td>

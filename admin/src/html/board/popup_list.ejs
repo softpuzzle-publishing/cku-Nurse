@@ -40,16 +40,22 @@
                             <colgroup>
                                 <col style="width: 150px">
                                 <col>
-                                <col style="width: 150px">
-                                <col>
                             </colgroup>
                             <tbody>
                                 <tr>
                                     <th>등록일</th>
-                                    <td colspan="3">
+                                    <td>
                                         <div class="row">
                                             <div class="col-auto">
-                                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                <div class="row row-10 align-items-center">
+                                                    <div class="col-auto">
+                                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                    </div>
+                                                    <div class="col-auto">~</div>
+                                                    <div class="col-auto">
+                                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="col">
                                                 <div class="btn-group" role="group">
@@ -89,23 +95,10 @@
                                             <label for="chk1-3" class="custom-control-label">비노출</label>
                                         </div>
                                     </td>
-                                    <th>학년</th>
-                                    <td>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk2-0>">
-                                            <label for="chk2-0" class="custom-control-label">전체</label>
-                                        </div>
-                                        <% for(var i = 1; i < 5; i++){ %>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk2-<%= i %>">
-                                            <label for="chk2-<%= i %>" class="custom-control-label"><%= i %>학년</label>
-                                        </div>
-                                        <% } %>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th>검색</th>
-                                    <td colspan="3">
+                                    <td>
                                         <input type="text" class="form-control" placeholder="제목">
                                     </td>
                                 </tr>
@@ -137,7 +130,7 @@
                                 <col>
                                 <col>
                                 <col>
-                                <col>
+                                <col style="width:500px">
                                 <col>
                                 <col>
                                 <col>
@@ -174,7 +167,7 @@
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
                                         <a href="popup_form.html">
-                                            <span>실습관련 특별공지</span>
+                                            <span class="text-truncate d-inline-block width-500px align-middle">베타서비스 테스트 홈페이지 일시정지 안내 공지</span>
                                         </a>
                                     </td>
                                     <td class="text-center">0000.00.00 00:00 ~ 0000.00.00 00:00</td>

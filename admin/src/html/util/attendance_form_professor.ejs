@@ -2,39 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-Compatible" content="IE=edge">
-    <title>간호학과 | 가톨릭관동대학교</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-
-    <!-- 파비콘 -->
-    <link rel="shortcut icon" href="../assets/images/favicon.ico">
-    <link rel="icon" type="image/png" href="../assets/images/favicon.png" sizes="192x192">
-
-    <!-- jquery-ui css  -->
-    <link rel="stylesheet" href="../assets/lib/jquery-ui/jquery-ui.min.css">
-
-    <!-- 풀캘린더 css-->
-    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css' rel='stylesheet' />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.print.css " rel="stylesheet" type="text/css" media="print" />
-
-    <!-- 부트스트랩 css  -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
-
+    <%- include('../layout/_head.ejs')%>
     <!-- 프린트 css  -->
     <link rel="stylesheet" type="text/css" href="../assets/css/print.css" media="screen" />
     <link rel="stylesheet" href="../assets/css/print.css" media="print" />
-
-    <!-- jquery js  -->
-    <script src="../assets/lib/jquery/jquery.min.js"></script>
-    <script src="../assets/lib/jquery-ui/jquery-ui.min.js"></script>
-
-    <!-- 풀캘린더 js  -->
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
-
-    <!-- 부트스트랩 js  -->
-    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <style>
@@ -49,6 +20,8 @@
             margin: 0 auto;
         }
     }
+
+    table th{text-align: center;}
 </style>
 
 <body class="popup">
@@ -91,7 +64,7 @@
                                 <div class="col-auto">
                                     <div class="profile-thumb">
                                         <span style="display:none;">NO IMAGE</span>
-                                        <img src="../assets/images/@landscape.jpg" alt="학생사진">
+                                        <img src="../assets/images/@landscape.png" alt="학생사진">
                                     </div>
                                 </div>
                             </div>
@@ -228,38 +201,7 @@
                 <button type="button" class="btn btn-primary">저장</button>
                 <button class="btn-secondary btn" onclick="self.close();">취소</button>
             </div>
-            <div><button type="button" class="btn btn-dark submint-btn" data-target="#modal-not-modified" data-toggle="modal">제출</button></div>
-        </div>
-    </div>
-
-    <!-- 모달 : 출석팝업 >> 수정 불가능 안내 -->
-    <div class="modal fade" id="modal-not-modified" tabindex="-1" aria-labelledby="not-modified" aria-hidden="true" style="padding-right:0;">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <!-- <h2 class="modal-title">알림</h2> -->
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <img src="../assets/images/icon-close.png" alt="" width="24px" height="24px">
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <div class="p-2 mt-3">
-                        제출하시면 수정이 불가능합니다.
-                        제출 하시겠습니까?
-                    </div>
-
-                </div>
-                <div class="modal-footer border-0">
-                    <div class="row row-10 w-100">
-                        <div class="col">
-                            <button type="button" class="btn btn-lg btn-primary btn-block">확인</button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-lg btn-secondary btn-block" data-dismiss="modal">취소</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div><button type="button" class="btn btn-dark submint-btn" data-target="#modal-not-modified" data-toggle="modal">승인</button></div>
         </div>
     </div>
 </body>

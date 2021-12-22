@@ -307,6 +307,12 @@
                                         <p>팝업관리</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="../board/clinical_list.html" class="nav-link" data-menu="clinical">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>임상실습안내</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item has-treeview">
@@ -333,7 +339,7 @@
                                 <li class="nav-item">
                                     <a href="../system/academic_import.html" class="nav-link" data-menu="academic">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>학사정보 가져오기</p>
+                                        <p>학사정보 업로드</p>
                                     </a>
                                 </li>
                             </ul>
@@ -373,16 +379,22 @@
                             <colgroup>
                                 <col style="width: 150px">
                                 <col>
-                                <col style="width: 150px">
-                                <col>
                             </colgroup>
                             <tbody>
                                 <tr>
                                     <th>등록일</th>
-                                    <td colspan="3">
+                                    <td>
                                         <div class="row">
                                             <div class="col-auto">
-                                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                <div class="row row-10 align-items-center">
+                                                    <div class="col-auto">
+                                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                    </div>
+                                                    <div class="col-auto">~</div>
+                                                    <div class="col-auto">
+                                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="col">
                                                 <div class="btn-group" role="group">
@@ -422,38 +434,10 @@
                                             <label for="chk1-3" class="custom-control-label">비노출</label>
                                         </div>
                                     </td>
-                                    <th>학년</th>
-                                    <td>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk2-0>">
-                                            <label for="chk2-0" class="custom-control-label">전체</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk2-1">
-                                            <label for="chk2-1" class="custom-control-label">1학년</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk2-2">
-                                            <label for="chk2-2" class="custom-control-label">2학년</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk2-3">
-                                            <label for="chk2-3" class="custom-control-label">3학년</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chk2-4">
-                                            <label for="chk2-4" class="custom-control-label">4학년</label>
-                                        </div>
-
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th>검색</th>
-                                    <td colspan="3">
+                                    <td>
                                         <input type="text" class="form-control" placeholder="제목">
                                     </td>
                                 </tr>
@@ -486,7 +470,7 @@
                                 <col>
                                 <col>
                                 <col>
-                                <col>
+                                <col style="width:500px">
                                 <col>
                                 <col>
                                 <col>
@@ -523,7 +507,7 @@
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
                                         <a href="popup_form.html">
-                                            <span>실습관련 특별공지</span>
+                                            <span class="text-truncate d-inline-block width-500px align-middle">베타서비스 테스트 홈페이지 일시정지 안내 공지</span>
                                         </a>
                                     </td>
                                     <td class="text-center">0000.00.00 00:00 ~ 0000.00.00 00:00</td>
@@ -549,7 +533,7 @@
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
                                         <a href="popup_form.html">
-                                            <span>실습관련 특별공지</span>
+                                            <span class="text-truncate d-inline-block width-500px align-middle">베타서비스 테스트 홈페이지 일시정지 안내 공지</span>
                                         </a>
                                     </td>
                                     <td class="text-center">0000.00.00 00:00 ~ 0000.00.00 00:00</td>
@@ -575,7 +559,7 @@
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
                                         <a href="popup_form.html">
-                                            <span>실습관련 특별공지</span>
+                                            <span class="text-truncate d-inline-block width-500px align-middle">베타서비스 테스트 홈페이지 일시정지 안내 공지</span>
                                         </a>
                                     </td>
                                     <td class="text-center">0000.00.00 00:00 ~ 0000.00.00 00:00</td>
@@ -601,7 +585,7 @@
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
                                         <a href="popup_form.html">
-                                            <span>실습관련 특별공지</span>
+                                            <span class="text-truncate d-inline-block width-500px align-middle">베타서비스 테스트 홈페이지 일시정지 안내 공지</span>
                                         </a>
                                     </td>
                                     <td class="text-center">0000.00.00 00:00 ~ 0000.00.00 00:00</td>
@@ -627,7 +611,7 @@
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
                                         <a href="popup_form.html">
-                                            <span>실습관련 특별공지</span>
+                                            <span class="text-truncate d-inline-block width-500px align-middle">베타서비스 테스트 홈페이지 일시정지 안내 공지</span>
                                         </a>
                                     </td>
                                     <td class="text-center">0000.00.00 00:00 ~ 0000.00.00 00:00</td>
@@ -653,7 +637,7 @@
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
                                         <a href="popup_form.html">
-                                            <span>실습관련 특별공지</span>
+                                            <span class="text-truncate d-inline-block width-500px align-middle">베타서비스 테스트 홈페이지 일시정지 안내 공지</span>
                                         </a>
                                     </td>
                                     <td class="text-center">0000.00.00 00:00 ~ 0000.00.00 00:00</td>
@@ -679,7 +663,7 @@
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
                                         <a href="popup_form.html">
-                                            <span>실습관련 특별공지</span>
+                                            <span class="text-truncate d-inline-block width-500px align-middle">베타서비스 테스트 홈페이지 일시정지 안내 공지</span>
                                         </a>
                                     </td>
                                     <td class="text-center">0000.00.00 00:00 ~ 0000.00.00 00:00</td>
@@ -705,7 +689,7 @@
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
                                         <a href="popup_form.html">
-                                            <span>실습관련 특별공지</span>
+                                            <span class="text-truncate d-inline-block width-500px align-middle">베타서비스 테스트 홈페이지 일시정지 안내 공지</span>
                                         </a>
                                     </td>
                                     <td class="text-center">0000.00.00 00:00 ~ 0000.00.00 00:00</td>
@@ -731,7 +715,7 @@
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
                                         <a href="popup_form.html">
-                                            <span>실습관련 특별공지</span>
+                                            <span class="text-truncate d-inline-block width-500px align-middle">베타서비스 테스트 홈페이지 일시정지 안내 공지</span>
                                         </a>
                                     </td>
                                     <td class="text-center">0000.00.00 00:00 ~ 0000.00.00 00:00</td>

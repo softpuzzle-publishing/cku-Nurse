@@ -307,6 +307,12 @@
                                         <p>팝업관리</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="../board/clinical_list.html" class="nav-link" data-menu="clinical">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>임상실습안내</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item has-treeview">
@@ -333,7 +339,7 @@
                                 <li class="nav-item">
                                     <a href="../system/academic_import.html" class="nav-link" data-menu="academic">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>학사정보 가져오기</p>
+                                        <p>학사정보 업로드</p>
                                     </a>
                                 </li>
                             </ul>
@@ -382,7 +388,15 @@
                                     <td colspan="3">
                                         <div class="row">
                                             <div class="col-auto">
-                                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                <div class="row row-10 align-items-center">
+                                                    <div class="col-auto">
+                                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                    </div>
+                                                    <div class="col-auto">~</div>
+                                                    <div class="col-auto">
+                                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="col">
                                                 <div class="btn-group" role="group">
@@ -426,7 +440,7 @@
                                     <td>
                                         <div class="custom-control custom-checkbox custom-control-inline">
                                             <input class="custom-control-input" type="checkbox" id="chk2-0>">
-                                            <label for="chk2-0" class="custom-control-label">전체</label>
+                                            <label for="chk2-0" class="custom-control-label">학생전체</label>
                                         </div>
 
                                         <div class="custom-control custom-checkbox custom-control-inline">
@@ -449,6 +463,10 @@
                                             <label for="chk2-4" class="custom-control-label">4학년</label>
                                         </div>
 
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chk2-0>">
+                                            <label for="chk2-0" class="custom-control-label">현장지도자</label>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -489,10 +507,11 @@
                                 <col>
                                 <col>
                                 <col>
+                                <col style="width:800px">
                                 <col>
                                 <col>
                                 <col>
-                                <col>
+                                <col style="width:10%">
                             </colgroup>
                             <thead>
                                 <tr>
@@ -523,7 +542,9 @@
                                     <td class="text-center">노출</td>
                                     <td class="text-left">
                                         <a href="notice_detail.html">
-                                            <span>제목제목제목 제목제목제목 제목제목제목</span>
+                                            <span class="text-truncate d-inline-block width-700px align-middle">
+                                                제목제목제목 제목제목제목 제목제목제목제목제목제목 제목제목제목 제목제목제목제목제목제목 제목제목제목 제목제목제목제목제목제목 제목제목제목 제목제목제목
+                                            </span>
                                         </a>
                                         <span class="badge badge-danger ml-2">NEW</span>
                                     </td>
@@ -548,8 +569,10 @@
                                     <td class="text-center">9</td>
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
-                                        <a href="notice_detail.html">
-                                            <span>제목제목제목</span>
+                                        <a href="notice_detail.html" class="text-truncate">
+                                            <span class="text-truncate d-inline-block width-700px align-middle">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+
+                                            </span>
                                         </a>
                                     </td>
                                     <td class="text-center">1,234</td>
@@ -573,8 +596,10 @@
                                     <td class="text-center">8</td>
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
-                                        <a href="notice_detail.html">
-                                            <span>제목제목제목</span>
+                                        <a href="notice_detail.html" class="text-truncate">
+                                            <span class="text-truncate d-inline-block width-700px align-middle">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+
+                                            </span>
                                         </a>
                                     </td>
                                     <td class="text-center">1,234</td>
@@ -598,8 +623,10 @@
                                     <td class="text-center">7</td>
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
-                                        <a href="notice_detail.html">
-                                            <span>제목제목제목</span>
+                                        <a href="notice_detail.html" class="text-truncate">
+                                            <span class="text-truncate d-inline-block width-700px align-middle">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+
+                                            </span>
                                         </a>
                                     </td>
                                     <td class="text-center">1,234</td>
@@ -623,8 +650,10 @@
                                     <td class="text-center">6</td>
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
-                                        <a href="notice_detail.html">
-                                            <span>제목제목제목</span>
+                                        <a href="notice_detail.html" class="text-truncate">
+                                            <span class="text-truncate d-inline-block width-700px align-middle">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+
+                                            </span>
                                         </a>
                                     </td>
                                     <td class="text-center">1,234</td>
@@ -648,8 +677,10 @@
                                     <td class="text-center">5</td>
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
-                                        <a href="notice_detail.html">
-                                            <span>제목제목제목</span>
+                                        <a href="notice_detail.html" class="text-truncate">
+                                            <span class="text-truncate d-inline-block width-700px align-middle">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+
+                                            </span>
                                         </a>
                                     </td>
                                     <td class="text-center">1,234</td>
@@ -673,8 +704,10 @@
                                     <td class="text-center">4</td>
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
-                                        <a href="notice_detail.html">
-                                            <span>제목제목제목</span>
+                                        <a href="notice_detail.html" class="text-truncate">
+                                            <span class="text-truncate d-inline-block width-700px align-middle">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+
+                                            </span>
                                         </a>
                                     </td>
                                     <td class="text-center">1,234</td>
@@ -698,8 +731,10 @@
                                     <td class="text-center">3</td>
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
-                                        <a href="notice_detail.html">
-                                            <span>제목제목제목</span>
+                                        <a href="notice_detail.html" class="text-truncate">
+                                            <span class="text-truncate d-inline-block width-700px align-middle">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+
+                                            </span>
                                         </a>
                                     </td>
                                     <td class="text-center">1,234</td>
@@ -723,8 +758,10 @@
                                     <td class="text-center">2</td>
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
-                                        <a href="notice_detail.html">
-                                            <span>제목제목제목</span>
+                                        <a href="notice_detail.html" class="text-truncate">
+                                            <span class="text-truncate d-inline-block width-700px align-middle">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+
+                                            </span>
                                         </a>
                                     </td>
                                     <td class="text-center">1,234</td>
@@ -748,8 +785,10 @@
                                     <td class="text-center">1</td>
                                     <td class="text-center">비노출</td>
                                     <td class="text-left">
-                                        <a href="notice_detail.html">
-                                            <span>제목제목제목</span>
+                                        <a href="notice_detail.html" class="text-truncate">
+                                            <span class="text-truncate d-inline-block width-700px align-middle">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+
+                                            </span>
                                         </a>
                                     </td>
                                     <td class="text-center">1,234</td>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <%- include('../layout/_head.ejs')%>
 </head>
@@ -34,18 +35,30 @@
             <!-- Main content -->
             <div class="content" data-menu="notice">
                 <div class="container-fluid">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-fixed">
                         <colgroup>
+                            <col style="width:150px">
+                            <col>
                             <col style="width:150px">
                             <col>
                         </colgroup>
                         <tbody>
+                            <!-- 아래}} 수정버튼 클릭 시 생기는 테이블 { -->
+                            <tr style="display:none;">
+                                <th>등록일</th>
+                                <td>2021.09.27<span class="m-l-10">10:00</span></td>
+                                <th>작성자</th>
+                                <td>관리자</td>
+                            </tr>
+                            <!-- } -->
+
+                            <!-- 기본 -->
                             <tr>
-                                <th>대상 선택 <strong class="text-danger">*</strong></th>
-                                <td>
+                                <th>학년 선택 <strong class="text-danger">*</strong></th>
+                                <td colspan="3">
                                     <div class="custom-control custom-checkbox custom-control-inline">
                                         <input class="custom-control-input" type="checkbox" id="chk1-0">
-                                        <label for="chk1-0" class="custom-control-label">전체</label>
+                                        <label for="chk1-0" class="custom-control-label">학생 전체</label>
                                     </div>
                                     <div class="custom-control custom-checkbox custom-control-inline">
                                         <input class="custom-control-input" type="checkbox" id="chk1-1">
@@ -63,11 +76,15 @@
                                         <input class="custom-control-input" type="checkbox" id="chk1-4">
                                         <label for="chk1-4" class="custom-control-label">4학년</label>
                                     </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-5">
+                                        <label for="chk1-5" class="custom-control-label">현장 지도자</label>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th>노출 여부</th>
-                                <td>
+                                <th>노출 여부 <strong class="text-danger">*</strong></th>
+                                <td colspan="3">
                                     <div class="row row-10 align-items-center">
                                         <div class="col-auto">
                                             <div class="custom-control custom-checkbox custom-control-inline">
@@ -83,7 +100,7 @@
                             </tr>
                             <tr>
                                 <th>공지 설정</th>
-                                <td>
+                                <td colspan="3">
                                     <div class="row row-10 align-items-center">
                                         <div class="col-auto">
                                             <div class="custom-control custom-checkbox custom-control-inline">
@@ -99,19 +116,19 @@
                             </tr>
                             <tr>
                                 <th>제목 <strong class="text-danger">*</strong></th>
-                                <td>
+                                <td colspan="3">
                                     <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
                                 <th>내용 <strong class="text-danger">*</strong></th>
-                                <td>
+                                <td colspan="3">
                                     <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
                                 </td>
                             </tr>
                             <tr>
                                 <th>첨부파일</th>
-                                <td>
+                                <td colspan="3">
                                     <div class="row">
                                         <div class="col-auto">
                                             <div class="custom-file">
@@ -156,8 +173,7 @@
     <%- include('../layout/_modal.ejs')%>
 
     <script>
-        $(document).ready(function () {
-        });
+        $(document).ready(function () {});
     </script>
 </body>
 
