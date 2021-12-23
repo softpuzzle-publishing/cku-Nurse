@@ -211,7 +211,7 @@
                             </ul>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="../task/safety_list.html" class="nav-link">
+                            <a href="../program/program_education.html" class="nav-link">
                                 <i class="nav-icon fas fa-tasks"></i>
                                 <p>
                                     프로그램관리
@@ -220,19 +220,19 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../task/safety_list.html" class="nav-link" data-menu="safety">
+                                    <a href="../program/program_education.html" class="nav-link" data-menu="program-education">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>교육현황관리</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../task/consignment_list.html" class="nav-link" data-menu="consignment">
+                                    <a href="../program/program_education_management.html" class="nav-link" data-menu="program-management">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>교육프로그램관리</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../task/instructor_list.html" class="nav-link" data-menu="instructor">
+                                    <a href="../program/program_prevention.html" class="nav-link" data-menu="program-prevention">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>검진/예방검사 관리</p>
                                     </a>
@@ -249,25 +249,25 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../management_professor/traning_history_list.html" class="nav-link" data-menu="training-history">
+                                    <a href="../management_professor/professor_develope.html" class="nav-link" data-menu="professor-develope">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>교수개발 참여실적</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../management_professor/settlement_list.html" class="nav-link" data-menu="settlement">
+                                    <a href="../management_professor/professor_nursing_management.html" class="nav-link" data-menu="professor-nursing-management">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>핵심간호술 관리</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../management_professor/settlement_list.html" class="nav-link" data-menu="settlement">
+                                    <a href="../management_professor/professor_nursing_total.html" class="nav-link" data-menu="professor-nursing-total">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>핵심간호술 종합</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../management_professor/clinical_practice_list.html" class="nav-link" data-menu="clinical_practice">
+                                    <a href="../management_professor/clinical_practice_list.html" class="nav-link" data-menu="clinical-practice">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>임상실습지도관리</p>
                                     </a>
@@ -951,9 +951,51 @@
             </div>
         </div>
     </div>
-
-    <!-- 모달 : 비행정보 -->
-    <div class="modal" tabindex="-1" role="dialog" id="modal-flights-info">
+    <!-- 모달 : 핵심간호술 등록 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-nursing-management">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">핵심간호술 등록</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered mb-0 mt-4">
+                        <tbody>
+                            <tr>
+                                <th>졸업연도</th>
+                                <td>
+                                    <select name="" id="" class="custom-select width-300px">
+                                        <option value="">연도선택</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>졸업학기</th>
+                                <td>
+                                    <select name="" id="" class="custom-select width-300px">
+                                        <option value="">2월 졸업</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>제목</th>
+                                <td><input type="text" class="form-control width-300px" value=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary">저장</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 모달 : 예방접종자가점검표 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-vaccination">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1326,12 +1368,12 @@
         </div>
     </div>
 
-    <!-- 모달 : 자가용 조종사 과정 성적 등록-->
-    <div class="modal" tabindex="-1" role="dialog" id="modal-ppl-grade">
+    <!-- 모달 : 프로그램명 수정-->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-program-modify">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title">자가용 조종사 과정 성적 등록</h1>
+                    <h1 class="modal-title">프로그램명 수정</h1>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -1339,109 +1381,112 @@
                 <div class="modal-body">
                     <table class="table table-fixed table-bordered">
                         <colgroup>
-                            <col style="width:25%">
-                            <col style="width:25%">
-                            <col style="width:25%">
-                            <col style="width:25%">
+                            <col width="170px">
+                            <col>
+                            <col width="170px">
+                            <col>
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th class="text-center">항공법</th>
-                                <th class="text-center">공중항법</th>
-                                <th class="text-center">항공기상Ⅰ</th>
-                                <th class="text-center">비행이론</th>
+                                <th>현재 프로그램명</th>
+                                <td colspan="3">
+                                    실험실안전교육
+                                </td>
                             </tr>
                             <tr>
-                                <td class="text-center">
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td class="text-center">
+                                <th>변경 프로그램명</th>
+                                <td colspan="3">
                                     <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
-                                <th class="text-center">모의비행Ⅰ</th>
-                                <th class="text-center">항공교통업무</th>
-                                <th class="text-center">항공무선통신</th>
-                                <td rowspan="2"></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" class="form-control">
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                <th>프로그램 적용</th>
+                                <td colspan="3">
+                                    <div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">1학년 1학기</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">1학년 2학기</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">2학년 1학기</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">2학년 2학기</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">3학년 1학기</label>
+                                        </div>
 
-                    <div class="d-flex justify-content-center p-b-20 border-bottom">
-                        <button type="button" class="btn btn-primary width-90px">점수 적용</button>
-                        <button type="button" class="btn btn-secondary m-l-10 width-90px">초기화</button>
-                    </div>
-
-                    <table class="table table-bordered table-fixed m-t-30">
-                        <colgroup>
-                            <col>
-                            <col>
-                            <col style="width:80px">
-                            <col style="width:80px">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th class="text-center">항공 과목</th>
-                                <th class="text-center">학과 교과목</th>
-                                <th class="text-center">교육 시간</th>
-                                <th class="text-center">평가 점수</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center">항공법규</td>
-                                <td class="text-center">항공법</td>
-                                <td class="text-center">45</td>
-                                <td class="text-center text-danger font-weight-bold">100</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">공중항법</td>
-                                <td class="text-center">공중항법</td>
-                                <td class="text-center">45</td>
-                                <td class="text-center text-danger font-weight-bold">100</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">항공기상</td>
-                                <td class="text-center">항공기상Ⅰ</td>
-                                <td class="text-center">45</td>
-                                <td class="text-center text-danger font-weight-bold">100</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">비행이론</td>
-                                <td class="text-center">
-                                    <p>비행이론(30시간)</p>
-                                    <p>모의비행Ⅰ(60시간)</p>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">3학년 2학기</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">4학년 1학기</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">4학년 2학기</label>
+                                        </div>
+                                    </div>
                                 </td>
-                                <td class="text-center">90</td>
-                                <td class="text-center text-danger font-weight-bold">95</td>
                             </tr>
                             <tr>
-                                <td class="text-center">항공교통·통신·정보업무
+                                <th>노출여부</th>
+                                <td colspan="3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio" checked>
+                                        <label for="customRadio1" class="custom-control-label">필수</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="customRadio2" name="customRadio">
+                                        <label for="customRadio2" class="custom-control-label">일반</label>
+                                    </div>
                                 </td>
-                                <td class="text-center">
-                                    <p>항공교통업무(45시간)</p>
-                                    <p>항공무선통신(30시간)</p>
+                            </tr>
+                            <tr>
+                                <th>노출여부</th>
+                                <td colspan="3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="custom-control custom-radio">
+                                            <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio" checked>
+                                            <label for="customRadio1" class="custom-control-label">있음</label>
+                                        </div>
+                                        <input type="text" class="form-control width-90px ml-4 mr-2">
+                                        <p>시간</p>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" id="customRadio2" name="customRadio">
+                                        <label for="customRadio2" class="custom-control-label">없음</label>
+                                    </div>
                                 </td>
-                                <td class="text-center">45</td>
-                                <td class="text-center text-danger font-weight-bold">100</td>
+                            </tr>
+                            <tr>
+                                <th>노출여부</th>
+                                <td colspan="3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio" checked>
+                                        <label for="customRadio1" class="custom-control-label">노출</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="customRadio2" name="customRadio">
+                                        <label for="customRadio2" class="custom-control-label">비노출</label>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -2303,7 +2348,6 @@
             </div>
         </div>
     </div>
-
 
     <script>
         $(document).ready(function() {});

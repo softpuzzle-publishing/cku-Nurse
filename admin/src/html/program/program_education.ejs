@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">프로그램관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">프로그램관리</a></li>
+                                <li class="breadcrumb-item">교육현황관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="program-education">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 150px">
+                                    <col>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>연도</th>
+                                    <td colspan="3">
+                                        <select name="" id="" class="custom-select">
+                                            <option value="">연도선택</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>학년</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select">
+                                            <option value="">학년선택</option>
+                                        </select>
+                                    </td>
+                                    <th>학기</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select">
+                                            <option value="">학기선택</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>검색</th>
+                                    <td colspan="3">
+                                        <input type="text" class="form-control" placeholder="교욱명  학번, 학생명으로 검색">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button type="button" class="btn btn-dark min-width-90px">검색</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-end mb-0 mt-5">
+                        <div class="col-auto">
+                            교육현황 목록
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-end mb-3 ">
+                        <div class="col-auto">
+                            <b>Total : 000</b>
+                            Page 1/3
+                        </div>
+                        <div class="col-auto">
+                            <!-- <button type="button" class="btn btn-danger mr-1" data-toggle="modal" data-target="#modal-training-designation-common">실습학생지정</button>
+                            <button type="button" class="btn btn-primary mr-1" data-toggle="modal" data-target="#modal-training-form">실습교과목관리</button> -->
+                            <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
+                            <select class="custom-select w-auto">
+                                <option>10</option>
+                                <option>30</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" rowspan="2">연번</th>
+                                    <th class="text-center" rowspan="2">학번</th>
+                                    <th class="text-center" rowspan="2">학생이름</th>
+                                    <th class="text-center" colspan="3">안전교육</th>
+                                    <th class="text-center" colspan="3">인권교육</th>
+                                    <th class="text-center" rowspan="2">관리</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">이수시간</th>
+                                    <th class="text-center">이수여부</th>
+                                    <th class="text-center">첨부파일</th>
+                                    <th class="text-center">이수시간</th>
+                                    <th class="text-center">이수여부</th>
+                                    <th class="text-center">첨부파일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 10; i > 0 ; i--){ %>
+                                <tr>
+
+                                    <td class="text-center"><%= i %></td>
+                                    <td class="text-center">12312330</td>
+                                    <td class="text-center">김학생</td>
+                                    <td class="text-center">6시간</td>
+                                    <td class="text-center">이수</td>
+                                    <td class="text-center"><a href="" class="text-underline">다운로드</a></td>
+                                    <td class="text-center">6시간</td>
+                                    <td class="text-center">이수</td>
+                                    <td class="text-center"><a href="" class="text-underline">다운로드</a></td>
+                                    <td class="text-center">
+                                        <a href="program_education_detail.html" class="btn btn-sm btn-secondary">상세</a>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>

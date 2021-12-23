@@ -327,8 +327,14 @@ ul.box{
 .none-data{
     width: calc(100% + 17px);height:2px;background-color: #000; transform: rotate(35deg); position: absolute; top:47%;left: -9px;
 }
+<<<<<<< HEAD
 
 
 .break-all{
     word-break: break-all;
+=======
+.scroll-tab{
+    max-height: 400px;
+    overflow-y: scroll;
+>>>>>>> park
 }
