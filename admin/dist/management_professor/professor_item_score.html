@@ -357,13 +357,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">실습기관 학생배치</h1>
+                            <h1 class="title">핵심간호술 대상자 관리</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">운영관리</a></li>
-                                <li class="breadcrumb-item">담당/평가표/실습과목 배정</li>
+                                <li class="breadcrumb-item"><a href="#">핵심간호술관리</a></li>
+                                <li class="breadcrumb-item">핵심간호술 대상자 관리</li>
                             </ol>
                         </div>
                     </div>
@@ -372,31 +372,31 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content" data-menu="operation">
+            <div class="content" data-menu="professor-nursing-management">
                 <div class="container-fluid">
                     <div class="inquery-area">
                         <table class="table table-bordered">
-                            <tbody>
+                            <thead>
                                 <colgroup>
-                                    <col style="width: 150px">
-                                    <col>
-                                    <col style="width: 150px">
-                                    <col>
-                                    <col style="width: 150px">
+                                    <col width="10%">
+                                    <col width="30%">
                                     <col>
                                 </colgroup>
+                                <th class="text-center">연도</th>
+                                <th class="text-center">졸업학기</th>
+                                <th class="text-center">제목</th>
+                            </thead>
+                            <tbody>
+
                                 <tr>
-                                    <th>연도 선택</th>
-                                    <td>
-                                        2022년
+                                    <td class="text-center">
+                                        2022
                                     </td>
-                                    <th>실습 분기</th>
-                                    <td>
-                                        1분기
+                                    <td class="text-center">
+                                        8월 졸업
                                     </td>
-                                    <th>실습기관</th>
-                                    <td>
-                                        강릉성심병원
+                                    <td class="text-center">
+                                        2022년 8월 졸업 대상 핵심간호술
                                     </td>
                                 </tr>
                             </tbody>
@@ -407,213 +407,82 @@
 
                     <div class="main_search_result_list mt-3">
                         <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
-                        <table class="table table-bordered" id="datatable1">
-                            <colgroup>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th class="text-center">실습부서</th>
-                                    <th class="text-center">실습단위</th>
-                                    <th class="text-center">실습교과목</th>
-                                    <th class="text-center">지정</th>
-                                    <th class="text-center">대상 학생</th>
-                                    <th class="text-center">배정일</th>
-                                </tr>
-                            </thead>
+                        <table class="table table-bordered">
                             <tbody>
-                                <!-- 1번 -->
+                                <colgroup>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
                                 <tr>
-                                    <td class="text-center" rowspan="3">내과</td>
-                                    <td class="text-center">제6병동</td>
-                                    <td class="text-center">아동간호실습1</td>
-                                    <td class="text-center">
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label"></label>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        김학생(X), 최학생(X), 박학생(X), 민학생(X), 오학생(X)
-                                    </td>
-                                    <td class="text-center">
-                                        2022. 1. 2
+                                    <th>입학연도</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-300px">
+                                            <option value="">연도선택</option>
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="text-center">제6병동</td>
-                                    <td class="text-center">아동간호실습1</td>
-                                    <td class="text-center">
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label"></label>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        김학생(X), 최학생(X), 박학생(X), 민학생(X), 오학생(X)
-                                    </td>
-                                    <td class="text-center">
-                                        2022. 1. 2
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">제6병동</td>
-                                    <td class="text-center">아동간호실습1</td>
-                                    <td class="text-center">
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label"></label>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        김학생(X), 최학생(X), 박학생(X), 민학생(X), 오학생(X)
-                                    </td>
-                                    <td class="text-center">
-                                        2022. 1. 2
-                                    </td>
-                                </tr>
-
-                                <!-- 2번 -->
-                                <tr>
-                                    <td class="text-center" rowspan="2">산부인과</td>
-                                    <td class="text-center">부인과</td>
-                                    <td class="text-center">아동간호실습1</td>
-                                    <td class="text-center">
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label"></label>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        김학생(X), 최학생(X), 박학생(X), 민학생(X), 오학생(X)
-                                    </td>
-                                    <td class="text-center">
-                                        2022. 1. 2
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">출산과</td>
-                                    <td class="text-center">아동간호실습1</td>
-                                    <td class="text-center">
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label"></label>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        김학생(X), 최학생(X), 박학생(X), 민학생(X), 오학생(X)
-                                    </td>
-                                    <td class="text-center">
-                                        2022. 1. 2
-                                    </td>
-                                </tr>
-
-                                <!-- 3번 -->
-                                <tr>
-                                    <td class="text-center">소아과</td>
-                                    <td class="text-center">소아병동</td>
-                                    <td class="text-center">아동간호실습1</td>
-                                    <td class="text-center">
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label"></label>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        김학생(X), 최학생(X), 박학생(X), 민학생(X), 오학생(X)
-                                    </td>
-                                    <td class="text-center">
-                                        2022. 1. 2
-                                    </td>
-                                </tr>
-
-                                <!-- 4번 -->
-                                <tr>
-                                    <td class="text-center" rowspan="2">청소년과</td>
-                                    <td class="text-center">소아과</td>
-                                    <td class="text-center">아동간호실습1</td>
-                                    <td class="text-center">
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label"></label>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        김학생(X), 최학생(X), 박학생(X), 민학생(X), 오학생(X)
-                                    </td>
-                                    <td class="text-center">
-                                        2022. 1. 2
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">가정의학과</td>
-                                    <td class="text-center">아동간호실습1</td>
-                                    <td class="text-center">
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                            <label for="chk1-1" class="custom-control-label"></label>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        김학생(X), 최학생(X), 박학생(X), 민학생(X), 오학생(X)
-                                    </td>
-                                    <td class="text-center">
-                                        2022. 1. 2
+                                    <th>학년</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-300px">
+                                            <option value="">학년선택</option>
+                                        </select>
                                     </td>
                                 </tr>
                             </tbody>
-
                         </table>
+
+                        <div class="btns text-center">
+                            <button type="button" class="btn btn-dark min-width-90px">검색</button>
+                        </div>
+
                     </div>
 
                     <div class="d-flex align-items-center justify-content-center m-t-50">
                         <div>
                             <p class="font-size-18px font-weight-bold mb-2">● 검색 목록 (총 166명)</p>
                             <p class="text-danger">추가버튼을 통해 우측의 실습예외 리스트에 추가하세요.</p>
-                            <table class="table table-bordered mt-2">
-                                <colgroup>
-                                    <col width="30px">
-                                    <col width="170px">
-                                    <col width="170px">
-                                    <col width="170px">
-                                    <col width="170px">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                                <label for="chk1-1" class="custom-control-label"></label>
-                                            </div>
-                                        </th>
-                                        <th class="text-center">학번</th>
-                                        <th class="text-center">성명</th>
-                                        <th class="text-center">학생구분</th>
-                                        <th class="text-center">학년</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                                <label for="chk1-1" class="custom-control-label"></label>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">200981</td>
-                                        <td class="text-center">김학생</td>
-                                        <td class="text-center">재학</td>
-                                        <td class="text-center">3</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="scroll-tab">
+                                <table class="table table-bordered mt-2 scroll-tab">
+                                    <colgroup>
+                                        <col width="30px">
+                                        <col width="170px">
+                                        <col width="170px">
+                                        <col width="170px">
+                                        <col width="170px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                                    <label for="chk1-1" class="custom-control-label"></label>
+                                                </div>
+                                            </th>
+                                            <th class="text-center">학번</th>
+                                            <th class="text-center">성명</th>
+                                            <th class="text-center">학생구분</th>
+                                            <th class="text-center">학년</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                                    <label for="chk1-1" class="custom-control-label"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">200981</td>
+                                            <td class="text-center">김학생</td>
+                                            <td class="text-center">재학</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <div class="ml-5 mr-5 mt-5">
+                        <div class="ml-4 mr-4 mt-5">
                             <button type="button" class="btn btn-primary d-flex align-items-center mb-2">추가 ></button>
                             <button type="button" class="btn btn-danger d-flex align-item  -cente mt-2">
                                 < 삭제</button>
@@ -621,43 +490,45 @@
                         <div>
                             <p class="font-size-18px font-weight-bold mb-2">● 실습대상 목록 (총 166명)</p>
                             <p class="text-danger">실습대상 목록에 포함된 학생들만 실습에 배됩니다.</p>
-                            <table class="table table-bordered mt-2">
-                                <colgroup>
-                                    <col width="30px">
-                                    <col width="170px">
-                                    <col width="170px">
-                                    <col width="170px">
-                                    <col width="170px">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                                <label for="chk1-1" class="custom-control-label"></label>
-                                            </div>
-                                        </th>
-                                        <th class="text-center">학번</th>
-                                        <th class="text-center">성명</th>
-                                        <th class="text-center">학생구분</th>
-                                        <th class="text-center">학년</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" type="checkbox" id="chk1-1">
-                                                <label for="chk1-1" class="custom-control-label"></label>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">200981</td>
-                                        <td class="text-center">김학생</td>
-                                        <td class="text-center">재학</td>
-                                        <td class="text-center">3</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="scroll-tab">
+                                <table class="table table-bordered mt-2">
+                                    <colgroup>
+                                        <col width="30px">
+                                        <col width="170px">
+                                        <col width="170px">
+                                        <col width="170px">
+                                        <col width="170px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                                    <label for="chk1-1" class="custom-control-label"></label>
+                                                </div>
+                                            </th>
+                                            <th class="text-center">학번</th>
+                                            <th class="text-center">성명</th>
+                                            <th class="text-center">학생구분</th>
+                                            <th class="text-center">학년</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                                    <label for="chk1-1" class="custom-control-label"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">200981</td>
+                                            <td class="text-center">김학생</td>
+                                            <td class="text-center">재학</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
 
