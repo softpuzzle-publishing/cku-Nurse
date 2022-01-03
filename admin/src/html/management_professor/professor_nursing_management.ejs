@@ -18,13 +18,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">교수업무관리</h1>
+                            <h1 class="title">핵심 간호술 관리</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">교수업무관리</a></li>
-                                <li class="breadcrumb-item">교수개발 참여실적</li>
+                                <li class="breadcrumb-item">핵심 간호술 관리</li>
                             </ol>
                         </div>
                     </div>
@@ -39,12 +39,13 @@
                         <table class="table table-bordered">
                             <colgroup>
                                 <col style="width: 150px">
+                                <col>
                             </colgroup>
                             <tbody>
                                 
                                 <tr>
                                     <th>졸업연도</th>
-                                    <td>
+                                    <td colspan="3">
                                         <div class="d-flex align-items-center">
                                             <select name="" id="" class="custom-select width-300px mr-3">
                                                 <option value="">연도선택</option>
@@ -97,7 +98,7 @@
                                 <col>
                                 <col>
                                 <col>
-                                <col>
+                                <col style="width:50%">
                                 <col>
                                 <col>
                                 <col>
@@ -120,24 +121,19 @@
                                     <td class="text-center"><%= i%></td>
                                     <td class="text-center">2022</td>
                                     <td class="text-center">8월 졸업</td>
-                                    <td class="text-center">2022년 8월 졸업 대상 핵심간호술</td>
+                                    <td class="text-center">2022년 8월 졸업 대상 핵심간호술2022년 8월 졸업 대상 핵심간호술2022년 8월 졸업 대상 핵심간호술</td>
                                     <td class="text-center">97명</td>
                                     <td class="text-center">
-                                        <a href="professor_item_management.html" class="btn btn-sm btn-outline-secondary">관리</a>
+                                        <a href="professor_item_score.html" class="btn btn-sm btn-outline-secondary">관리</a>
                                     </td>
                                     <td class="text-center">2021.09.21</td>
                                     <td class="text-center">
-                                        <a href="professor_item_score.html" class="btn btn-sm btn-secondary">항목별 점수 적용</a>
+                                        <a href="professor_nursing_achievement.html" class="btn btn-sm btn-secondary">항목별 점수 적용</a>
                                     </td>
                                 </tr>
                                 <% } %>
                             </tbody>
                         </table>
-                        <div class="row mb-3">
-                            <div class="col-auto">
-                                <button type="button" class="btn btn-outline-primary mr-1">선택삭제</button>
-                            </div>
-                        </div>
                     </div>
 
                     <%- include('../layout/_pagination.ejs')%>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <%- include('../layout/_head.ejs')%>
 </head>
@@ -18,7 +19,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">실습관리</h1>
+                            <h1 class="title">교과목별 실습평가</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
@@ -60,8 +61,8 @@
                                 </tr>
                                 <tr>
                                     <th>학년</th>
-                                    <td>
-                                        <select name="" id="" class="custom-select">
+                                    <td colspan="3">
+                                        <select name="" id="" class="custom-select width-200px">
                                             <option value="">전체</option>
                                         </select>
                                     </td>
@@ -73,8 +74,6 @@
                                             <option value="">전체</option>
                                         </select>
                                     </td>
-                                </tr>
-                                <tr>
                                     <th>진행현황</th>
                                     <td>
                                         <select name="" id="" class="custom-select">
@@ -85,7 +84,7 @@
                                 <tr>
                                     <th>검색</th>
                                     <td colspan="3">
-                                        <input type="text" class="form-control" placeholder="이름, 학번, 휴대폰번호 입력">
+                                        <input type="text" class="form-control" placeholder="학번, 이름으로 검색">
                                     </td>
                                 </tr>
                             </tbody>
@@ -95,12 +94,12 @@
                         </div>
                     </div>
                     <div class="row row-0 justify-content-between align-items-end mb-3 mt-4">
-                        <div class="col-auto bg-gray-1 p-3">
+                        <div class="col-12 bg-gray-1 p-3">
                             <p class="text-danger mb-2 font-weight-bold">주의사항</p>
                             <p>※ 실습을 진행 중인 학생들의 예방접종현황과 보안서약서를 열람할 수 있으며, 출석부 및 평가서를 작성할 수 잇습니다.</p>
                             <p>※ 출석부 최초 저장시 해당 학생의 담당 현장지도자로 지정되며, 이후에는 변경할 수 없으니 유의하세요.</p>
                         </div>
-                    </div>      
+                    </div>
                     <div class="row justify-content-between align-items-end mb-3">
                         <div class="col-auto">
                             <b>Total : 000</b>,
@@ -115,8 +114,27 @@
                             </select>
                         </div>
                     </div>
-                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
                         <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:120px;">
+                                <col style="width:120px;">
+                                <col style="width:120px;">
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th class="text-center">번호</th>
@@ -150,12 +168,27 @@
                                     <td class="text-center">1분기</td>
                                     <td class="text-center">2021.03.26 ~<br> 2021.04.06</td>
                                     <td class="text-center">실습완료</td>
-                                    <td class="text-center"> <button type="button" class="btn btn-sm btn-secondary" onclick="window.open('../util/attendance_form.html', '출석부팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인요청</button> </td>
-                                    <td class="text-center"> <button type="button" class="btn btn-sm btn-primary" onclick="window.open('../util/appraisal_leader.html', '현장지도자 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인요청</button> </td>
-                                    <td class="text-center"> <button type="button" class="btn btn-sm btn-primary" onclick="window.open('../util/appraisal_professor.html', '교수 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인요청</button> </td>
+                                    <td class="text-center"> 
+                                        <button type="button" class="btn btn-sm btn-outline-secondary width-70px" onclick="window.open('../util/attendance_form.html', '출석부팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">작성전</button> 
+                                        <button type="button" class="btn btn-sm btn-outline-primary width-70px" onclick="window.open('../util/attendance_form.html', '출석부팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">작성중</button> 
+                                        <button type="button" class="btn btn-sm btn-outline-danger width-70px" onclick="window.open('../util/attendance_form.html', '출석부팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인요청</button> 
+                                        <button type="button" class="btn btn-sm btn-secondary width-70px" onclick="window.open('../util/attendance_form.html', '출석부팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인완료</button> 
+                                    </td>
+                                    <td class="text-center"> 
+                                        <button type="button" class="btn btn-sm btn-outline-secondary width-70px" onclick="window.open('../util/appraisal_leader.html', '현장지도자 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">작성전</button> 
+                                        <button type="button" class="btn btn-sm btn-outline-primary width-70px" onclick="window.open('../util/appraisal_leader.html', '현장지도자 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">작성중</button> 
+                                        <button type="button" class="btn btn-sm btn-outline-danger width-70px" onclick="window.open('../util/appraisal_leader.html', '현장지도자 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인요청</button> 
+                                        <button type="button" class="btn btn-sm btn-secondary width-70px" onclick="window.open('../util/appraisal_leader.html', '현장지도자 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인완료</button> 
+                                    </td>
+                                    <td class="text-center"> 
+                                        <button type="button" class="btn btn-sm btn-outline-secondary width-70px" onclick="window.open('../util/appraisal_professor.html', '교수 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">작성전</button> 
+                                        <button type="button" class="btn btn-sm btn-outline-primary width-70px" onclick="window.open('../util/appraisal_professor.html', '교수 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">작성중</button> 
+                                        <button type="button" class="btn btn-sm btn-outline-danger width-70px" onclick="window.open('../util/appraisal_professor.html', '교수 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인요청</button> 
+                                        <button type="button" class="btn btn-sm btn-secondary width-70px" onclick="window.open('../util/appraisal_professor.html', '교수 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인완료</button> 
+                                    </td>
                                     <td class="text-center">90</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-sm btn-secondary" onclick="window.open('../util/self-diagnosis.html', '교수 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')" >보기</button>
+                                        <button type="button" class="btn btn-sm btn-secondary" onclick="window.open('../util/self-diagnosis.html', '교수 평가서 팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">보기</button>
                                     </td>
                                     <td class="text-center">완료</td>
                                 </tr>

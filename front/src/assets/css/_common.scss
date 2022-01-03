@@ -879,6 +879,11 @@ select.form-control {
         padding: .5rem .75rem;
         transition: .1s;
         color: #666;
+
+    }
+    ul.select2-results__options{
+        max-height: 250px;
+        overflow-y: scroll;
     }
 
     .select2-results__option--selected {

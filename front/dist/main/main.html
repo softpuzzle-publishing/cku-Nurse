@@ -226,6 +226,15 @@
                                                 <li class="active"><a href="#none">공지사항</a></li>
                                                 <li><a href="#none">자료실</a></li>
                                             </ul>
+
+                                            <script>
+                                                $(".tab li").on("click", function() {
+                                                    $(this).addClass("active");
+                                                    if ($(this).hasClass("active")) {
+                                                        $(".tab li").not(this).removeClass("active");
+                                                    }
+                                                });
+                                            </script>
                                         </div>
                                         <div class="col-auto">
                                             <a href="../board/notice_list.html" class="more" aria-label="더보기"><i class="icon-plus-white"></i></a>

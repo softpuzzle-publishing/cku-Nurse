@@ -19,13 +19,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">운영관리</h1>
+                            <h1 class="title">실습기관 배정</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">운영관리</a></li>
-                                <li class="breadcrumb-item">학기정보</li>
+                                <li class="breadcrumb-item">실습기관 배정</li>
                             </ol>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content" data-menu="operation">
+            <div class="content" data-menu="operation-agency">
                 <div class="container-fluid">
                     <div class="inquery-area">
                         <p class="font-size-18px font-weight-bold mb-3">● 실습 정보</p>
@@ -67,12 +67,19 @@
                         </div>
                     </div>
 
-                    <p class="font-size-18px font-weight-bold mb-3">● 실습 기관</p>
+                    <div class="row row-0 align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <p class="font-size-18px font-weight-bold mb-3">● 실습 기관</p>
+                        </div>
+                        <div class="col-auto text-right">
+                            ※ 부서, 실습단위 등의 등록은 실습기관관리에서 연동됩니다. <a href="../agency/agency_info.html" class="font-weight-bold text-danger d-inline-block">[실습기관관리 바로가기] </a>
+                        </div>
+                    </div>
 
-                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
                         <table class="table table-bordered" id="datatable1">
                             <colgroup>
-                                <col>
                                 <col>
                                 <col>
                                 <col>
@@ -82,6 +89,12 @@
                             </colgroup>
                             <thead>
                                 <tr>
+                                    <th class="text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </th>
                                     <th class="text-center">연번</th>
                                     <th class="text-center">기관명</th>
                                     <th class="text-center">부서명</th>
@@ -92,6 +105,12 @@
                             <tbody>
                                 <!-- 1번 -->
                                 <tr>
+                                    <td class="text-center" rowspan="6">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
                                     <td class="text-center" rowspan="6">1</td>
                                     <td class="text-center" rowspan="6">강릉제일병원</td>
                                     <td class="text-center" rowspan="3">내과</td>
@@ -154,6 +173,12 @@
 
                                 <!-- 2번 -->
                                 <tr>
+                                    <td class="text-center" rowspan="3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
                                     <td class="text-center" rowspan="3">2</td>
                                     <td class="text-center" rowspan="3">가톨릭병원</td>
                                     <td class="text-center" rowspan="2">청소년과</td>
@@ -184,15 +209,18 @@
                                         </div>
                                     </td>
                                 </tr>
-                               <!-- 2번 끝 -->
+                                <!-- 2번 끝 -->
                             </tbody>
-                            
+
                         </table>
                     </div>
 
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-primary mr-2">저장</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-dark" data-target="#modal-no-delete-info" data-toggle="modal">선택삭제</button>
+                        <div>
+                            <button type="button" class="btn btn-primary mr-2 width-120px">저장</button>
+                            <button type="button" class="btn btn-secondary width-120px" data-dismiss="modal" aria-label="Close">취소</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -209,7 +237,7 @@
 
     <script>
         $(document).ready(function () {
-            // $("#modal-training-designation-common").modal("show");
+            // $("#modal-reset-studentInfo-success").modal("show");
         });
     </script>
 </body>

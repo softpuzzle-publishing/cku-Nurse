@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <%- include('../layout/_head.ejs')%>
 </head>
@@ -18,13 +19,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">실습관리</h1>
+                            <h1 class="title">교과목별 실습배치표</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">실습관리</a></li>
-                                <li class="breadcrumb-item">교과목별 실습평가</li>
+                                <li class="breadcrumb-item">교과목별 실습배치표</li>
                             </ol>
                         </div>
                     </div>
@@ -36,7 +37,6 @@
             <div class="content" data-menu="practice-subject">
                 <div class="container-fluid">
                     <div class="inquery-area">
-                        <p class="font-size-18px font-weight-bold">● 실습과목별 실습배치표</p>
                         <table class="table table-bordered m-t-30">
                             <colgroup>
                                 <col style="width: 150px">
@@ -89,15 +89,15 @@
                             <button type="button" class="btn btn-dark min-width-90px">검색</button>
                         </div>
                     </div>
-                    
-                    
+
+
                     <div class="row justify-content-between align-items-end mb-0">
                         <div class="col-auto">
-                           실습연도 : <span>2022</span>년
+                            실습연도 : <span>2022</span>년
                         </div>
                     </div>
                     <div class="row justify-content-between align-items-end mb-3">
-                        
+
                         <div class="col-auto">
                             <b>Total : 000</b>,
                             Page 1/3
@@ -112,15 +112,16 @@
                             </select>
                         </div>
                     </div>
-                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
                         <table class="table table-bordered" id="datatable1">
                             <thead>
                                 <tr>
-                                    <th class="text-center" rowspan="2" >학기</th>
-                                    <th class="text-center" rowspan="2" >실습교과목</th>
-                                    <th class="text-center" rowspan="2" >실습기관</th>
-                                    <th class="text-center" rowspan="2" >실습부서</th>
-                                    <th class="text-center" rowspan="2" >실습단위</th>
+                                    <th class="text-center" rowspan="2">학기</th>
+                                    <th class="text-center" rowspan="2">실습교과목</th>
+                                    <th class="text-center" rowspan="2">실습기관</th>
+                                    <th class="text-center" rowspan="2">실습부서</th>
+                                    <th class="text-center" rowspan="2">실습단위</th>
                                     <th class="text-center">1차</th>
                                     <th class="text-center">2차</th>
                                     <th class="text-center">3차</th>
@@ -159,156 +160,72 @@
                                     <td class="text-center" rowspan="2">강릉성심병원</td>
                                     <td class="text-center" rowspan="2">소아과</td>
                                     <td class="text-center" rowspan="2">소아병동</td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                            <div>
-                                                <p class="class font-size-12px">성인간호실습I</p>
-                                                <p class="hospital font-size-12px">강릉성심병원</p>
-                                                <p class="place font-size-12px">101병동</p>
-                                            </div>
-                                        </a>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                            <div>
-                                                <p class="class font-size-12px">성인간호실습I</p>
-                                                <p class="hospital font-size-12px">강릉성심병원</p>
-                                                <p class="place font-size-12px">101병동</p>
-                                            </div>
-                                        </a>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
+                                    <td class="slash"></td>
+                                    <td class="slash"></td>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                            <div>
-                                                <p class="class font-size-12px">성인간호실습I</p>
-                                                <p class="hospital font-size-12px">강릉성심병원</p>
-                                                <p class="place font-size-12px">101병동</p>
-                                            </div>
-                                        </a>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                        <div>
-                                            <p class="class font-size-12px">성인간호실습I</p>
-                                            <p class="hospital font-size-12px">강릉성심병원</p>
-                                            <p class="place font-size-12px">101병동</p>
-                                        </div>
-                                        </a>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                            <div>
-                                                <p class="class font-size-12px">성인간호실습I</p>
-                                                <p class="hospital font-size-12px">강릉성심병원</p>
-                                                <p class="place font-size-12px">101병동</p>
-                                            </div>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                            <div>
-                                                <p class="class font-size-12px">성인간호실습I</p>
-                                                <p class="hospital font-size-12px">강릉성심병원</p>
-                                                <p class="place font-size-12px">101병동</p>
-                                            </div>
-                                        </a>
-                                    </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
-                                    </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
-                                    </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
-                                    </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
-                                    </td>
+                                    <td class="slash"></td>
+                                    <td class="slash"></td>
+                                    <td class="slash"></td>
+                                    <td class="slash"></td>
                                     <td class="text-center" rowspan="2">11</td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                            <div>
-                                                <p class="class font-size-12px">성인간호실습I</p>
-                                                <p class="hospital font-size-12px">강릉성심병원</p>
-                                                <p class="place font-size-12px">101병동</p>
-                                            </div>
-                                        </a>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                            <div>
-                                                <p class="class font-size-12px">성인간호실습I</p>
-                                                <p class="hospital font-size-12px">강릉성심병원</p>
-                                                <p class="place font-size-12px">101병동</p>
-                                            </div>
-                                        </a>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
+                                    <td class="slash"></td>
+                                    <td class="slash"></td>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                            <div>
-                                                <p class="class font-size-12px">성인간호실습I</p>
-                                                <p class="hospital font-size-12px">강릉성심병원</p>
-                                                <p class="place font-size-12px">101병동</p>
-                                            </div>
-                                        </a>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                        <div>
-                                            <p class="class font-size-12px">성인간호실습I</p>
-                                            <p class="hospital font-size-12px">강릉성심병원</p>
-                                            <p class="place font-size-12px">101병동</p>
-                                        </div>
-                                        </a>
+                                    <td class="text-center font-size-12px">
+                                        <p>김학생</p>
+                                        <p>(1254027)</p>
                                     </td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                            <div>
-                                                <p class="class font-size-12px">성인간호실습I</p>
-                                                <p class="hospital font-size-12px">강릉성심병원</p>
-                                                <p class="place font-size-12px">101병동</p>
-                                            </div>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
-                                            <div>
-                                                <p class="class font-size-12px">성인간호실습I</p>
-                                                <p class="hospital font-size-12px">강릉성심병원</p>
-                                                <p class="place font-size-12px">101병동</p>
-                                            </div>
-                                        </a>
-                                    </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
-                                    </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
-                                    </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
-                                    </td>
-                                    <td class="td-none-data">
-                                        <div class="none-data"></div>
-                                    </td>
+                                    <td class="slash"></td>
+                                    <td class="slash"></td>
+                                    <td class="slash"></td>
+                                    <td class="slash"></td>
                                 </tr>
                                 <% } %>
-                               
+
                             </tbody>
                             <tfoot>
                                 <tr>

@@ -148,7 +148,7 @@
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="../practice/practice_student_placement.html" class="nav-link">
-                                <i class="nav-icon fas fa-plane"></i>
+                                <i class="nav-icon fas fa-user-nurse"></i>
                                 <p>
                                     실습관리
                                     <i class="right fas fa-angle-right"></i>
@@ -740,18 +740,35 @@
         <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <p>학생정보 변경이 완료 되었습니다.</p>
+                    <p class="text-center">학생정보 변경이 완료 되었습니다.</p>
                 </div>
-            </div>
-            <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">확인</button>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">확인</button>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- 모달 : 실습 적용 후 삭제 불가 안내 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-no-delete-info">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fas fa-exclamation-circle m-b-20"></i>
+                        <p>실습 적용 되어 삭제가 불가합니다</p>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary">확인</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ---------- -->
-    <!-- 모달 : 실습학생 지정 팝업(학생 개별지정)-->
+    <!-- 모달 : 실습학생 지정 팝업-->
     <div class="modal" tabindex="-1" role="dialog" id="modal-training-designation-common">
         <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 740px">
             <div class="modal-content">
@@ -815,7 +832,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 740px">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title">2022년도 실습교과목 목록</h1>
+                    <h1 class="modal-title">실습교과목 목록</h1>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -844,104 +861,12 @@
                                     <p>성인간호학실습 IV</p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="text-center">4학년</td>
-                                <td class="text-left">
-                                    <p>기본간호학 실습 I</p>
-                                    <p>기본간호학 실습 II</p>
-                                    <p>성인간호학실습 I</p>
-                                    <p>성인간호학실습 II</p>
-                                    <p>성인간호학실습 III</p>
-                                    <p>성인간호학실습 IV</p>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="btn btn-primary">저장</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 모달 : 실습학생 지정 팝업(학생 개별지정)-->
-    <div class="modal" tabindex="-1" role="dialog" id="modal-training-designation">
-        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 740px">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title">실습학생 과목지정</h1>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="box p-3">
-                        <div class="student-courses-profile">
-                            <dl>
-                                <dt>학생</dt>
-                                <dd>김학생 (20190102)</dd>
-                            </dl>
-                            <dl>
-                                <dt>생년월일</dt>
-                                <dd>1999.02.02</dd>
-                                <dt>성별</dt>
-                                <dd>여</dd>
-                            </dl>
-                            <dl>
-                                <dt>휴대폰번호</dt>
-                                <dd>010-0000-0000</dd>
-                                <dt>이메일</dt>
-                                <dd>aaabbbccc22@gmail.com</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <table class="table table-bordered mb-0 m-t-20">
-                        <colgroup>
-                            <col style="width: 25%">
-                            <col>
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th class="text-center">구분</th>
-                                <th class="text-center">내용</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center">비행훈련</td>
-                                <td class="text-left">
-                                    <div class="custom-control custom-checkbox my-2">
-                                        <input class="custom-control-input" type="checkbox" id="chkPractice1">
-                                        <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox my-2">
-                                        <input class="custom-control-input" type="checkbox" id="chkPractice1">
-                                        <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox my-2">
-                                        <input class="custom-control-input" type="checkbox" id="chkPractice1">
-                                        <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">시뮬레이터교육</td>
-                                <td class="text-left">
-                                    <div class="custom-control custom-checkbox my-2">
-                                        <input class="custom-control-input" type="checkbox" id="chkPractice4">
-                                        <label for="chkPractice4" class="custom-control-label">시뮬레이터교육 (IR 4Basic, VOR Intercept)
-                                        </label>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
-                    <button type="button" class="btn btn-primary">저장</button>
                 </div>
             </div>
         </div>
@@ -958,18 +883,6 @@
                     </button>
                 </div>
                 <div class="modal-body">
-
-                    <div class="form-group row row-30 align-items-center justify-content-center">
-                        <div class="col-auto">
-                            <strong>연도 선택</strong>
-                        </div>
-                        <div class="col-auto">
-                            <select name="" id="" class="custom-select width-200px">
-                                <option value="">2022년</option>
-                                <option value=""></option>
-                            </select>
-                        </div>
-                    </div>
 
                     <table class="table table-bordered mb-0 ">
                         <colgroup>
@@ -1072,7 +985,7 @@
     </div>
     <!-- 모달 : 실습기간 정보 -->
     <div class="modal" tabindex="-1" role="dialog" id="modal-agency-info">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title">실습기관 정보</h1>
@@ -1141,7 +1054,7 @@
                             </tr>
                             <tr>
                                 <th>제목</th>
-                                <td><input type="text" class="form-control width-300px" value=""></td>
+                                <td><input type="text" class="form-control" value=""></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1911,7 +1824,7 @@
 
     <!-- 모달 : 실습배치 명단 -->
     <div class="modal" tabindex="-1" role="dialog" id="modal-training-name" data-overlap="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-dialog modal-dialog-centered modal-md modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title">실습배치 명단 </h1>
@@ -2053,7 +1966,7 @@
                         </tbody>
                     </table>
                     <div class="row row-0 justify-content-between align-items-end mb-3 mt-3">
-                        <div class="col-auto bg-gray-1 p-3">
+                        <div class="col-12 bg-gray-1 p-3">
                             <p class="text-danger mb-2 font-weight-bold">유의사항</p>
                             <p>※ 실습 차수를 변경할 수 있으며, 선택 상태를 변경하고 저장하면 일정이 변경됩니다. </p>
                         </div>
@@ -2295,7 +2208,7 @@
     <!-- ---------- -->
 
     <!-- 모달 :  순회지도 일시 지정  -->
-    <div class="modal" tabindex="-1" role="dialog" id="modal-practice-log-tour">
+    <div class="modal" tabindex="-1" role="dialog" id="modal-practice-log-tour-form">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -2435,7 +2348,7 @@
 
 
     <!-- 모달 :  집담회 일시 지정  -->
-    <div class="modal" tabindex="-1" role="dialog" id="modal-practice-log-meeting">
+    <div class="modal" tabindex="-1" role="dialog" id="modal-practice-log-meeting-form">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -2507,6 +2420,583 @@
             </div>
         </div>
     </div>
+
+    <!-- 모달 : 순회지도 활동 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-practice-log-tour">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md" role="document">
+            <div class="modal-content border-0">
+                <div class="modal-header bg-primary">
+                    <h1 class="modal-title text-white">순회지도 활동</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close-white"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center">구분</th>
+                                <th class="text-center">작성차수</th>
+                                <th class="text-center">지도시간</th>
+                                <th class="text-center">작성자<br>(지도교수)</th>
+                                <th class="text-center">지도일시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td class="text-center">순회지도</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center text-danger">4</td>
+                                <td class="text-center">김교수</td>
+                                <td class="text-center">2021-10-11 12:00</td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">순회지도</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center text-danger">4</td>
+                                <td class="text-center">김교수</td>
+                                <td class="text-center">2021-10-11 12:00</td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">순회지도</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center text-danger">4</td>
+                                <td class="text-center">김교수</td>
+                                <td class="text-center">2021-10-11 12:00</td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">순회지도</td>
+                                <td class="text-center">4</td>
+                                <td class="text-center text-danger">4</td>
+                                <td class="text-center">김교수</td>
+                                <td class="text-center">2021-10-11 12:00</td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">순회지도</td>
+                                <td class="text-center">5</td>
+                                <td class="text-center text-danger">4</td>
+                                <td class="text-center">김교수</td>
+                                <td class="text-center">2021-10-11 12:00</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary width-120px" data-dismiss="modal" aria-label="Close">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 모달 : 집담회 활동 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-practice-log-meeting">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md" role="document">
+            <div class="modal-content border-0">
+                <div class="modal-header bg-primary">
+                    <h1 class="modal-title text-white">집담회 활동</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close-white"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center">구분</th>
+                                <th class="text-center">작성차수</th>
+                                <th class="text-center">지도시간</th>
+                                <th class="text-center">작성자<br>(지도교수)</th>
+                                <th class="text-center">집담회 일시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td class="text-center">집담회</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center text-danger">4</td>
+                                <td class="text-center">김교수</td>
+                                <td class="text-center">2021-10-11 12:00</td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">집담회</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center text-danger">4</td>
+                                <td class="text-center">김교수</td>
+                                <td class="text-center">2021-10-11 12:00</td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">집담회</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center text-danger">4</td>
+                                <td class="text-center">김교수</td>
+                                <td class="text-center">2021-10-11 12:00</td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">집담회</td>
+                                <td class="text-center">4</td>
+                                <td class="text-center text-danger">4</td>
+                                <td class="text-center">김교수</td>
+                                <td class="text-center">2021-10-11 12:00</td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">집담회</td>
+                                <td class="text-center">5</td>
+                                <td class="text-center text-danger">4</td>
+                                <td class="text-center">김교수</td>
+                                <td class="text-center">2021-10-11 12:00</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary width-120px" data-dismiss="modal" aria-label="Close">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 모달 : 평가서 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-appraisal">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+            <div class="modal-content border-0">
+                <div class="modal-header bg-primary">
+                    <h1 class="modal-title text-white">집담회 활동</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close-white"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <colgroup>
+                            <col style="width:150px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="text-danger">연도 선택*</th>
+                                <td>2022</td>
+                            </tr>
+                            <tr>
+                                <th class="text-danger">평가서 제목 *</th>
+                                <td>2022년 1학기 현장지도자용 공통 평가서
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-danger">학년 선택*</th>
+                                <td>3학년</td>
+                            </tr>
+                            <tr>
+                                <th class="text-danger">교과목 선택*</th>
+                                <td>지역사회간호실습 I</td>
+                            </tr>
+                            <tr>
+                                <th class="text-danger">평가자 선택*</th>
+                                <td>현장지도자</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="table-title m-t-10">평가 항목</p>
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col>
+                            <col style="width:9%;">
+                            <col style="width:20%;">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center" rowspan="2">대분류</th>
+                                <th class="text-center" rowspan="2">중분류</th>
+                                <th class="text-center" rowspan="2">소분류</th>
+                                <th class="text-center" colspan="5">평가점수</th>
+                            </tr>
+                            <tr>
+                                <th class="text-center">10점</th>
+                                <th class="text-center">9점</th>
+                                <th class="text-center">8점</th>
+                                <th class="text-center">7점</th>
+                                <th class="text-center">6점</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center" rowspan="3">
+                                    <p>PO1</p>
+                                    <p>(총점 : 30)</p>
+                                </td>
+                                <td class="text-center" rowspan="3">지식</td>
+                                <td>이해력</td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">10점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">9점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">8점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">7점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">6점</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>판단력</td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">10점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">9점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">8점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">7점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">6점</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>지식 적응력</td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">10점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">9점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">8점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">7점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">6점</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" rowspan="3">
+                                    <p>PO4</p>
+                                    <p>(총점 : 30)</p>
+                                </td>
+                                <td class="text-center" rowspan="3">기술</td>
+                                <td>관찰력</td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">10점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">9점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">8점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">7점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">6점</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>종합적 사고능력</td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">10점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">9점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">8점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">7점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">6점</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>의사소통력</td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">10점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">9점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">8점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">7점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">6점</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" rowspan="4">
+                                    <p>PO8</p>
+                                    <p>(총점 : 40)</p>
+                                </td>
+                                <td class="text-center" rowspan="4">태도</td>
+                                <td>용모</td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">10점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">9점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">8점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">7점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">6점</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>협조성</td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">10점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">9점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">8점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">7점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">6점</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>적극성</td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">10점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">9점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">8점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">7점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">6점</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>책임감</td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">10점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">9점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">8점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">7점</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">6점</label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- 총점 -->
+                            <tr>
+                                <th class="text-center" colspan="3">총점(%)</th>
+                                <th class="text-center" colspan="5">100점</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary width-120px" data-dismiss="modal" aria-label="Close">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         $(document).ready(function() {

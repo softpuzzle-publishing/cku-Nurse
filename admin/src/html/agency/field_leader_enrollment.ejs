@@ -19,13 +19,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">실습기관관리</h1>
+                            <h1 class="title">부서 및 현장지도자 정보</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">실습기관관리</a></li>
-                                <li class="breadcrumb-item">실습기관정보</li>
+                                <li class="breadcrumb-item">부서 및 현장지도자 정보</li>
                             </ol>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content" data-menu="agency-info">
+            <div class="content" data-menu="agency-leader">
                 <div class="container-fluid">
                     <div class="inquery-area">
 
@@ -138,7 +138,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-danger">최종학력 *</th>
+                                    <th class="text-danger">간호사면허 *</th>
                                     <td>
                                         <div class="custom-control custom-radio custom-control-inline ml-2">
                                             <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio" checked>
@@ -151,18 +151,36 @@
                                     </td>
                                     <th>기타면허 및 자격</th>
                                     <td>
-                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
-                                            <label for="chkPractice1" class="custom-control-label">조산사</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
-                                            <label for="chkPractice1" class="custom-control-label">보건교사</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
-                                            <label for="chkPractice1" class="custom-control-label">기타</label>
-                                        </div>
+                                        <div class="row row-5 align-items-center">
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="radio1" name="">
+                                                    <label class="custom-control-label" for="radio1">조산사</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="radio1" name="">
+                                                    <label class="custom-control-label" for="radio1">보건 교사</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="row row-0 align-items-center">
+                                                    <div class="col-auto">
+                                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                                            <input type="checkbox" class="custom-control-input" id="license-etc" name="license-etc" data-pair="#license-name">
+                                                            <label class="custom-control-label" for="license-etc">기타</label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col">
+                                                        <div class="input-next-div m-t-10"  id="license-name">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </di v>
                                     </td>
                                 </tr>
                             </tbody>
@@ -200,8 +218,8 @@
                         </table>
 
                         <div class="btns d-flex align-items-center justify-content-center mt-5">
-                            <button type="button" class="btn btn-dark min-width-90px">저장</button>
-                            <button type="button" class="btn btn-dark min-width-90px">취소</button>
+                            <button type="button" class="btn btn-primary min-width-90px">저장</button>
+                            <button type="button" class="btn btn-secondary min-width-90px">취소</button>
                         </div>
                     </div>
 

@@ -325,7 +325,7 @@ ul.box{
     padding: 0; position: relative;
 }
 .none-data{
-    width: calc(100% + 17px);height:2px;background-color: #000; transform: rotate(35deg); position: absolute; top:47%;left: -9px;
+    width: calc(100% + 17px);height:1px;background-color: $border-color; transform: rotate(35deg); position: absolute; top:47%;left: -9px;
 }
 
 
@@ -336,4 +336,34 @@ ul.box{
 .scroll-tab{
     max-height: 400px;
     overflow-y: scroll;
+}
+
+
+// 테이블에 있는 슬래쉬
+.slash {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="100%" x2="100%" y2="0" stroke="gray" /></svg>');
+    padding:0!important;
+    opacity: 0.3;
+}
+
+.tab-menu{
+    li{
+        flex:0 0 163px;
+        border:1px solid $border-color;
+        margin-bottom:-1px;
+        text-align: center;
+        max-width: 163px;
+        a{
+            &.active{
+                background:$dark;
+                color:$white;
+            }
+        }
+        & + li{
+            margin-left:-1px;
+        }
+        &:nth-child(10n + 1){
+            margin-left:0;
+        }
+    }
 }

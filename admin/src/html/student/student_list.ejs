@@ -51,22 +51,20 @@
                                             <option value="">연도 선택</option>
                                         </select>
                                     </td>
-                                </tr>
-                                <tr>
                                     <th>학년 선택</th>
                                     <td>
                                         <select name="" id="" class="custom-select">
                                             <option value="">전체</option>
                                         </select>
                                     </td>
+                                </tr>
+                                <tr>
                                     <th>반 선택</th>
                                     <td>
                                         <select name="" id="" class="custom-select">
                                             <option value="">전체</option>
                                         </select>
                                     </td>
-                                </tr>
-                                <tr>
                                     <th>학기 선택</th>
                                     <td>
                                         <select name="" id="" class="custom-select">
@@ -109,7 +107,8 @@
                             <colgroup>
                                 <col>
                                 <col>
-                                <!-- <col> -->
+                                <col>
+                                <col>
                                 <col>
                                 <col>
                                 <col>
@@ -128,7 +127,8 @@
                                     </th>
                                     <th class="text-center">번호</th>
                                     <th class="text-center">학년</th>
-                                    <!-- <th class="text-center">학기</th> -->
+                                    <th class="text-center">학기</th>
+                                    <th class="text-center">반</th>
                                     <th class="text-center">학번</th>
                                     <th class="text-center">이름</th>
                                     <th class="text-center">생년월일</th>
@@ -148,16 +148,17 @@
                                         </div>
                                     </td>
                                     <td class="text-center"><%= i %></td>
-                                    <td class="text-center">4학년</td>
-                                    <!-- <td class="text-center">2학기</td> -->
-                                    <td class="text-center"><a href="student_detail.html" class="text-underline">9819155</a></td>
+                                    <td class="text-center">2학기</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center"><a href="student_detail.html" class="text-underline">1반</a></td>
+                                    <td class="text-center">9819155</td>
                                     <td class="text-center">김학생</td>
                                     <td class="text-center">1999.02.02</td>
                                     <td class="text-center">여</td>
                                     <td class="text-center">010-0000-0000</td>
                                     <td class="text-center">aaabbbccc1@gmail.com</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#modal-training-designation">관리</button>
+                                        <button type="button" class="btn btn-sm btn-secondary"data-toggle="modal" data-target="#modal-training-designation-common">관리</button>
                                     </td>
                                 </tr>
                                 <% } %>

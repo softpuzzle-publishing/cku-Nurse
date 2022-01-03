@@ -163,11 +163,17 @@
                             <div class="sort">A</div>
                             <div>
                                 <div>
-                                    <span class="writer">관리자</span>
-                                    <span class="date">2021.09.29 15:22</span>
+                                    <span class="writer" th:text="${answerInfo.sAdminNm}">관리자</span>
+                                    <span class="date" th:text="${answerInfo.dtCreateTime}">2021.09.29 15:22</span>
                                 </div>
                                 <div class="content">
-                                    교육일정은 교육시간관리 > 교육일정에서 확인하시길 바랍니다.
+                                    <span th:text="${answerInfo.tContent}">교육일정은 교육시간관리 > 교육일정에서 확인하시길 바랍니다.</span>
+                                </div>
+                                <div class="m-t-50">
+                                    <div class="attachments w-100 m-b-5">
+                                        <i class="icon-attachments"></i>
+                                        <a href="javascript:;">2020년 하반기보수교육안내200921(수정).zip</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

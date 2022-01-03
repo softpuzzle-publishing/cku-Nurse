@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <%- include('../layout/_head.ejs')%>
 </head>
@@ -85,7 +86,7 @@
                             Page 1/3
                         </div>
                         <div class="col-auto">
-                            <a href="operation_appraisal_form.html" class="btn btn-primary mr-1" >평가표등록</a>
+                            <a href="operation_appraisal_form.html" class="btn btn-primary mr-1">평가표등록</a>
                             <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
                             <select class="custom-select w-auto">
                                 <option>10</option>
@@ -95,7 +96,8 @@
                             </select>
                         </div>
                     </div>
-                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
                         <table class="table table-bordered" id="datatable1">
                             <colgroup>
                                 <col>
@@ -105,7 +107,6 @@
                                 <col>
                                 <col>
                                 <col>
-                               
                             </colgroup>
                             <thead>
                                 <tr>
@@ -127,11 +128,11 @@
                                     <td class="text-center">교수</td>
                                     <td class="text-center">3학년</td>
                                     <td class="text-center">아동간호실습1</td>
-                                    <td class="text-center"><a href="">아동간호1-교수용</a></td>
+                                    <td class=""><a href="#modal-appraisal" data-toggle="modal" class="text-underline">아동간호1-교수용</a></td>
                                     <td class="text-center">2022.01.01</td>
                                     <td class="text-center">
-                                        <a href="flight_detail.html" class="btn btn-sm btn-secondary">삭제</a>
-                                        <a href="flight_detail.html" class="btn btn-sm btn-secondary">수정</a>
+                                        <a href="#modal-delete" data-toggle="modal" class="btn btn-sm btn-secondary">삭제</a>
+                                        <a href="operation_appraisal_form.html" class="btn btn-sm btn-dark">수정</a>
                                     </td>
                                 </tr>
                                 <% } %>
@@ -155,7 +156,7 @@
 
     <script>
         $(document).ready(function () {
-            // $("#modal-training-designation-common").modal("show");
+            // $("#modal-appraisal").modal("show");
         });
     </script>
 </body>

@@ -75,7 +75,7 @@
                                 <tr>
                                     <th>검색</th>
                                     <td colspan="3">
-                                        <input type="text" class="form-control" placeholder="이름, 학번, 휴대폰번호 입력">
+                                        <input type="text" class="form-control" placeholder="학번, 이름으로 검색">
                                     </td>
                                 </tr>
                             </tbody>
@@ -85,7 +85,7 @@
                         </div>
                     </div>
                     <div class="row row-0 justify-content-between align-items-end mb-3">
-                        <div class="col-auto bg-gray-1 p-3">
+                        <div class="col-12 bg-gray-1 p-3">
                             <p class="text-danger mb-2 font-weight-bold">유의사항</p>
                             <p>※ 실습을 진행 중인 학생들의 예방접종현황과 보안서약서를 열람할 수 있으며, 출석부 및 평가서를 작성할 수 있습니다.</p>
                             <p>※ 출석부 최초 저장시 해당 학생의 담당 현장지도자로 지정되며, 이후에는 변경할 수 없으니 유의하세요.</p>
@@ -124,15 +124,11 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th class="text-center" style="width: 50px">
-                                        <div class="custom-control custom-checkbox without-label">
-                                            <input type="checkbox" class="custom-control-input" id="checkAll">
-                                            <label class="custom-control-label" for="checkAll"><label>
-                                        </div>
-                                    </th>
+                
                                     <th class="text-center">번호</th>
-                                    <th class="text-center">실습학기</th>
+                                    <th class="text-center">실습분기</th>
                                     <th class="text-center">학년</th>
+                                    <th class="text-center">반</th>
                                     <th class="text-center">학번</th>
                                     <th class="text-center">이름</th>
                                     <th class="text-center">진행현황</th>
@@ -145,26 +141,17 @@
                             <tbody>
                                 <% for(var i = 10; i > 0 ; i--){ %>
                                 <tr>
-                                    <td class="text-center">
-                                        <div class="custom-control custom-checkbox without-label">
-                                            <input type="checkbox" class="custom-control-input" id="check<%= i %>">
-                                            <label class="custom-control-label" for="check<%= i %>"><label>
-                                        </div>
-                                    </td>
                                     <td class="text-center"><%= i %></td>
                                     <td class="text-center">1분기</td>
                                     <td class="text-center">3</td>
+                                    <td class="text-center">1</td>
                                     <td class="text-center">9819155</td>
                                     <td class="text-center">김학생</td>
                                     <td class="text-center">실습완료</td>
-                                    <td class="text-center"><a href="">2</a></td>
-                                    <td class="text-center"><a href="">2</a></td>
+                                    <td class="text-center"><a href="#modal-practice-log-tour" data-toggle="modal" class="text-underline">2</a></td>
+                                    <td class="text-center"><a href="#modal-practice-log-meeting" data-toggle="modal" class="text-underline">2</a></td>
                                     <td class="text-center">
-<<<<<<< HEAD
                                         <button type="button" class="btn btn-sm btn-secondary" onclick="window.open('../util/self-diagnosis_form.html', '현장지도자 평가서 팝업', 'width=1200,height=900,location=no,status=no,scrollbars=yes')">보기</button>
-=======
-                                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#modal-vaccination">보기</button>
->>>>>>> park
                                     </td>
                                     <td class="text-center">완료</td>
                                 </tr>

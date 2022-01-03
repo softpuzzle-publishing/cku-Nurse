@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <%- include('../layout/_head.ejs')%>
 </head>
@@ -18,7 +19,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">운영관리</h1>
+                            <h1 class="title">교과목정보</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
@@ -73,7 +74,8 @@
                             </select>
                         </div>
                     </div>
-                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
                         <table class="table table-bordered" id="datatable1">
                             <colgroup>
                                 <col>
@@ -83,7 +85,6 @@
                                 <col>
                                 <col>
                                 <col>
-                               
                             </colgroup>
                             <thead>
                                 <tr>
@@ -106,8 +107,8 @@
                                     <td class="text-center">아동간호실습 II, 성인간호실습 II, 정신간호실습 II</td>
                                     <td class="text-center">2022.01.01</td>
                                     <td class="text-center">
-                                        <a href="flight_detail.html" class="btn btn-sm btn-secondary">삭제</a>
-                                        <a href="flight_detail.html" class="btn btn-sm btn-secondary">수정</a>
+                                        <a href="#modal-delete" data-toggle="modal" class="btn btn-sm btn-secondary">삭제</a>
+                                        <a href="#modal-training-form" data-toggle="modal" class="btn btn-sm btn-dark">수정</a>
                                     </td>
                                 </tr>
                                 <% } %>

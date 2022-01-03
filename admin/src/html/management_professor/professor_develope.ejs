@@ -18,7 +18,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">교수업무관리</h1>
+                            <h1 class="title">교수개발 참여실적</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
@@ -98,7 +98,7 @@
                                 <tr>
                                     <th>검색</th>
                                     <td colspan="3">
-                                        <input type="text" class="form-control" placeholder="이름, 학번, 휴대폰번호 입력">
+                                        <input type="text" class="form-control" placeholder="기관명, 내용으로 검색">
                                     </td>
                                 </tr>
                             </tbody>
@@ -171,15 +171,17 @@
                                     </td>
                                     <td class="text-center"><%= i%></td>
                                     <td class="text-center">2022</td>
-                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">
+                                        <a href="professor_develope_detail.html" class="text-underline">김교수</a>
+                                    </td>
                                     <td class="text-center">간호 전문직단체 활동</td>
                                     <td class="text-center">대한간호협회</td>
                                     <td class="text-center">임원으로 활동</td>
                                     <td class="text-center">2021.09.21 ∼ 2021.09.30</td>
                                     <td class="text-center">2021.09.21 14:21</td>
                                     <td class="text-center">
-                                        <a href="operation_agency_detail.html" class="btn btn-sm btn-secondary">삭제</a>
-                                        <a href="operation_agency_detail.html" class="btn btn-sm btn-secondary">수정</a>
+                                        <a href="javascript:;" class="btn btn-sm btn-secondary">삭제</a>
+                                        <a href="professor_develope_enrollment.html" class="btn btn-sm btn-dark">수정</a>
                                     </td>
                                 </tr>
                                 <% } %>
@@ -187,7 +189,7 @@
                         </table>
                         <div class="row mb-3">
                             <div class="col-auto">
-                                <button type="button" class="btn btn-outline-primary mr-1">선택삭제</button>
+                                <button type="button" class="btn btn-outline-primary mr-1" data-target="#modal-delete" data-toggle="modal">선택삭제</button>
                             </div>
                         </div>
                     </div>

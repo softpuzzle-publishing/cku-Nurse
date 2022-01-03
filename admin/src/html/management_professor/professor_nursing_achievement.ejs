@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">학생 성취평가 관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">교수업무관리</a></li>
+                                <li class="breadcrumb-item">핵심 간호술 관리</li>
+                                <li class="breadcrumb-itme">학생 성취평가 관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="professor-nursing-management">
+                <div class="container-fluid">
+                    <ul class="nav tab-menu" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="l1" data-toggle="pill" href="#t1" role="tab" aria-controls="t1" aria-selected="true">활력징후</a>
+                        </li>
+                        <% for(var i = 2; i < 21; i++) { %>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="l2" data-toggle="pill" href="#t<%= i %>" role="tab" aria-controls="t<%= i %>" aria-selected="false">경구투약</a>
+                        </li>
+                        <% } %>
+                    </ul>
+                    <div class="tab-content m-t-30">
+                        <div class="tab-pane fade active show" id="t1" role="tabpanel" aria-labelledby="l1">
+                            <table class="table table-bordered">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col style="width:50%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">연도</th>
+                                        <th class="text-center">졸업학기</th>
+                                        <th class="text-center">제목</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">
+                                            2022
+                                        </td>
+                                        <td class="text-center">
+                                            8월 졸업
+                                        </td>
+                                        <td class="text-center">
+                                            2022년 8월 졸업 대상 핵심간호술
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div class="p-t-40 border-bottom">
+                                <div class="row row-0 align-items-center justify-content-between">
+                                    <div class="col-auto">
+                                        <p class="table-title">활력징후</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="row row-10 align-items-center">
+                                            <div class="col-auto">
+                                                평가일
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control form-datepicker" placeholder="00-00-00">
+                                                    <button type="button" class="btn btn-dark">적용</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto m-l-20">
+                                                평가자
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="input-group">
+                                                    <select name="" id="" class="form-control width-200px">
+                                                        <option value="">김교수님</option>
+                                                    </select>
+                                                    <button type="button" class="btn btn-dark">적용</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between align-items-end mb-3 m-t-60">
+                                <div class="col-auto">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            평가점수
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control width-120px">
+                                                <button type="button" class="btn btn-dark">적용</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto m-l-20">
+                                            평가자
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="input-group">
+                                                <select name="" id="" class="form-control width-200px">
+                                                    <option value="">심화</option>
+                                                </select>
+                                                <button type="button" class="btn btn-dark">적용</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
+                                    <select class="custom-select w-auto">
+                                        <option>10</option>
+                                        <option>30</option>
+                                        <option>50</option>
+                                        <option>100</option>
+                                    </select>
+                                </div>
+
+                                <table class="table table-bordered m-t-10">
+                                    <colgroup>
+                                        <col style="width:50px;">
+                                        <col style="width:100px;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">
+                                                <div class="custom-control custom-checkbox without-label">
+                                                    <input type="checkbox" class="custom-control-input" id="checkAll">
+                                                    <label class="custom-control-label" for="checkAll"><label>
+                                                </div>
+                                            </th>
+                                            <th class="text-center">연번</th>
+                                            <th class="text-center">평가 항목</th>
+                                            <th class="text-center">학번</th>
+                                            <th class="text-center">학생 이름</th>
+                                            <th class="text-center">평가 점수</th>
+                                            <th class="text-center">성취 수준</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for(var i = 10; i > 0 ; i--){ %>
+                                        <tr>
+                                            <td class="text-center">
+                                                <div class="custom-control custom-checkbox without-label">
+                                                    <input type="checkbox" class="custom-control-input" id="checkAll">
+                                                    <label class="custom-control-label" for="checkAll"><label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <%= i %>
+                                            </td>
+                                            <td class="text-center">활력징후</td>
+                                            <td class="text-center">20173001</td>
+                                            <td class="text-center">고선이</td>
+                                            <td class="text-center">
+                                                <input type="text" class="form-control width-200px m-auto">
+                                            </td>
+                                            <td class="text-center">
+                                                <select name="" id="" class="form-control width-200px m-auto">
+                                                    <option value="">심화</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <% } %>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-primary width-120px">저장</button>
+                                <button type="button" class="btn btn-secondary width-120px m-l-10">취소</button>
+                            </div>
+                        </div>
+
+                        <% for(var i = 2; i < 21; i++) { %>
+                            <div class="tab-pane fade" id="t<%= i %>" role="tabpanel" aria-labelledby="l<%= i %>">
+                                <table class="table table-bordered">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col style="width:50%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">연도</th>
+                                            <th class="text-center">졸업학기</th>
+                                            <th class="text-center">제목</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                2022
+                                            </td>
+                                            <td class="text-center">
+                                                8월 졸업
+                                            </td>
+                                            <td class="text-center">
+                                                2022년 8월 졸업 대상 핵심간호술
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <div class="p-t-100 border-bottom">
+                                    <div class="row row-0 align-items-center justify-content-between">
+                                        <div class="col-auto">
+                                            <p class="table-title">경구투약<%= i %></p>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="row row-10 align-items-center">
+                                                <div class="col-auto">
+                                                    평가일
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-datepicker" placeholder="00-00-00">
+                                                        <button type="button" class="btn btn-dark">적용</button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto m-l-20">
+                                                    평가자
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="input-group">
+                                                        <select name="" id="" class="form-control width-200px">
+                                                            <option value="">김교수님</option>
+                                                        </select>
+                                                        <button type="button" class="btn btn-dark">적용</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="row justify-content-between align-items-end mb-3 m-t-60">
+                                    <div class="col-auto">
+                                        <div class="row row-10 align-items-center">
+                                            <div class="col-auto">
+                                                평가점수
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control width-120px">
+                                                    <button type="button" class="btn btn-dark">적용</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto m-l-20">
+                                                평가자
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="input-group">
+                                                    <select name="" id="" class="form-control width-200px">
+                                                        <option value="">심화</option>
+                                                    </select>
+                                                    <button type="button" class="btn btn-dark">적용</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
+                                        <select class="custom-select w-auto">
+                                            <option>10</option>
+                                            <option>30</option>
+                                            <option>50</option>
+                                            <option>100</option>
+                                        </select>
+                                    </div>
+    
+                                    <table class="table table-bordered m-t-10">
+                                        <colgroup>
+                                            <col style="width:50px;">
+                                            <col style="width:100px;">
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">
+                                                    <div class="custom-control custom-checkbox without-label">
+                                                        <input type="checkbox" class="custom-control-input" id="checkAll">
+                                                        <label class="custom-control-label" for="checkAll"><label>
+                                                    </div>
+                                                </th>
+                                                <th class="text-center">연번</th>
+                                                <th class="text-center">평가 항목</th>
+                                                <th class="text-center">학번</th>
+                                                <th class="text-center">학생 이름</th>
+                                                <th class="text-center">평가 점수</th>
+                                                <th class="text-center">성취 수준</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox without-label">
+                                                        <input type="checkbox" class="custom-control-input" id="checkAll">
+                                                        <label class="custom-control-label" for="checkAll"><label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center">활력징후</td>
+                                                <td class="text-center">20173001</td>
+                                                <td class="text-center">고선이</td>
+                                                <td class="text-center">
+                                                    <input type="text" class="form-control width-200px m-auto">
+                                                </td>
+                                                <td class="text-center">
+                                                    <select name="" id="" class="form-control width-200px m-auto">
+                                                        <option value="">심화</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+    
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-primary width-120px">저장</button>
+                                    <button type="button" class="btn btn-secondary width-120px m-l-10">취소</button>
+                                </div>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>

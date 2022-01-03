@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <%- include('../layout/_head.ejs')%>
 </head>
@@ -18,13 +19,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="title">학년별 실습배치표</h1>
+                            <h1 class="title">실습배치표 관리</h1>
                         </div>
                         <div class="col">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">학생관리</a></li>
-                                <li class="breadcrumb-item">학년별 실습배치표</li>
+                                <li class="breadcrumb-item"><a href="#">실습관리</a></li>
+                                <li class="breadcrumb-item">실습배치표 관리</li>
                             </ol>
                         </div>
                     </div>
@@ -33,37 +34,35 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content" data-menu="practice-student">
+            <div class="content" data-menu="practice-table">
                 <div class="container-fluid">
-                    <div class="inquery-area">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">실습 배치 과목</th>
-                                    <th class="text-center">배정교수</th>
-                                    <th class="text-center">실습기관수</th>
-                                    <th class="text-center">실습배치인원</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-center">성인간호실습I</td>
-                                    <td class="text-center">김교수</td>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center">19</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    
+                    <p class="font-size-18px font-weight-bold">● 실습배치표 성인간호실습 I </p>
+                    <table class="table table-bordered m-t-10">
+                        <thead>
+                            <tr>
+                                <th class="text-center">실습 배치 과목</th>
+                                <th class="text-center">배정교수</th>
+                                <th class="text-center">실습기관수</th>
+                                <th class="text-center">실습배치인원</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">성인간호실습I</td>
+                                <td class="text-center">김교수</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">19</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <div class="row justify-content-between align-items-end mb-0">
                         <div class="col-auto">
-                           <b class="text-danger">2022</b>학년도 실습배치표
+                            <b class="text-danger">2022</b>학년도 실습배치표
                         </div>
                     </div>
                     <div class="row justify-content-between align-items-end mb-3">
-                        
+
                         <div class="col-auto">
                             <b>Total : 000</b>,
                             Page 1/3
@@ -78,7 +77,8 @@
                             </select>
                         </div>
                     </div>
-                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
                         <table class="table table-bordered" id="datatable1">
                             <colgroup>
                                 <col>
@@ -94,12 +94,12 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th class="text-center" rowspan="2" >연번</th>
-                                    <th class="text-center" rowspan="2" >분기</th>
-                                    <th class="text-center" rowspan="2" >학년</th>
-                                    <th class="text-center" rowspan="2" >반</th>
-                                    <th class="text-center" rowspan="2" >학번</th>
-                                    <th class="text-center" rowspan="2" >이름</th>
+                                    <th class="text-center" rowspan="2">연번</th>
+                                    <th class="text-center" rowspan="2">분기</th>
+                                    <th class="text-center" rowspan="2">학년</th>
+                                    <th class="text-center" rowspan="2">반</th>
+                                    <th class="text-center" rowspan="2">학번</th>
+                                    <th class="text-center" rowspan="2">이름</th>
                                     <th class="text-center">1차</th>
                                     <th class="text-center">2차</th>
                                     <th class="text-center">3차</th>
@@ -133,9 +133,8 @@
                                 <tr>
                                     <td class="text-center">1</td>
                                     <td class="text-center">1분기</td>
-                                    <td class="text-center">3학년</td>
+                                    <td class="text-center">3</td>
                                     <td class="text-center">1</td>
-                                    <td class="text-center">2</td>
                                     <td class="text-center">20211012011</td>
                                     <td class="text-center">김학생</td>
                                     <td>
@@ -169,15 +168,6 @@
                                     </td>
                                     <td>
                                         <a href="#modal-table-list" data-toggle="modal">
-                                        <div>
-                                            <p class="class font-size-12px">성인간호실습I</p>
-                                            <p class="hospital font-size-12px">강릉성심병원</p>
-                                            <p class="place font-size-12px">101병동</p>
-                                        </div>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a href="#modal-table-list" data-toggle="modal">
                                             <div>
                                                 <p class="class font-size-12px">성인간호실습I</p>
                                                 <p class="hospital font-size-12px">강릉성심병원</p>
@@ -194,6 +184,16 @@
                                             </div>
                                         </a>
                                     </td>
+                                    <td>
+                                        <a href="#modal-table-list" data-toggle="modal">
+                                            <div>
+                                                <p class="class font-size-12px">성인간호실습I</p>
+                                                <p class="hospital font-size-12px">강릉성심병원</p>
+                                                <p class="place font-size-12px">101병동</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>

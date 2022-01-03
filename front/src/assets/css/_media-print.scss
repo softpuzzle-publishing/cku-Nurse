@@ -588,6 +588,12 @@ body {
 
 
 // 풀캘린더 스타일
+.calendar-style{
+    & + .calendar-style{
+        margin-top:30px;
+    }
+}
+
 .fc-toolbar-title {
     font-size: 18px !important;
     font-weight: 700;

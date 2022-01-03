@@ -71,7 +71,7 @@
             <div class="table-title  table-top-info d-flex align-items-center justify-content-between" style="margin-top:0;">
                 기본정보
                 <div class="no-print-page">
-                    <a href="javascript:;" class=" printBtn">
+                    <a href="javascript:;" class=" printBtn" onclick="printAction();">
                         인쇄
                     </a>
                 </div>
@@ -180,7 +180,7 @@
                 </tbody>
             </table>
         </div>
-        <br class="no-print-page">
+        <br class="no-print-page page-divide">
         <div class="sector">
             <div class="table-title table-top-info">
                 <p>실습 출석 지정</p>
@@ -195,11 +195,19 @@
                     </tbody>
                 </table>
             </div>
+            <!-- 캘린더 영역 { -->
             <div class="calendar-wrap">
-                <!-- 캘린더 영역 { -->
-                <div id="calendar"></div>
-                <!-- }-->
+                <!-- 기본 웹상에서 보이는 캘린더  {-->
+                <div id="calendar" class="calendar-style page-divide h-100"></div>
+                <!-- } -->
+
+                <!-- 출력상에서 보이는 추가 캘린더 (다중 캘린더 일경우 => 프린트 미리보기할때 settimeout ){ -->
+                <div class="only-print-area">
+                    <div id="calendar-2" class="calendar-style"></div>
+                </div>
+                <!-- } -->
             </div>
+            <!-- }-->
         </div>
 
         <div class="sector">
@@ -290,12 +298,18 @@
         window.print();
     });
 
+
     /*
      * 캘린더 
      */
 
     $(document).ready(function () {
         $(function () {
+            ///////////////////////////////////////////////
+            // 첫번째 캘린더 스크립트
+            ///////////////////////////////////////////////
+
+
             // calendar element 취득
             var calendarEl = document.getElementById('calendar');
             // full-calendar 생성하기
@@ -396,8 +410,116 @@
             });
 
 
+
+            ///////////////////////////////////////////////
+            // 두번째 캘린더 스크립트  : 캘린더 스크립트는 같고 아이디 값만 달라요
+            ///////////////////////////////////////////////
+
+            // calendar element 취득
+            var calendarEle = document.getElementById('calendar-2');
+            // full-calendar 생성하기
+            var calendar2 = new FullCalendar.Calendar(calendarEle, {
+                /** 플러그인 모음 */
+                // 캘린더 불러오는 버전차이때문인지 플러그인 인터랙션때문에  호출이 안되서 일단 주석처리 해놨습니다. html 옮긴후 주석풀고 확인해주세요
+                // plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+                /** default 값 */
+                defaultView: 'dayGridMonth',
+                /** 한글 설정 */
+                locale: 'kr',
+                /** 하루종일 슬롯 ->false*/
+                allDaySlot: false,
+                /** 커스텀 버튼 */
+                customButtons: {
+                    /** 커스텀 옵션 */
+                    myCustomButton: {
+                        /** 제목 */
+                        text: '일정 등록',
+                        /** 클릭 시 */
+                        click: function () {
+                            /** 날짜 형식 */
+                            var regex = RegExp(/^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/);
+                            /** 시간 형식 */
+                            var timeFormat = /^([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/;
+
+                            /** 날짜 팝업 */
+                            var dateStr = prompt('YYYY-MM-DD 날짜 형식에 맞게 입력해주세요');
+
+                            /** 시작 날짜 미입력 시 */
+                            if (dateStr == '' || dateStr == null) {
+                                /** 미입력 시 알람 */
+                                alert("날짜를 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+                            /** 형식에 맞지 않으면 */
+                            else if (regex.test(dateStr) == false) {
+                                /** 형식 맞지 않으면 */
+                                alert("날짜 형식에 맞게 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+
+                            /** 시간 팝업 */
+                            var timeStr = prompt('00:00:00 시작 시간을 형식에 맞게 입력해주세요')
+
+                            /** 시작 시간 미입력 시 */
+                            if (timeStr == '' || timeStr == null) {
+                                /** 미입력 시 알람 */
+                                alert("시간을 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+                            /** 형식에 맞지 않으면 */
+                            else if (timeFormat.test(timeStr) == false) {
+                                /** 형식 맞지 않으면 */
+                                alert("시간 형식에 맞게 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+
+                            /** date에 담기 */
+                            var date = new Date(dateStr + 'T' + timeStr);
+
+                            /** date 값이 있으면 */
+                            if (!isNaN(date.valueOf())) {
+                                /** 캘린더에 이벤트 추가 */
+                                calendar.addEvent({
+                                    'id': 'a',
+                                    'title': '',
+                                    'start': date
+                                });
+                            }
+                            /** date 값이 없으면 */
+                            else {
+                                /** 입력 형식에 맞지 않을 시 알람 */
+                                alert('형식에 맞춰 입력해주세요');
+                            }
+                        }
+                    }
+                },
+                /** 툴바 */
+                header: {
+                    /** 왼쪽 설정 */
+                    left: 'prev,next today myCustomButton',
+                    /** 가운데 설정 */
+                    center: 'title',
+                    /** 오른쪽 설정 */
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+
+                /** 이벤트 html 추가 */
+                eventRender: function (eventInfo) {
+                    /** 셀렉트 버튼 추가 */
+                    eventInfo.el.querySelector('.fc-content').innerHTML += "<select class='fa fa-external-link pull-right'><option>출석</option><option>미지정</option></select>";
+                },
+            });
+
+
+
             // 캘린더 랜더링
             calendar.render();
+            calendar2.render();
+
         });
     });
 </script>
