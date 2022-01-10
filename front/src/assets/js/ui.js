@@ -150,6 +150,10 @@ var Common = {
 			minimumResultsForSearch: -1,
 			theme: "style-3"
 		});
+
+		$(".scroll-y-dark").mCustomScrollbar({
+			theme:"dark"
+		});
 	}
 };
 

@@ -277,17 +277,17 @@
 }
 
 //모달 오버랩
-.modal-backdrop~.modal-backdrop {
-    z-index: 1051 !important;
-}
+// .modal-backdrop~.modal-backdrop {
+//     z-index: 1051 !important;
+// }
 
-.modal-backdrop~.modal-backdrop~.modal-backdrop {
-    z-index: 1053 !important;
-}
+// .modal-backdrop~.modal-backdrop~.modal-backdrop {
+//     z-index: 1053 !important;
+// }
 
-.modal[data-overlap=true] {
-    z-index: 1052 !important;
-}
+// .modal[data-overlap=true] {
+//     z-index: 1052 !important;
+// }
 
 @include media-breakpoint-down(md) {
     .btn-xl {
@@ -1078,11 +1078,19 @@ ul.box {
     background: #fff;
     // box-shadow: $box-shadow;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-
+    .popup-content{
+        img{
+            max-width: 100%;
+        }
+    }
     .popup-footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 1rem;
     }
+    .mCSB_inside>.mCSB_container{
+        margin:0;
+    }
+    .scroll-y-dark{max-height: calc(100% - 57px);}
 }
