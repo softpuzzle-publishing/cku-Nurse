@@ -381,13 +381,13 @@ button {
 
       dd:not(.date) {
         color: $gray;
-        width: calc(100% - 260px);
+        width: calc(100% - 280px);
         text-align: left;
       }
 
       .date {
         color: $middlegray;
-        width: 140px;
+        width: 160px;
       }
     }
 
@@ -626,3 +626,5 @@ button {
     object-fit: scale-down!important;
   }
 }
+
+

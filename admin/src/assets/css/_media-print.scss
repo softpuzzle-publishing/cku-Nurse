@@ -643,3 +643,118 @@ textarea {
 .table-bg {
     background-color: #f2f2f2 !important;
 }
+
+.calendar-wrap {
+    .calendar-date {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        >.button-wrap {
+            display: flex;
+            align-items: center;
+
+            .btn-today {
+                height: 36px;
+                border-radius: 4px !important;
+                line-height: 18px;
+            }
+
+            .input-group {
+                border-radius: 4px !important;
+                overflow: hidden;
+                margin-left: 10px;
+
+                button {
+                    border-radius: 0 !important;
+                    width: 36px;
+                    height: 36px;
+                    line-height: 36px;
+                    padding: 2px !important;
+
+                    i {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .prev {
+                i {
+                    background: url(../images/icon_left.svg)no-repeat center;
+                    width: 30px;
+                    height: 30px;
+                    background-size: contain;
+                }
+            }
+
+            .next {
+                margin-left: 0 !important;
+
+                i {
+                    background: url(../images/icon_left.svg)no-repeat center;
+                    width: 30px;
+                    height: 30px;
+                    background-size: contain;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    .calendar-table {
+        margin-top: 10px;
+        border-top: 2px solid #111;
+
+        th {
+            height: 40px !important;
+            font-weight: 700 !important;
+        }
+
+        td {
+            height: 90px !important;
+            padding: 0.25rem !important;
+
+            >div {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                flex: 0 0 100%;
+                position: relative;
+
+                .date {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    font-size: 12px;
+                }
+
+                >select {
+                    position: absolute;
+                    bottom: 5%;
+                    font-size: 12px;
+                    padding: 0.25rem 0.5rem !important;
+                }
+            }
+
+            &.sunday {
+                background: #f3cccc2b !important;
+            }
+
+            &.saturday {
+                background: #ffb00708 !important;
+            }
+
+            &.disabled {
+                * {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

@@ -197,15 +197,263 @@
             </div>
             <!-- 캘린더 영역 { -->
             <div class="calendar-wrap">
-                <!-- 기본 웹상에서 보이는 캘린더  {-->
-                <div id="calendar" class="calendar-style page-divide h-100"></div>
-                <!-- } -->
+                <div class="calendar-date">
+                    <p class="date">2022년 2월</p>
 
-                <!-- 출력상에서 보이는 추가 캘린더 (다중 캘린더 일경우 => 프린트 미리보기할때 ){ -->
-                <div class="only-print-area">
-                    <div id="calendar-2" class="calendar-style"></div>
+                    <div class="button-wrap no-print-page">
+                        <button class="btn btn-secondary btn-today">Today</button>
+
+                        <div class="input-group">
+                            <button class="btn btn-dark prev">
+                                <i class="icon-left-arrow-w"></i>
+                            </button>
+                            <button class="btn btn-dark next">
+                                <i class="icon-left-arrow-w"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <!-- } -->
+
+                <table class="table table-bordered table-fixed calendar-table">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">일</th>
+                            <th class="text-center">월</th>
+                            <th class="text-center">화</th>
+                            <th class="text-center">수</th>
+                            <th class="text-center">목</th>
+                            <th class="text-center">금</th>
+                            <th class="text-center">토</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sunday">
+                                <div>
+                                    <div class="date">1일</div>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">옵션</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">2일</div>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">옵션</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">3일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">4일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">5일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">6일</div>
+                                </div>
+                            </td>
+                            <td class="saturday">
+                                <div>
+                                    <div class="date">7일</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">
+                                <div>
+                                    <div class="date">1일</div>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">옵션</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">2일</div>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">옵션</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">3일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">4일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">5일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">6일</div>
+                                </div>
+                            </td>
+                            <td class="saturday">
+                                <div>
+                                    <div class="date">7일</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">
+                                <div>
+                                    <div class="date">1일</div>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">옵션</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">2일</div>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">옵션</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">3일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">4일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">5일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">6일</div>
+                                </div>
+                            </td>
+                            <td class="saturday">
+                                <div>
+                                    <div class="date">7일</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">
+                                <div>
+                                    <div class="date">1일</div>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">옵션</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">2일</div>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">옵션</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">3일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">4일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">5일</div>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">6일</div>
+                                </div>
+                            </td>
+                            <td class="saturday">
+                                <div>
+                                    <div class="date">7일</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">
+                                <div>
+                                    <div class="date">1일</div>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">옵션</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="">
+                                <div>
+                                    <div class="date">2일</div>
+                                </div>
+                            </td>
+                            <td class="disabled">
+                                <div>
+                                    <div class="date">3일</div>
+                                </div>
+                            </td>
+                            <td class="disabled">
+                                <div>
+                                    <div class="date">4일</div>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">옵션</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="disabled">
+                                <div>
+                                    <div class="date">5일</div>
+                                </div>
+                            </td>
+                            <td class="disabled">
+                                <div>
+                                    <div class="date">6일</div>
+                                </div>
+                            </td>
+                            <td class="disabled saturday">
+                                <div>
+                                    <div class="date">7일</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
             </div>
             <!-- }-->
         </div>

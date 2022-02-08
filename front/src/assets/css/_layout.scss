@@ -182,3 +182,12 @@ h1.logo{
         }
     }
 }
+
+
+// 에러페이지 
+.error{
+    width: 100vw;height: 100vh;display: flex;align-items: center;justify-content: center;
+    .inner{display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;text-align: center;padding: 0 20px;}
+    strong{font-size: 20px;font-weight: 700;margin: 55px 0 20px;}
+    p{font-size: 18px;line-height: 1.56;color: #666;margin-bottom: 80px;}
+  }
