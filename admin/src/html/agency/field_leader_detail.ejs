@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">부서 및 현장지도자 정보</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">실습기관관리</a></li>
+                                <li class="breadcrumb-item">부서 및 현장지도자 정보</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="agency-leader">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+
+                        <div class="d-flex align-items-center justify-content-between mt-5 mb-2">
+                            <p class="font-size-18px font-weight-bold">부서정보</p>
+                            <p class="text-danger">* 표시는 필수입력 항목입니다.</p>
+                        </div>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 150px">
+                                    <col>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th class="text-danger">실습기관 *</th>
+                                    <td colspan="3">
+                                        강릉제일병원
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-danger">부서분류 *</th>
+                                    <td>
+                                        내과
+                                    </td>
+                                    <th class="text-danger">실습단위 *</th>
+                                    <td>
+                                        제6병동
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-danger">부서전화번호 *</th>
+                                    <td>
+                                        033-0908-1234
+                                    </td>
+                                    <th>팩스번호</th>
+                                    <td>
+                                        대시(-)없이 번호만 입력해 주세요!
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p class="font-size-18px font-weight-bold mt-5 mb-2">현장지도자정보</p>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 150px">
+                                    <col>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th class="text-danger">현장지도자명 *</th>
+                                    <td>
+                                        홍길동
+                                    </td>
+                                    <th class="text-danger">직위 *</th>
+                                    <td>
+                                        간호사
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-danger">연락처 *</th>
+                                    <td>
+                                        010-2345-8989
+                                    </td>
+                                    <th>이메일</th>
+                                    <td>
+                                        abcde@naver.com
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-danger">현장지도자명 *</th>
+                                    <td colspan="3">
+                                        <div class="d-flex align-items-center">
+                                            <p class="mr-2">경력 시작일</p>
+                                            <p>2011-11-24</p>
+                                            <p class="ml-5">현재기준 경력일: 11년 9개월</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-danger">최종학력 *</th>
+                                    <td>
+                                        학력선택
+                                    </td>
+                                    <th>졸업학교명</th>
+                                    <td>
+                                        서울간호대학교
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-danger">간호사면허 *</th>
+                                    <td>
+                                        유
+                                    </td>
+                                    <th>기타면허 및 자격</th>
+                                    <td>
+                                        조산사, 보건사, 기타
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p class="font-size-18px font-weight-bold mt-5 mb-2">비밀번호 변경</p>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 150px">
+                                    <col>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>등록아이디</th>
+                                    <td colspan="3">
+                                        asd123123
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호</th>
+                                    <td>
+                                        **********
+                                    </td>
+                                    <th>비밀번호 확인</th>
+                                    <td>
+                                        **********
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="btns d-flex align-items-center justify-content-center mt-5">
+                            <button type="button" class="btn btn-dark min-width-90px">저장</button>
+                            <button type="button" class="btn btn-dark min-width-90px">취소</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual nurse-04">
+                    <div class="container">
+                        <h1 class="title">나의 실습</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            나의 실습
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>나의 실습</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col style="width: 170px">
+                                <col>
+                                <col style="width: 170px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>연도</th>
+                                    <td>
+                                        <select name="" id="" class="form-control width-240px">
+                                            <option value="">연도선택</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                    <th>실습분기</th>
+                                    <td>
+                                        <select name="" id="" class="form-control width-240px">
+                                            <option value="">전체</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button class="btn btn-primary">검색</button>
+                        </div>
+                    </div>
+
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">실습 목록</p>
+                            <p class="total">Total : 000 </p>
+                            <p class="page">Page 1/3 </p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary">
+                                실습관련 서약서 다운로드
+                            </button>
+                            <button type="button" class="btn btn-outline-light width-140px">
+                                엑셀다운로드
+                                <i class="icon-excel m-l-10"></i>
+                            </button>
+                            <select name="" id="" class="form-control width-90px">
+                                <option value="">50</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered table-sm" id="datatable1">
+                            <colgroup>
+                                <col style="width:60px">
+                                <col style="width:13%">
+                                <col style="width:5%">
+                                <col style="width:5%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col>
+                                <col>
+                                <col style="width:5%">
+                                <col style="width:5%">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">번호</th>
+                                    <th rowspan="2">실습 교과목</th>
+                                    <th rowspan="2" class="text-danger">실습<br>분기</th>
+                                    <th rowspan="2">실습<br>차수</th>
+                                    <th rowspan="2">실습기간</th>
+                                    <th rowspan="2">기관</th>
+                                    <th rowspan="2" class="text-danger">부서</th>
+                                    <th rowspan="2" class="text-danger">단위</th>
+                                    <th colspan="2">참석여부</th>
+                                    <th rowspan="2">출석부</th>
+                                    <th rowspan="2">서약서</th>
+                                    <th rowspan="2">보고서</th>
+                                    <th rowspan="2">진행현황</th>
+                                </tr>
+                                <tr>
+                                    <th>순회지도</th>
+                                    <th>집담회</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 10; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center"><%= i%></td>
+                                    <td class="text-center">지역사회간호실습 </td>
+                                    <td class="text-center text-danger">1학기</td>
+                                    <td class="text-center"><%= i%>차</td>
+                                    <td class="text-center">2021. 05. 07 ∼ 2021. 05.18</td>
+                                    <td class="text-center">가톨릭 성모병원</td>
+                                    <td class="text-center text-danger">중환자계</td>
+                                    <td class="text-center text-danger">치매안심센터</td>
+                                    <td class="text-center">
+                                        <a href="#modal-practice-log-tour" class="text-underline" data-toggle="modal">0</a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="#modal-practice-log-meeting" class="text-underline" data-toggle="modal">2</a>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-outline-light width-70px" onclick="window.open('../util/attendance.html', '출석부팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')"> 작성전</button>
+                                        <button class="btn btn-sm btn-gray3 width-70px" onclick="window.open('../util/attendance.html', '출석부팝업', 'width=900,height=900,location=no,status=no,scrollbars=yes')">수정</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-outline-light width-70px" data-target="#modal-pledge" data-toggle="modal">등록전</button>
+                                        <button class="btn btn-sm btn-gray3 width-70px" data-target="#modal-pledge" data-toggle="modal">등록완료</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-outline-light width-70px" data-target="#modal-report" data-toggle="modal">작성전</button>
+                                        <button class="btn btn-sm btn-gray3 width-70px" data-target="#modal-report" data-toggle="modal">등록완료</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <p class="text-lightprimary font-weight-semibold">실습완료</p>
+                                        <p class="text-danger font-weight-semibold">실습대기</p>
+                                        <p class="">실습진행</p>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+    <script>
+        /** 캘린더 id 불러오기 */
+        var calendarEl = document.getElementById('calendar');
+        /** 캘린더 설정 */
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            /** 플러그인 모음 */
+            plugins: ['interaction', 'dayGrid', 'timeGrid'],
+            /** default 값 */
+            defaultView: 'dayGridMonth',
+            /** 한글 설정 */
+            locale: 'kr',
+            /** 하루종일 슬롯 ->false*/
+            allDaySlot: false,
+            /** 커스텀 버튼 */
+            customButtons: {
+                /** 커스텀 옵션 */
+                myCustomButton: {
+                    /** 제목 */
+                    text: '일정 등록',
+                    /** 클릭 시 */
+                    click: function () {
+                        /** 날짜 형식 */
+                        var regex = RegExp(/^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/);
+                        /** 시간 형식 */
+                        var timeFormat = /^([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/;
+
+                        /** 날짜 팝업 */
+                        var dateStr = prompt('YYYY-MM-DD 날짜 형식에 맞게 입력해주세요');
+
+                        /** 시작 날짜 미입력 시 */
+                        if (dateStr == '' || dateStr == null) {
+                            /** 미입력 시 알람 */
+                            alert("날짜를 입력해주세요");
+                            /** 리턴 */
+                            return
+                        }
+                        /** 형식에 맞지 않으면 */
+                        else if (regex.test(dateStr) == false) {
+                            /** 형식 맞지 않으면 */
+                            alert("날짜 형식에 맞게 입력해주세요");
+                            /** 리턴 */
+                            return
+                        }
+
+                        /** 시간 팝업 */
+                        var timeStr = prompt('00:00:00 시작 시간을 형식에 맞게 입력해주세요')
+
+                        /** 시작 시간 미입력 시 */
+                        if (timeStr == '' || timeStr == null) {
+                            /** 미입력 시 알람 */
+                            alert("시간을 입력해주세요");
+                            /** 리턴 */
+                            return
+                        }
+                        /** 형식에 맞지 않으면 */
+                        else if (timeFormat.test(timeStr) == false) {
+                            /** 형식 맞지 않으면 */
+                            alert("시간 형식에 맞게 입력해주세요");
+                            /** 리턴 */
+                            return
+                        }
+
+                        /** date에 담기 */
+                        var date = new Date(dateStr + 'T' + timeStr);
+
+                        /** date 값이 있으면 */
+                        if (!isNaN(date.valueOf())) {
+                            /** 캘린더에 이벤트 추가 */
+                            calendar.addEvent({
+                                'id': 'a',
+                                'title': '',
+                                'start': date
+                            });
+                        }
+                        /** date 값이 없으면 */
+                        else {
+                            /** 입력 형식에 맞지 않을 시 알람 */
+                            alert('형식에 맞춰 입력해주세요');
+                        }
+                    }
+                }
+            },
+            /** 툴바 */
+            header: {
+                /** 왼쪽 설정 */
+                left: 'prev,next today myCustomButton',
+                /** 가운데 설정 */
+                center: 'title',
+                /** 오른쪽 설정 */
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+
+            /** 이벤트 html 추가 */
+            eventRender: function (eventInfo) {
+                /** 셀렉트 버튼 추가 */
+                eventInfo.el.querySelector('.fc-content').innerHTML += "<select class='fa fa-external-link pull-right'><option>출석</option><option>미지정</option></select>";
+            },
+        });
+
+        /** 캘린더 불러오기 */
+        calendar.render();
+    </script>
+
+</body>
+
+</html>

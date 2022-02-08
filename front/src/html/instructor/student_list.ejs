@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual nurse-01">
+                    <div class="container">
+                        <h1 class="title">실습학생관리</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">실습학생관리</div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>실습학생관리</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <tbody>
+                            </tbody>
+                            <colgroup>
+                                <col style="width: 150px">
+                                <col>
+                                <col style="width: 150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>연도 선택</th>
+                                    <td>
+                                        <select name="" id="" class="form-control width-240px">
+                                            <option value="">연도 선택</option>
+                                        </select>
+                                    </td>
+                                    <th>실습 분기</th>
+                                    <td>
+                                        <select name="" id="" class="form-control width-240px">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>학년 선택</th>
+                                    <td colspan="3">
+                                        <select name="" id="" class="form-control width-240px">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>실습 교과목</th>
+                                    <td>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">지역사회간호실습</option>
+                                        </select>
+                                    </td>
+                                    <th>진행현황</th>
+                                    <td>
+                                        <select name="" id="" class="form-control width-240px">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>검색</th>
+                                    <td colspan="3">
+                                        <input type="text" class="form-control" placeholder="학번, 이름으로 검색">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button class="btn btn-primary">검색</button>
+                        </div>
+                    </div>
+
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">학생목록</p>
+                        </div>
+                    </div>
+
+                    <div class="box p-3 mb-3">
+                        <strong class="font-18px">주의사항</strong>
+                        <p class="m-t-10">※ 실습을 진행 중인 학생들의 예방접종현황과 보안서약서를 열람할 수 있으며, 출석부 및 평가서를 작성할 수 있습니다.</p>
+                        <p>※ 출석부 최초 저장시 해당 학생의 담당 현장지도자로 지정되며, 이후에는 변경할 수 없으니 유의하세요.</p>
+                    </div>
+
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered table-sm" id="datatable1">
+                            <colgroup>
+                                <col style="width:60px;">
+                                <col style="width:15%;">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:10%;">
+                                <col>
+                                <col style="width:7%;">
+                                <col style="width:7%;">
+                                <col style="width:7%;">
+                                <col style="width:60px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>실습 교과목</th>
+                                    <th>실습<br>기관</th>
+                                    <th>실습<br>단위</th>
+                                    <th>현장<br>지도자</th>
+                                    <th>이름</th>
+                                    <th>학번</th>
+                                    <th>실습차수</th>
+                                    <th>실습기간</th>
+                                    <th>진행구분</th>
+                                    <th>출석부</th>
+                                    <th>현장지도자<br>평가서</th>
+                                    <th>예방접종<br>자가점검표</th>
+                                    <th>보안<br>서약서</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 10; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center"><%= i %></td>
+                                    <td class="text-center">성인간호학 I
+                                    <td class="text-center">국제성모</td>
+                                    <td class="text-center">PICU</td>
+                                    <td class="text-center">김간호</td>
+                                    <td class="text-center">김학생</td>
+                                    <td class="text-center">98090001</td>
+                                    <td class="text-center">2차</td>
+                                    <td class="text-center">2021. 03. 26 ∼ 2021. 04.06</td>
+                                    <td class="text-center">실습완료</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-outline-light width-60px font-12px" onclick="window.open('../util/attendance_form.html', '출석부', 'width=900,height=900,location=no,status=no,scrollbars=yes')">작성전</button>
+                                        <button type="button" class="btn btn-sm btn-outline-lightprimary width-60px font-12px" onclick="window.open('../util/attendance_form.html', '출석부', 'width=900,height=900,location=no,status=no,scrollbars=yes')">작성중</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger width-60px font-12px" onclick="window.open('../util/attendance_form.html', '출석부', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인요청</button>
+                                        <button type="button" class="btn btn-sm btn-gray3 width-60px font-12px" onclick="window.open('../util/attendance.html', '출석부', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인완료</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-outline-light width-60px font-12px" onclick="window.open('../util/appraisal.html', '현장관리자 평가서', 'width=900,height=900,location=no,status=no,scrollbars=yes')">작성전</button>
+                                        <button type="button" class="btn btn-sm btn-outline-lightprimary width-60px font-12px" onclick="window.open('../util/appraisal.html', '현장관리자 평가서', 'width=900,height=900,location=no,status=no,scrollbars=yes')">작성중</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger width-60px font-12px" onclick="window.open('../util/appraisal.html', '현장관리자 평가서', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인요청</button>
+                                        <button type="button" class="btn btn-sm btn-gray3 width-60px font-12px" onclick="window.open('../util/appraisal.html', '현장관리자 평가서', 'width=900,height=900,location=no,status=no,scrollbars=yes')">승인완료</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-gray5 width-60px font-12px" onclick="window.open('../util/self-diagnosis.html', '예방접종 자가점검표', 'width=900,height=900,location=no,status=no,scrollbars=yes')">보기</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <p>동의</p>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+
+                </div>
+
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-practice-history").modal("show");
+        });
+    </script>
+
+</body>
+
+</html>

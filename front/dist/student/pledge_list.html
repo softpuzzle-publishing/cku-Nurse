@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>간호학과 | 가톨릭관동대학교</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" sizes="192x192">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/lib/swiper/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/lib/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../assets/lib/select2/select2.min.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css">
+
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../assets/lib/swiper/js/swiper-bundle.min.js"></script>
+    <script src="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/lib/select2/select2.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js"></script>
+
+    <script src="../assets/js/ui.js" defer></script>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <div id="header-block">
+            <div id="header">
+                <aside class="header-top">
+                    <div class="container">
+                        <ul class="header-util">
+                            <!-- 학생일경우에만 {-->
+                            <a href="../board/clinical_list.html" class="btn btn-lightprimary text-white px-4 m-r-15 height-40px">임상실습안내</a>
+                            <!-- } -->
+                            <li><a href="../student/dashboard.html"><i class="icon-top-home"></i> HOME</a></li>
+                            <li><a href="#modal-login" data-toggle="modal"><i class="icon-top-user"></i> LOGIN</a></li>
+                            <li><a href="javascript:;"><i class="icon-top-user"></i>LOGOUT</a></li>
+                            <li><a href="../sitemap/sitemap.html"><i class="icon-top-sitemap"></i> SITEMAP</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <header class="header-bottom">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <h1 class="logo">
+                                    <a href="../main/main.html">
+                                        <i><span class="sr-only">가톨릭관동대학교</span></i>
+                                        <span>간호학과</span>
+                                    </a>
+                                </h1>
+                            </div>
+                            <div class="col">
+                                <nav class="gnb">
+                                    <ul class="dep1">
+                                        <!-- 학생{ -->
+                                        <li><a href="../student/traning_completion_list.html"><span>교육이수</span></a></li>
+                                        <li><a href="../student/vaccination_list.html"><span>검진/예방 검사</span></a></li>
+                                        <li><a href="../student/practice_list.html"><span>나의 실습</span></a></li>
+                                        <!-- } -->
+
+                                        <!-- 교관{ -->
+                                        <li><a href="../instructor/student_list.html"><span>실습학생관리</span></a></li>
+                                        <li><a href="../instructor/practice_table_list.html"><span>실습배치표</span></a></li>
+                                        <li><a href="../instructor/participation_history_list.html"><span>참여이력조회</span></a></li>
+                                        <!-- } -->
+
+
+                                        <!-- 학생/현장지도자 공통 {-->
+                                        <li><a href="../personal/personal_list.html"><span>나의정보</span></a></li>
+                                        <li>
+                                            <a href="../board/notice_list.html"><span>지원센터</span></a>
+                                            <ul class="dep2">
+                                                <li><a href="../board/notice_list.html">공지사항</a></li>
+                                                <li><a href="../board/resource_list.html">자료실</a></li>
+                                                <li><a href="../board/qna_list.html">1:1문의</a></li>
+                                                <li><a href="../board/clinical_list.html">임상실습안내</a></li>
+                                            </ul>
+                                        </li>
+                                        <!-- } -->
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual nurse-03">
+                    <div class="container">
+                        <h1 class="title">검진/예방검사</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            <nav class="tab-visual">
+                                <ul>
+                                    <li><a href="vaccination_list.html">예방접종현황</a></li>
+                                    <li class="active"><a href="pledge_list.html">서약서 관리</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>검진/예방검사</li>
+                                <li>서약서 관리</li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+                    <p class="ag-title">서약서</p>
+                    <p class="ag-sub-title">[임상실습을 위한 개인정보 등의 처리 동의서]</p>
+                    <div class="ag-content">
+                        <ul>
+                            <li>
+                                ■ 최소한의 정보처리 및 도의 거부에 관한 안내
+                                <ul>
+                                    <li>
+                                        • 정보동의시 협약서 체결 및 이행 목적 달성에 부합하는 최소한의 정보만 수집, 이용 및 제공하며, 본 동의를 거부를 하는 경우에는 정상적인 서비스 제공이 불가능할 수 있음을 알려 드립니다.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                ■ 신용등급에 미치는 영향
+                                <ul>
+                                    <li>
+                                        • 본 동의서에 의한 개인정보 조회는 귀하의 신용등급에 영향을 주지 않습니다.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ol>
+                            <li>
+                                1. 개인정보 등의 수집 및 이용에 관한 사항
+                                <ul>
+                                    <li>
+                                        ■ 본 대학 및 본 대학의 학생들은 [개인정보보호법] 및 [신용정보의 이용 및 보호에 관한 법률]에 따라 본 계약과 관련하여 귀하의 개인정보 등을 다음과 같이 수집 및 이용하고자 합니다.
+                                        이에 대하여 동의 합니다.
+                                    </li>
+                                    <li>
+                                        ■ 개인정보 등의 수집 및 이용 목적
+                                        <ul>
+                                            <li>
+                                                • 현장실습의 협약을 체결, 유지, 관리, 상담을 위해서 함.
+                                            </li>
+                                            <li>
+                                                • 현장실습의 조사연구, 서비스 제공을 위한 산출 검증.
+                                            </li>
+                                            <li>
+                                                • 현장실습의 보험계약 및 보험금 청구에 이해관계가 있는 자에 대한 법규 및 계약상 의무이행[보험금 청구권실행]
+                                            </li>
+                                            <li>
+                                                • 금융거래 관련 업무[보험계약, 전자금융서비스 관련 신청, 해지, 변경 업무, 자동이체, 입출금 업무 등
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        ■ 수집 및 이용할 개인정보 등의 내용
+                                        <ul>
+                                            <li>• 개인식별정보[성명, 학번, 주민등록번호, 외국인등록번호, 주소, 전화번호, 이메일]. 취미 및 가족관계 등 개인정보</li>
+                                            <li>• 현장실습 참여자의 질병 및 상해에 관한 정보</li>
+                                            <li>• 금융거래 관련 이체 및 입금, 출금 정보</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        ■ 개인정보 등의 보유 및 이용기간
+                                        <ul>
+                                            <li>
+                                                • 수집 및 이용 동의일로부터 개인정보 등이 수집 및 이용 목적이 달성할 때까지 보유 및 이용을 함.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                2. 민감 정보 및 고유식별정보의 처리에 관한 사항
+                                <ul>
+                                    <li>
+                                        ■ 본 대학은 [개인정보보호법] 제23조 및 제24조에 따라 상기의 개인정보 등에 대한 개별 동의 사항에 대하여 다음과 같이 귀하의 민감정보(질병, 상해정보)
+                                        및 고유식별정보(주민등록번호, 외국인 등록번호)를 처리(수집, 이용, 제공 등) 하고자 합니다. 이에 대하여 동의합니다.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="ag-area">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="" value="1" id="">
+                            임상실습을 위한 개인정보 등의 처리 동의서 내용을 읽었으며 동의합니다.
+                        </label>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center ag-area p-t-15 pr-0">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="" value="1" id="">
+                            서약서 및 개인정보 동의서 내용에 모두 동의합니다.
+                        </label>
+
+                        <button class="btn btn-lg btn-primary btn-block width-120px">동의</button>
+                    </div>
+
+                    <div class="p-l-30 m-t-20">
+                        <span class="font-weight-bold text-primary d-inline-block">[ 참고 ]</span>
+                        <span class="text-gray5">모든 서약에 동의한 상태에서만 나의 실습의 메뉴에 접근할 수 있습니다.</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <!-- ------------- -->
+        <!-- 간호학과  모달 -->
+        <!-- ------------- -->
+
+
+        <!-- 모달 : 순회지도 활동 -->
+        <div class="modal" tabindex="-1" role="dialog" id="modal-practice-log-tour">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                <div class="modal-content border-0">
+                    <div class="modal-header bg-primary">
+                        <h1 class="modal-title text-white">순회지도 활동</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close-white"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>작성차수</th>
+                                    <th>지도시간</th>
+                                    <th>작성자<br>(지도교수)</th>
+                                    <th>지도일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td class="text-center">순회지도</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center text-danger">4</td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">2021-10-11 12:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">순회지도</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center text-danger">4</td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">2021-10-11 12:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">순회지도</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center text-danger">4</td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">2021-10-11 12:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">순회지도</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center text-danger">4</td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">2021-10-11 12:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">순회지도</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center text-danger">4</td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">2021-10-11 12:00</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-secondary width-120px" data-dismiss="modal" aria-label="Close">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 모달 : 집담회 활동 -->
+        <div class="modal" tabindex="-1" role="dialog" id="modal-practice-log-meeting">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                <div class="modal-content border-0">
+                    <div class="modal-header bg-primary">
+                        <h1 class="modal-title text-white">집담회 활동</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close-white"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>작성차수</th>
+                                    <th>지도시간</th>
+                                    <th>작성자<br>(지도교수)</th>
+                                    <th>지도일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td class="text-center">집담회</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center text-danger">4</td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">2021-10-11 12:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">집담회</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center text-danger">4</td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">2021-10-11 12:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">집담회</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center text-danger">4</td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">2021-10-11 12:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">집담회</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center text-danger">4</td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">2021-10-11 12:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">집담회</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center text-danger">4</td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">2021-10-11 12:00</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-secondary width-120px" data-dismiss="modal" aria-label="Close">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 모달 : 서약서-->
+        <div class="modal" tabindex="-1" role="dialog" id="modal-pledge">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                <div class="modal-content border-0">
+                    <div class="modal-header bg-primary">
+                        <h1 class="modal-title text-white">서약서</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close-white"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col style="width:170px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>서약서</th>
+                                    <td class="m-b-10">
+                                        <!-- 기획서랑 상이하게 퍼블진행했습니다  편하신 방법으로 선택해서 사용해주세요-->
+
+                                        <!-- 아래}} 기획서상 디자인 (현재 숨김처리> 사용할 경우 클래스 d-none 빼주세요) 최대 10개인데 너무 보기 불편해서 아래 다른 디자인 추가 해놨습니다. 더 편하신거 사용해주세요!-->
+                                        <div class="d-none">
+                                            <div class="m-t-10">
+                                                <!-- 파일 첨부 -->
+                                                <div class="row row-10 align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="custom-file w-100">
+                                                            <input type="file" class="form-control custom-file-input" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                            <label class="custom-file-label" for="customFile" lang="ko"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <button type="buton" class="btn btn-dark">추가</button>
+                                                    </div>
+                                                </div>
+                                                <!-- 첨부된 파일 명 -->
+                                                <div class="bg-light p-2 m-t-10 px-3">
+                                                    <a href="javascript:;">김학생서약서.hwp</a>
+                                                </div>
+                                            </div>
+                                            <!-- 파일 추가시 { -->
+                                            <div class="m-t-10">
+                                                <!-- 파일 첨부 -->
+                                                <div class="row row-10  align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="custom-file w-100">
+                                                            <input type="file" class="form-controlcustom-file-input" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                            <label class="custom-file-label" for="customFile" lang="ko"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <button type="buton" class="btn btn-outline-dark">삭제</button>
+                                                        <button type="buton" class="btn btn-dark">추가</button>
+                                                    </div>
+                                                </div>
+                                                <!-- 첨부된 파일 명 -->
+                                                <div class="bg-light p-2 m-t-10 px-3">
+                                                    <a href="javascript:;">김학생서약서.hwp</a>
+                                                </div>
+                                            </div>
+                                            <!-- } -->
+                                        </div>
+
+
+                                        <!-- 아래}} 1:1문의 등록과 똑같이 진행된 퍼블..이에요! 편하신방법으로 선택해서 쓰시면 될것같아요! 이게 중복되서 개발하기 편할것같고.. 보기 더 편할것 같습니다..1:1문의랑 같은 개발 방식이라면!  추가버튼은 삭제해도 될것같아요.. 기획서에 추가 버튼이 있어서 넣은것 뿐입니다. -->
+                                        <div class="">
+                                            <!-- 파일 첨부 -->
+                                            <div class="row row-10 align-items-center">
+                                                <div class="col-8">
+                                                    <div class="custom-file w-100">
+                                                        <input type="file" class="form-control custom-file-input" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                        <label class="custom-file-label" for="customFile" lang="ko"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button type="buton" class="btn btn-dark">추가</button>
+                                                </div>
+                                            </div>
+                                            <!-- 첨부된 파일명 -->
+                                            <ul id="fileAppend" class="p-3 bg-light m-t-10">
+                                                <li>
+                                                    <label class="d-inline-block fileName mb-0" name="safetyFile">xxxxxxxxxxx.pdf</label>
+                                                    <input type="hidden" class="filePath"></input>
+                                                    <input type="hidden" class="fileSize"></input>
+                                                    <button type="button" class="btn text-underline text-gray4 p-0 m-l-10">삭제</button>
+                                                </li>
+                                                <li>
+                                                    <label class="d-inline-block fileName mb-0" name="safetyFile">xxxxxxxxxxx.pdf</label>
+                                                    <input type="hidden" class="filePath"></input>
+                                                    <input type="hidden" class="fileSize"></input>
+                                                    <button type="button" class="btn text-underline text-gray4 p-0 m-l-10">삭제</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-primary width-120px">저장</button>
+                        <button class="btn btn-secondary  width-120px m-l-10" data-dismiss="modal" aria-label="Close">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 모달 : 보고서-->
+        <div class="modal" tabindex="-1" role="dialog" id="modal-report">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                <div class="modal-content border-0">
+                    <div class="modal-header bg-primary">
+                        <h1 class="modal-title text-white">보고서</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close-white"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="inquery-area">
+                            <table class="table table-bordered">
+                                <colgroup>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>제목 </th>
+                                        <td>
+                                            <input type="text" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>파일첨부</th>
+                                        <td>
+                                            <div class="row row-10  align-items-center">
+                                                <div class="col-8">
+                                                    <div class="custom-file w-100">
+                                                        <input type="file" class="form-control custom-file-input" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                        <label class="custom-file-label" for="customFile" lang="ko">찾아보기</label>
+                                                    </div>
+                                                </div>
+                                                <!-- 필요하면 쓰고 아니면 지워주세요! -->
+                                                <!-- <div class="col-2">
+                                            <button type="button" class="btn btn-outline-dark">파일삭제</button>
+                                        </div> -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btns">
+                                <button class="btn btn-primary">등록</button>
+                            </div>
+                        </div>
+
+                        <div class="list-title-wrap">
+                            <div>
+                                <i class="icon-list-title"></i>
+                                <p class="title">보고서 목록</p>
+                            </div>
+                        </div>
+
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col style="width:60px">
+                                <col>
+                                <col>
+                                <col style="width:18%">
+                                <col style="width:16%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>연번</th>
+                                    <th>보고서 제목</th>
+                                    <th>파일명</th>
+                                    <th>등록일</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td class="text-center">10</td>
+                                    <td class="text-center text-truncate">주간보고서 내용 길어요 내용 길어요 내용 길어요</td>
+                                    <td class="text-center text-truncate">10월2주차주간보고서10월2주차주간보고서10월2주차주간보고서.hwp</td>
+                                    <td class="text-center">2021-10-01</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                        <button type="button" class="btn btn-sm btn-gray5" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">9</td>
+                                    <td class="text-center text-truncate">주간보고서 내용 길어요 내용 길어요 내용 길어요</td>
+                                    <td class="text-center text-truncate">10월2주차주간보고서10월2주차주간보고서10월2주차주간보고서.hwp</td>
+                                    <td class="text-center">2021-10-01</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                        <button type="button" class="btn btn-sm btn-gray5" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">8</td>
+                                    <td class="text-center text-truncate">주간보고서 내용 길어요 내용 길어요 내용 길어요</td>
+                                    <td class="text-center text-truncate">10월2주차주간보고서10월2주차주간보고서10월2주차주간보고서.hwp</td>
+                                    <td class="text-center">2021-10-01</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                        <button type="button" class="btn btn-sm btn-gray5" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">7</td>
+                                    <td class="text-center text-truncate">주간보고서 내용 길어요 내용 길어요 내용 길어요</td>
+                                    <td class="text-center text-truncate">10월2주차주간보고서10월2주차주간보고서10월2주차주간보고서.hwp</td>
+                                    <td class="text-center">2021-10-01</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                        <button type="button" class="btn btn-sm btn-gray5" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">6</td>
+                                    <td class="text-center text-truncate">주간보고서 내용 길어요 내용 길어요 내용 길어요</td>
+                                    <td class="text-center text-truncate">10월2주차주간보고서10월2주차주간보고서10월2주차주간보고서.hwp</td>
+                                    <td class="text-center">2021-10-01</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                        <button type="button" class="btn btn-sm btn-gray5" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center text-truncate">주간보고서 내용 길어요 내용 길어요 내용 길어요</td>
+                                    <td class="text-center text-truncate">10월2주차주간보고서10월2주차주간보고서10월2주차주간보고서.hwp</td>
+                                    <td class="text-center">2021-10-01</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                        <button type="button" class="btn btn-sm btn-gray5" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center text-truncate">주간보고서 내용 길어요 내용 길어요 내용 길어요</td>
+                                    <td class="text-center text-truncate">10월2주차주간보고서10월2주차주간보고서10월2주차주간보고서.hwp</td>
+                                    <td class="text-center">2021-10-01</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                        <button type="button" class="btn btn-sm btn-gray5" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center text-truncate">주간보고서 내용 길어요 내용 길어요 내용 길어요</td>
+                                    <td class="text-center text-truncate">10월2주차주간보고서10월2주차주간보고서10월2주차주간보고서.hwp</td>
+                                    <td class="text-center">2021-10-01</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                        <button type="button" class="btn btn-sm btn-gray5" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center text-truncate">주간보고서 내용 길어요 내용 길어요 내용 길어요</td>
+                                    <td class="text-center text-truncate">10월2주차주간보고서10월2주차주간보고서10월2주차주간보고서.hwp</td>
+                                    <td class="text-center">2021-10-01</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                        <button type="button" class="btn btn-sm btn-gray5" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center text-truncate">주간보고서 내용 길어요 내용 길어요 내용 길어요</td>
+                                    <td class="text-center text-truncate">10월2주차주간보고서10월2주차주간보고서10월2주차주간보고서.hwp</td>
+                                    <td class="text-center">2021-10-01</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                        <button type="button" class="btn btn-sm btn-gray5" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-primary width-120px">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <!-- 모달 : 로그인 -->
+        <div class="modal fade user-modal" id="modal-login" tabindex="-1" aria-modal="true" data-overlap="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"></h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="icon-wrap"><i class="icon-login"></i></div>
+                        <p class="title">로그인</p>
+                        <p class="desc">가톨릭관동대학교 간호교육지원시스템입니다.</p>
+                        <form action="">
+                            <fieldset>
+                                <legend>LOGIN</legend>
+                                <input type="text" class="form-control form-control-lg" placeholder="학번(아이디)를 입력해 주세요.">
+                                <input type="password" class="form-control form-control-lg mt-2" placeholder="비밀번호를 입력해 주세요.">
+                                <button type="submit" class="btn btn-primary btn-block btn-lg mt-3">로그인</button>
+                            </fieldset>
+                            <a href="#modal-password" data-toggle="modal" class="m-t-20 text-right d-block font-14px text-gray5 font-weight-medium" data-dismiss="modal">비밀번호찾기</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 모달 : 비밀번호 찾기 -->
+        <div class="modal fade user-modal" id="modal-password" tabindex="-1" aria-modal="true" data-overlap="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"></h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="icon-wrap"><i class="icon-password"></i></div>
+                        <p class="title">비밀번호 찾기</p>
+                        <p class="desc">가톨릭관동대학교 간호교육지원시스템입니다.</p>
+                        <form action="">
+                            <fieldset>
+                                <legend>LOGIN</legend>
+                                <input type="text" class="form-control form-control-lg" placeholder="학번(아이디)를 입력해 주세요.">
+                                <input type="password" class="form-control form-control-lg mt-2" placeholder="휴대폰 번호를 입력해 주세요.">
+                                <button type="button" class="btn btn-primary btn-block btn-lg mt-3">비밀번호 찾기</button>
+                            </fieldset>
+                            <a href="#modal-login" data-toggle="modal" class="m-t-20 text-right d-block font-14px text-gray5 font-weight-medium" data-dismiss="modal">로그인</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 모달 : 비밀번호 찾기 > 비밀번호 안내 -->
+        <div class="modal fade" id="modal-password-guide" tabindex="-1" aria-hidden="true" data-overlap="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">알림</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="p-2">
+                            비밀번호는 다음과 같습니다
+                            <p class="password m-t-30 w-100 font-weight-bold font-18px">
+                                abcde***
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-center w-100">
+                            <button type="button" class="btn btn-lg btn-primary width-120px">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 모달 : 삭제 확인 여부 -->
+        <div class="modal fade" id="modal-cancel" tabindex="-1" aria-hidden="true" data-overlap="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <!-- <h2 class="modal-title">알림</h2> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="p-2">
+                            삭제하시겠습니까?
+                        </div>
+
+                    </div>
+                    <div class="modal-footer border-0">
+                        <div class="row row-10 w-100">
+                            <div class="col">
+                                <button type="button" class="btn btn-lg btn-primary btn-block">확인</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-lg btn-secondary btn-block" data-dismiss="modal">취소</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="footer-block">
+            <footer id="footer">
+                <div class="container">
+                    <div class="footer-top">
+                        <ul class="footer-menu offset-263px">
+                            <li><a href="">개인정보취급방침</a></li>
+                            <li><a href="">이메일무단수집거부</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="row row-40">
+                            <div class="col-auto">
+                                <div class="f-logo">
+                                    <div class="logo"><span class="sr-only">중앙대학교 원격미래교육원 로고</span></div>
+                                    <span>간호학과</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="footer-info">
+                                    (25601) 강릉시 범일로 579번길 24 (내곡동) 가톨릭관동대학교 라파엘관 210호 간호학과<br>
+                                    TEL : 033-649-7610, 7492 / FAX : 033-649-7620
+                                </div>
+                                <div class="copyright">COPYRIGHT(C) CATHOLIC KWANDONG UNIVERSITY. ALL RIGHTS RESERVED.</div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="row row-10">
+                                    <div class="col">
+                                        <select name="" id="" class="select-dark d-lg-inline-block min-width-210px">
+                                            <option value="">관련 사이트</option>
+                                            <option value="">120개씩 보기</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select name="" id="" class="select-dark d-lg-inline-block min-width-210px">
+                                            <option value="">교내주요사이트</option>
+                                            <option value="">120개씩 보기</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">실습학생관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">학생관리</a></li>
+                                <li class="breadcrumb-item">실습학생관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="practice-student">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 150px">
+                                    <col>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>연도 선택</th>
+                                    <td colspan="3">
+                                        <select name="" id="" class="custom-select">
+                                            <option value="">연도 선택</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>실습 학기</th>
+                                    <td>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                            <label for="chk1-1" class="custom-control-label">전체</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                            <label for="chk1-1" class="custom-control-label">1분기</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                            <label for="chk1-2" class="custom-control-label">2분기</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="chk1-3" name="">
+                                            <label for="chk1-3" class="custom-control-label">3분기</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="chk1-4" name="">
+                                            <label for="chk1-4" class="custom-control-label">4분기</label>
+                                        </div>
+                                    </td>
+                                    <th>실습 학년</th>
+                                    <td>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                            <label for="chk1-1" class="custom-control-label">3학년</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                            <label for="chk1-2" class="custom-control-label">4학년</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button type="button" class="btn btn-dark min-width-90px">검색</button>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-between align-items-center mb-3">
+                        <div class="col-auto">
+                            <b class="text-danger">2022</b>학년도 실습배치표
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
+                            <select class="custom-select w-auto">
+                                <option>10</option>
+                                <option>30</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:60%;">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center">번호</th>
+                                    <th class="text-center">분기</th>
+                                    <th class="text-center">학년</th>
+                                    <th class="text-center">반</th>
+                                    <th class="text-center">학번</th>
+                                    <th class="text-center">이름</th>
+                                    <th class="text-center">실습교과목</th>
+                                    <th class="text-center">관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 10; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center"><%= i %></td>
+                                    <td class="text-center">1분기</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center"><a href="student_detail.html" class="text-underline">20211012011</a></td>
+                                    <td class="text-center">김학생</td>
+                                    <!-- 아래}} 는 글자수 잘리면 안될것같아요!  -->
+                                    <td class="text-center">기본간호학 실습 I, 기본간호학 실습 I,기본간호학 실습 I, 기본간호학 실습 I,기본간호학 실습 I, 기본간호학 실습 I,기본간호학 실습 I,성인간호학실습 I, 모성간호학실습 I, 아동간호학실습I 아동간호학실습I성인간호학실습 I, 모성간호학실습 I, 아동간호학실습I 아동간호학실습I</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#modal-training-designation-common">관리</button>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-vaccination").modal("show");
+        });
+    </script>
+</body>
+
+</html>

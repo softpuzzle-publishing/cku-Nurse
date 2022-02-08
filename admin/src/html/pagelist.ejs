@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"="IE=edge">
+    <title>(pagelist)간호학과 관리자 시스템 - 가톨릭관동대학교</title>
+    <link rel="icon" href="resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="resources/images/favicon-128.png" sizes="128x128">
+    <style type="text/css">
+        body {
+            padding: 20px;
+            position: relative;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            color: #222;
+            line-height: 1.5em;
+            font-family: 'NanumGothic';
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #c1ced1;
+            padding: 4px 10px;
+            word-break: keep-all
+        }
+
+        table th {
+            background: #0c6276;
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        table td a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        table td a:hover {
+            text-decoration: underline;
+        }
+
+        table tbody tr:hover {
+            background-color: #f2fbfd;
+        }
+
+        .noteTable {
+            display: table;
+            width: 100%;
+        }
+
+        .noteTable .date {
+            display: table-cell;
+            color: #333;
+            width: 40px;
+        }
+
+        .noteTable .note {
+            display: table-cell;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bg {
+            background: #fff5f5;
+        }
+
+        ul.float {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        ul.float li {
+            list-style: none;
+            border: 1px solid #ccc;
+            padding: 2px 5px;
+            display: inline-block;
+        }
+
+        .end {
+            background: #333;
+        }
+
+        .ing {
+            background: #333;
+        }
+
+        .list {
+            text-align: center;
+            padding: 0 0 20px;
+        }
+
+        .list a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>간호학과 관리자 시스템 pagelist</h1>
+    <table>
+        <colgroup>
+            <col style="width:6%">
+            <col style="width:10%">
+            <col style="width:16%">
+            <col style="width:10%">
+            <col>
+            <col style="width:10%">
+            <col style="width:15%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Depth 1</th>
+                <th>Depth 2</th>
+                <th>Depth 3</th>
+                <th>Depth 4</th>
+                <th>File</th>
+                <th>pageLink</th>
+                <th>최초작업일</th>
+                <th>수정일</th>
+                <th></th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Guide</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>/_guide/</td>
+                <td><a target="_blank" href="_guide/guide.html">guide.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>로그인</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>/login/</td>
+                <td><a target="_blank" href="login/login.html">login.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>학생관리</td>
+                <td>재학생관리</td>
+                <td>list</td>
+                <td></td>
+                <td>/student/</td>
+                <td><a target="_blank" href="student/student_list.html">student_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="student/student_detail.html">student_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="student/student_form.html">student_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>실습학생관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="student/student_practice_list.html">student_practice_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>학생 참여관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="student/student_join.html">student_join.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>학년별 실습배치표</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="student/student_placement_table.html">student_placement_table.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>운영관리</td>
+                <td>교과목정보</td>
+                <td>list</td>
+                <td></td>
+                <td>/operation/</td>
+                <td><a target="_blank" href="operation/operation_list.html">operation_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="operation/operation_form.html">operation_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail2</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="operation/operation_form_2.html">operation_form_2.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>평가서관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="operation/operation_appraisal.html">operation_appraisal.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>학기정보</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="operation/operation_term.html">operation_term.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>실습기관배정</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="operation/operation_agency.html">operation_agency.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="operation/operation_agency_detail.html">operation_agency_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>담당/평가표/실습과목배정</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="operation/operation_charge.html">operation_charge.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="operation/operation_charge_detail.html">operation_charge_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>실습관리</td>
+                <td>학생배치 대상관리</td>
+                <td>list</td>
+                <td></td>
+                <td>/practice/</td>
+                <td><a target="_blank" href="practice/practice_student_placement.html">practice_student_placement.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="practice/practice_student_detail.html">practice_student_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>실습대상 관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="practice/practice_target.html">practice_target.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>실습배치표 관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="practice/practice_subject_table.html">practice_subject_table.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="practice/practice_table_detail.html">practice_table_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>교과목별 실습배치표</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="practice/practice_table.html">practice_table.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>교과목별 실습평가</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="practice/practice_subject_evaluation.html">practice_subject_evaluation.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>실습기관 관리</td>
+                <td>실습기관 정보</td>
+                <td>list</td>
+                <td></td>
+                <td>/agency/</td>
+                <td><a target="_blank" href="agency/agency_info.html">agency_info.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="agency/agency_info_detail.html">agency_info_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="agency/agency_info_enrollment.html">agency_info_enrollment.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>부서 및 현장지도자정보</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="agency/agency_field_leader.html">agency_field_leader.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="agency/field_leader_detail.html">field_leader_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="agency/field_leader_enrollment.html">field_leader_enrollment.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>프로그램관리</td>
+                <td>교육현황관리</td>
+                <td>list</td>
+                <td></td>
+                <td>/program/</td>
+                <td><a target="_blank" href="program/program_education.html">program_education.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="program/program_education_detail.html">program_education_detail.htmll</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>교육프로그램관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="program/program_education_management.html">program_education_management.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>검진/예방검사 관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="program/program_prevention.html">program_prevention.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            
+            <!-- 교수업무 시작  -->
+            <tr>
+                <td></td>
+                <td>교수 업무관리</td>
+                <td>교수개발 참여실적</td>
+                <td>list</td>
+                <td></td>
+                <td>/management_professor/</td>
+                <td><a target="_blank" href="management_professor/professor_develope.html">professor_develope.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="management_professor/professor_develope_detail.html">professor_develope_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="management_professor/professor_develope_enrollment.html">professor_develope_enrollment.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>핵심 간호술 관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="management_professor/professor_develope_enrollment.html">professor_nursing_management.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>학생 성취평가 관리</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="management_professor/professor_nursing_achievement.html">professor_nursing_achievement.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>성취평과 항목 관리</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="management_professor/professor_item_management.html">professor_item_management.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>핵심간호술 대상자 관리</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="management_professor/professor_item_score.html">professor_item_score.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>핵심간호술 종합</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="management_professor/professor_nursing_total.html">professor_nursing_total.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>성취평가 관리</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="management_professor/professor_total_management.html">professor_total_management.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note">기획서상 경로 확인 불가능(답변 대기)>> 퍼블)테이블 내 관리로 넣음</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>임상실습지도관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="management_professor/clinical_practice_list.html">clinical_practice_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="management_professor/clinical_practice_form.html">clinical_practice_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>출력물</td>
+                <td>출석부</td>
+                <td></td>
+                <td></td>
+                <td>/util/</td>
+                <td><a target="_blank" href="util/attendance_form.html">attendance_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>현장지도자 평가서</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="util/appraisal_leader.html">appraisal_leader.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>교수 평가서</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="util/appraisal_professor.html">appraisal_professor.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>실습관리 > 교과목별 실습평가 > 예방접종 자가 점검표</td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="util/self-diagnosis.html">self-diagnosis.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>학생관리 > 학생참여관리 > 예방접종 자가 점검표 </td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="util/self-diagnosis_form.html">self-diagnosis_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>에러 s페이지</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="util/error.html">error.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>게시판 관리</td>
+                <td>공지사항</td>
+                <td>list</td>
+                <td></td>
+                <td>/board/</td>
+                <td><a target="_blank" href="board/notice_list.html">notice_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/notice_detail.html">notice_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/notice_form.html">notice_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>자료실</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/resource_list.html">resource_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/resource_detail.html">resource_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/resource_form.html">resource_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>1:1문의</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/qna_list.html">qna_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/qna_detail.html">qna_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>팝업관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/popup_list.html">popup_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/popup_form.html">popup_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>임상실습안내</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/clinical_list.html">clinical_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/clinical_detail.html">clinical_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/clinical_form.html">clinical_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>시스템 관리</td>
+                <td>내부사용자관리</td>
+                <td>list</td>
+                <td></td>
+                <td>/system/</td>
+                <td><a target="_blank" href="system/insider_list.html">insider_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="system/insider_form.html">insider_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>비밀번호변경</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="system/password_change.html">password_change.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>학사정보 업로드</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="system/academic_import.html">academic_import.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

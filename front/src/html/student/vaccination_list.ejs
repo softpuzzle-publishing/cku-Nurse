@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual nurse-03">
+                    <div class="container">
+                        <h1 class="title">검진/예방검사</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            <nav class="tab-visual">
+                                <ul>
+                                    <li class="active"><a href="vaccination_list.html">예방접종현황</a></li>
+                                    <li><a href="pledge_list.html">서약서 관리</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>검진/예방검사</li>
+                                <li>예방접종현황</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="table-title table-top-info d-flex align-items-center justify-content-between">
+                        기본정보
+                        <a href="../personal/personal_list.html" class="btn btn-primary">내정보 변경</a>
+                    </div>
+
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:170px">
+                            <col>
+                            <col style="width:170px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3">사진</th>
+                                <td rowspan="3">
+                                    <div class="row row-10 align-items-end justify-content-center">
+                                        <div class="col-auto">
+                                            <div class="profile-thumb">
+                                                <span style="display:none;">NO IMAGE</span>
+                                                <img src="../assets/images/@landscape.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>이름<strong class="text-danger"></strong></th>
+                                <td class="text-center">김학생</td>
+                            </tr>
+                            <tr>
+                                <th>학번<strong class="text-danger"></strong></th>
+                                <td class="text-center">981016</td>
+                            </tr>
+                            <tr>
+                                <th>학년<strong class="text-danger"></strong></th>
+                                <td class="text-center">3</td>
+                            </tr>
+                            <tr>
+                                <th>휴대폰<strong class="text-danger"></strong></th>
+                                <td class="text-center">010-2233-4455</td>
+                                <th>이메일<strong class="text-danger"></strong></th>
+                                <td class="text-center">abvdd@naver.com</td>
+                            </tr>
+                            <tr colspan="4">
+                                <th class="text-center">주소<strong class="text-danger"></strong></th>
+                                <td colspan="3" class="text-center">우(1211) 강원도 강릉시 강동 호림아파트 102동 100호</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="list-title-wrap m-t-60">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">예방접종 현황</p>
+                        </div>
+                    </div>
+
+                    <div class="box p-3 mb-3">
+                        <strong class="font-18px">주의사항</strong>
+                        <p class="m-t-10">※ 개인정보를 외부에 유출할 경우, 법적 책임을 받을 수 있으므로 유의하세요. </p>
+                        <p class="text-danger">※ 각 항목에 맞추어 항체유무와 접종유무(차수)를 체크하세요.</p>
+                    </div>
+
+                    <div class="table-title table-top-info">결핵(흉부 X선) 검사</div>
+                    <table class="table table-bordered">
+                        <colgroup>
+                            <col width="10%">
+                            <col>
+                            <col>
+                            <col width="25%">
+                            <col width="30%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>항목</th>
+                                <th>검사유무</th>
+                                <th>검사결과</th>
+                                <th>검사일</th>
+                                <th>증빙자료(결과지)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center text-danger">
+                                    <strong>결핵검사</strong>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">정상소견</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">이상소견</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">검사결과 증빙자료.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-title table-top-info">항체검사 및 예방접종</div>
+                    <table class="table table-bordered">
+                        <colgroup>
+                            <col width="10%">
+                            <col>
+                            <col>
+                            <col width="25%">
+                            <col width="30%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>항목</th>
+                                <th>검사유무</th>
+                                <th>
+                                    항체유무<br>
+                                    <p class="font-12px">
+                                        (만 19세 이후 검사만 인정)
+                                    </p>
+                                </th>
+                                <th>접종</th>
+                                <th>증빙자료(결과지)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center text-danger" rowspan="3">
+                                    <strong>비형간염*</strong>
+                                    <p class="text-black font-12px">*6개월에 3회 접종</p>
+                                </td>
+                                <td class="text-center" rowspan="3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center" rowspan="3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 2차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 3차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-danger">
+                                    <strong>결핵*</strong>
+                                    <p class="text-black font-12px">*6개월에 2회 접종</p>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-danger" rowspan="2">
+                                    <strong>홍역*</strong>
+                                </td>
+                                <td class="text-center" rowspan="2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center" rowspan="2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 2차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            <tr>
+                                <td class="text-center text-danger" rowspan="2">
+                                    <strong>유행성이하선염*</strong>
+                                </td>
+                                <td class="text-center" rowspan="2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center" rowspan="2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 2차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-danger" rowspan="2">
+                                    <strong>풍진*</strong>
+                                </td>
+                                <td class="text-center" rowspan="2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center" rowspan="2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 2차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-danger" rowspan="2">
+                                    <strong>수두*</strong>
+                                    <p class="font-12px text-black">*1개월 간격 2회 접종</p>
+                                </td>
+                                <td class="text-center" rowspan="2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center" rowspan="2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 2차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-danger">
+                                    <strong>파상풍*</strong>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-danger">
+                                    <strong>디프테리아*</strong>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-danger">
+                                    <strong>백일해*</strong>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-danger">
+                                    <strong>인풀루엔자*</strong>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-danger">
+                                    <strong>코로나PCR*</strong>
+                                </td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                        <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                        <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                                    </div>
+                                </td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-checkbox custom-control-inline ml-3">
+                                                <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                                <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row row-0  align-items-center">
+                                        <div class="col">
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block width-200px text-truncate break-all ">xxxddgdgdgdddddddddddddddddddddddddddgdxx.pdf</a>
+                                                <button type="button" class="btn btn-outline-light btn-sm" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto height-32px">
+                                            <div class="custom-file w-100">
+                                                <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                <label class="btn btn-gray5 btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="font-18px text-danger m-t-20">※ 각 항목에 맞추어 항체유무와 접종유무(차수)를 체크하세요.
+                    </p>
+
+                    <div class="d-flex justify-content-center align-items-center m-t-60">
+                        <button type="button" class="btn btn-primary btn-lg width-120px">저장</button>
+                        <button class="btn btn-secondary  btn-lg width-120px m-l-10">취소</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>

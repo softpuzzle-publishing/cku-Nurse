@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual nurse-02">
+                    <div class="container">
+                        <h1 class="title">교육이수</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            교육이수
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>교육이수</li>
+                                <li>교육이수 확인</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">교육정보</p>
+                        </div>
+                    </div>
+
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>교육구분</th>
+                                    <th>이수구분</th>
+                                    <th>목표시간</th>
+                                    <th>이수여부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">안전교육</td>
+                                    <td class="text-center">필수</td>
+                                    <td class="text-center">6시간</td>
+                                    <td class="text-center">미이수</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">이수정보</p>
+                        </div>
+                    </div>
+
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>실제이수 시간
+                                    </th>
+                                    <th>발급처</th>
+                                    <th>파일첨부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">6</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control">
+                                    </td>
+                                    <td>
+                                        <div class="row row-10  align-items-center">
+                                            <div class="col">
+                                                <div class="custom-file w-100">
+                                                    <input type="file" class="form-control custom-file-input" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                                    <label class="custom-file-label" for="customFile" lang="ko">찾아보기</label>
+                                                </div>
+                                            </div>
+                                            <!-- 아래 { 기획서엔 없는데 확인하시고 안쓰시면 지워주세요 -->
+                                            <div class="col-auto">
+                                                <button type="button" class="btn btn-outline-dark">파일삭제</button>
+                                            </div>
+                                            <!-- }    -->
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button class="btn btn-primary">등록</button>
+                        </div>
+                    </div>
+
+                    <div class="main_search_result_list m-t-60">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:30%">
+                                <col style="width:10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>등록일</th>
+                                    <th>실제이수 시간</th>
+                                    <th>발급처</th>
+                                    <th>파일첨부</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 0; i < 5; i++) { %>
+                                <tr>
+                                    <td class="text-center">2021-10-11</td>
+                                    <td class="text-center">1시간</td>
+                                    <td class="text-center">안전교육센터</td>
+                                    <td class="text-center text-truncate">
+                                        <a href="javascript:;">안전교육이수증1.pdf</a>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="row row-10 justify-content-center">
+                                            <div class="col-auto">
+                                                <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="button" class="btn btn-sm btn-gray5" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <% } %>
+                                <tr class="bg-lightblue font-weight-semibold">
+                                    <td class="text-center">합계</td>
+                                    <td class="text-center">6시간</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center m-t-60">
+                        <button type="button" class="btn btn-primary btn-lg width-120px">저장</button>
+                        <button class="btn btn-secondary  btn-lg width-120px m-l-10">취소</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>

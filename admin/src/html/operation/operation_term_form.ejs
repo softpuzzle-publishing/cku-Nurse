@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">임상실습분기 입력</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">운영관리</a></li>
+                                <li class="breadcrumb-item"><a href="#">분기정보</a></li>
+                                <li class="breadcrumb-item">임상실습분기 입력</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="operation-term">
+                <div class="container-fluid">
+                    <p class="font-size-18px font-weight-bold mb-3 mt-3">● 임상실습분기생성</p>
+                    <div class="row row-0 justify-content-between align-items-end mb-3">
+                        <div class="col-12 bg-gray-1 p-3">
+                            <p class="text-danger mb-2 font-weight-bold">유의사항</p>
+                            <p>※ 임상실습분기를 생성하고, 하단의 항목들은 임상실습 타이틀에 사용되는 정보입니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-between align-items-end mb-3 mt-3">
+                        <div class="col-auto"></div>
+                        <div class="col-auto">
+                            <p class="text-danger">* 표시는 필수입력 항목입니다.</p>
+                        </div>
+                    </div>
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col width="150px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th class="text-danger">연도 선택*</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">연도 선택</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-danger">실습 분기*</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">1분기</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-danger">임상실습명</th>
+                                    <td>
+                                        <input type="text" class="form-control" value="2022년 1분기 임상실습">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="font-size-18px font-weight-bold mb-3 m-t-100">● 실습기간 등록</p>
+                    <div class="row row-0 justify-content-between align-items-end mb-3">
+                        <div class="col-12 bg-gray-1 p-3">
+                            <p class="text-danger mb-2 font-weight-bold">유의사항</p>
+                            <p>※ 연도별로 실습학기는 4학기(1분기, 2분기, 3분기, 4분기)로 구성되며. 분기별 각 차수의 실습기간은 실습배치표를 이루는 최소 단위가 됩니다.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-auto">
+                            <select name="" id="" class="custom-select width-200px">
+                                <option value="">1분기</option>
+                            </select>
+                            <select name="" id="" class="custom-select width-200px">
+                                <option value="">1분기</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center">
+                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                <p class="ml-4 mr-4">~</p>
+                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-bordered m-t-50" id="datatable1">
+                        <colgroup>
+                            <col width="250px;">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center">실습 지수</th>
+                                <th class="text-center">실습 기간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">1차 실습</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                        <p class="ml-4 mr-4">~</p>
+                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                        <div class="justify-content-center ml-3">
+                                            <button type="button" class="btn btn-primary">추가</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2차 실습</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                        <p class="ml-4 mr-4">~</p>
+                                        <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                        <div class="justify-content-center ml-3">
+                                            <button type="button" class="btn btn-primary">추가</button>
+                                            <button type="button" class="btn btn-danger">삭제</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        </tbody>
+                    </table>
+
+                    <p class="font-size-18px font-weight-bold mb-3 m-t-100">● 과목별 평가서, 주임교수 선택</p>
+
+                    <table class="table table-bordered" id="datatable1">
+                        <colgroup>
+                            <col width="250px;">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center" rowspan="2" colspan="2">
+                                    <p>실습교과목</p>
+                                    <p>2022년 1분기 임상실습</p>
+                                </th>
+                                <th class="text-center" colspan="2">평가서선택</th>
+                                <th class="text-center" rowspan="2">주임교수</th>
+                            </tr>
+                            <tr>
+                                <th class="text-center">교수용</th>
+                                <th class="text-center">현장지도자용</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr>
+                                <td class="text-center" rowspan="6">3학년</td>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <!-- 4학년 -->
+                            <tr>
+                                <td class="text-center" rowspan="6">4학년</td>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">기본간호학 실습1</td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 교수용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">2022 현장지도자용 평가서 선택</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <select name="" id="" class="custom-select width-200px">
+                                        <option value="">박교수</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary mr-2">저장</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>

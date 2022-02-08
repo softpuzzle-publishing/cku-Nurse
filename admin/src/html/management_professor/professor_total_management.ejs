@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">학생 성취평가 관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">교수업무관리</a></li>
+                                <li class="breadcrumb-item">핵심간호술 종합</li>
+                                <li class="breadcrumb-item">학생 성취평과 관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="professor-nursing-total">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+                        <p class="font-size-18px font-weight-bold mb-3 mt-3">학생 기본 정보</p>
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col style="width: 150px">
+                            </colgroup>
+                            <tbody>
+
+                                <tr>
+                                    <th>졸업연도</th>
+                                    <td colspan="3">
+                                        <div class="d-flex align-items-center">
+                                            <select name="" id="" class="custom-select width-300px mr-3">
+                                                <option value="">연도선택</option>
+                                            </select>
+                                            <select name="" id="" class="custom-select width-300px">
+                                                <option value="">2월 졸업</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>학번</th>
+                                    <td colspan="3">
+                                        201730001
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>학생이름</th>
+                                    <td colspan="3">
+                                        고선이
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="font-size-18px font-weight-bold mb-3 mt-3">평가정보</p>
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <div class="row">
+                            <div class="col-auto d-flex align-items-center">
+                                <span class="mr-2">평가일</span>
+                                <input type="text" readonly="" class="form-control form-datepicker mr-2" placeholder="0000-00-00">
+                                <button type="button" class="btn btn-dark">적용</button>
+                            </div>
+                            <div class="col-auto d-flex align-items-center">
+                                <span class="mr-2">평가자</span>
+                                <select name="" id="" class="custom-select width-90px mr-2">
+                                    <option value="">김교수</option>
+                                </select>
+                                <button type="button" class="btn btn-dark">적용</button>
+                            </div>
+                            <div class="col-auto d-flex align-items-center">
+                                <p>시험일자 입력 예시 : 2021.09.01</p>
+                            </div>
+                        </div>
+                        <table class="table table-bordered m-t-30">
+                            <colgroup>
+                                <col style="width: 150px">
+                            </colgroup>
+                            <thead>
+                                <th class="text-center">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                        <label for="chk1-1" class="custom-control-label"></label>
+                                    </div>
+                                </th>
+                                <th class="text-center">연번</th>
+                                <th class="text-center">항목명</th>
+                                <th class="text-center">평가일</th>
+                                <th class="text-center">평가자</th>
+                                <th class="text-center">평가점수</th>
+                                <th class="text-center">성취수준</th>
+
+                            </thead>
+                            <tbody>
+                                <% for(var i = 15; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"> <%= i %></td>
+                                    <td class="text-center">활력징후</td>
+                                    <td class="text-center">
+                                        <input type="text" class="form-control" value="">
+                                    </td>
+                                    <td class="text-center">
+                                        <input type="text" class="form-control" value="">
+                                    </td>
+                                    <td class="text-center">
+                                        <input type="text" class="form-control" value="">
+                                    </td>
+                                    <td class="text-center">
+                                        <select name="" id="" class="custom-select">
+                                            <option value="">심화</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th class="text-center" colspan="5">점수합계</th>
+                                    <th class="text-center">1,873</th>
+                                    <th class="text-center"></th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" colspan="5">평균점수</th>
+                                    <th class="text-center">94</th>
+                                    <th class="text-center"></th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" colspan="5">평가(PASS/FAIL)</th>
+                                    <th class="text-center">P</th>
+                                    <th class="text-center"></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary width-120px">저장</button>
+                        <button type="button" class="btn btn-secondary width-120px m-l-10">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>

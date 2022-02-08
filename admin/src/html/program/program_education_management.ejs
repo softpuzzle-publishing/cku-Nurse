@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">교육프로그램관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">프로그램관리</a></li>
+                                <li class="breadcrumb-item">교육프로그램관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="program-management">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 150px">
+                                    <col>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>프로그램명</th>
+                                    <td colspan="3">
+                                        <input type="text" class="form-control mr-2" value="실험실안전교육">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>프로그램 적용</th>
+                                    <td colspan="3">
+                                        <div class="custom-control custom-checkbox my-2">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">전체</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">1학년 1학기</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">1학년 2학기</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">2학년 1학기</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">2학년 2학기</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">3학년 1학기</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">3학년 2학기</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">4학년 1학기</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox my-2 custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label">4학년 2학기</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>노출여부</th>
+                                    <td colspan="3">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio" checked>
+                                            <label for="customRadio1" class="custom-control-label">노출</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input class="custom-control-input" type="radio" id="customRadio2" name="customRadio">
+                                            <label for="customRadio2" class="custom-control-label">비노출</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button type="button" class="btn btn-dark min-width-90px">초기화</button>
+                            <button type="button" class="btn btn-dark min-width-90px">추가</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-end mb-2 mt-5">
+                        <div class="col-auto">
+                            프로그램 목록
+                        </div>
+                    </div>
+                    
+                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:50%;">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center">
+                                        <div class="custom-control custom-checkbox my-2">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label"></label>
+                                        </div>
+                                    </th>
+                                    <th class="text-center">번호</th>
+                                    <th class="text-center">프로그램명</th>
+                                    <th class="text-center">프로그램 적용</th>
+                                    <th class="text-center">노출여부</th>
+                                    <th class="text-center">작성자</th>
+                                    <th class="text-center">등록일</th>
+                                    <th class="text-center">관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 10; i > 0 ; i--){ %>
+                                <tr>
+
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox my-2">
+                                            <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                            <label for="chkPractice1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><%= i %></td>
+                                    <td class="text-center">실험실안전교육</td>
+                                    <td class="text-center">
+                                        1학년 1학기, 1학년 2학기, 2학년 1학기, 2학년 2학기, 3학년 1학기, 3학년 2학기, 4학년 1학기, 4학년 2학기
+                                    </td>
+                                    <td class="text-center">노출</td>
+                                    <td class="text-center">관리자</td>
+                                    <td class="text-center">2021.09.01 10:20</td>
+                                    <td class="text-center">
+                                        <div class="btns">
+                                            <button type="button" class="btn btn-sm btn-secondary">삭제</button>
+                                            <button type="button" class="btn btn-sm btn-dark" data-toggle="modal" data-target="#modal-program-modify">수정</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                        
+                        <div class="btns d-flex">
+                            <button type="button" class="btn btn-dark min-width-90px">선택삭제</button>
+                        </div>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>

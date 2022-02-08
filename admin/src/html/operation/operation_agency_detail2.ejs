@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">실습기관배정</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">운영관리</a></li>
+                                <li class="breadcrumb-item">실습기관배정</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content"  data-menu="operation-agency">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+                        <p class="font-size-18px font-weight-bold mb-3">● 실습 정보</p>
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col style="width: 150px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center">연도</th>
+                                    <th class="text-center">실습학기</th>
+                                    <th class="text-center">임상실습명</th>
+                                    <th class="text-center">전체 실습기간</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">연도</td>
+                                    <td class="text-center">4분기</td>
+                                    <td class="text-center">2022년 4분기 임상실습</td>
+                                    <td class="text-center">2021.10.01~2021.12.30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="font-size-18px font-weight-bold mb-3">● 실습 기관</p>
+
+                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center">연번</th>
+                                    <th class="text-center">기관명</th>
+                                    <th class="text-center">부서명</th>
+                                    <th class="text-center">실습단위</th>
+                                    <th class="text-center">실습적용</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 1번 -->
+                                <tr>
+                                    <td class="text-center" rowspan="6">1</td>
+                                    <td class="text-center" rowspan="6">강릉제일병원</td>
+                                    <td class="text-center" rowspan="3">내과</td>
+                                    <td class="text-center">6병동</td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">7병동</td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">8병동</td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" rowspan="2">산부인과</td>
+                                    <td class="text-center">부인과</td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">출산과</td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" rowspan="1">소아과</td>
+                                    <td class="text-center">소아병동</td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- 1번 끝 -->
+
+                                <!-- 2번 -->
+                                <tr>
+                                    <td class="text-center" rowspan="3">2</td>
+                                    <td class="text-center" rowspan="3">가톨릭병원</td>
+                                    <td class="text-center" rowspan="2">청소년과</td>
+                                    <td class="text-center">소아과</td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">가정의학과</td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">정형외과</td>
+                                    <td class="text-center">정형1과</td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label"></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                               <!-- 2번 끝 -->
+                            </tbody>
+                            
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary mr-2">저장</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>

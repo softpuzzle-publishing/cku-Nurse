@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">교수업무관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">교수업무관리</a></li>
+                                <li class="breadcrumb-item">교수개발 참여실적</li>
+                                <li class="breadcrumb-item">등록</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="professor-develope">
+                <div class="container-fluid">
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col width="170px">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>실적연도 <span class="text-danger">*</span></th>
+                                    <td>
+                                        2021
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>전임교원명 <span class="text-danger">*</span></th>
+                                    <td>
+                                        홍길동
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>구분 <span class="text-danger">*</span></th>
+                                    <td>
+                                        간호 전문직단체 활동
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기관명 <span class="text-danger">*</span></th>
+                                    <td>
+                                        대한간호협회
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>내용 <span class="text-danger">*</span></th>
+                                    <td>
+                                        <textarea name="" id="" cols="30" rows="10" width="100%" height="100%" maxlength="1000">임원으로 활동</textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>참여기간 <span class="text-danger">*</span></th>
+                                    <td>
+                                        2021. 09. 11 ∼ 2021. 09. 30
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>첨부파일</th>
+                                    <td>
+                                        <a href="javscript:void(0);">활동증명서.pdf</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row mb-3 justify-content-center mt-5">
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-primary mr-1">목록</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>간호학과 관리자 시스템 - 가톨릭관동대학교</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" sizes="192x192">
+
+    <link rel="stylesheet" href="../assets/lib/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../assets/lib/bootstrap/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../assets/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../assets/lib/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/lib/chart/Chart.min.css">
+    <link rel="stylesheet" href="../assets/css/adminlte.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Additional style(개발단에서 수정 및 추가 필요한 경우 additional.css에 작성)  -->
+    <link rel="stylesheet" href="../assets/css/additional.css">
+
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/moment/moment.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap-select.js"></script>
+    <script src="../assets/lib/swiper/js/swiper.min.js"></script>
+    <script src="../assets/lib/chart/Chart.min.js"></script>
+
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css">
+
+    <script src="/assets/js/adminlte.min.js" defer></script>
+    <script src="/assets/js/ui.js" defer></script>
+
+
+    <!-- 프린트 css  -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/print.css" media="screen" />
+    <link rel="stylesheet" href="../assets/css/print.css" media="print" />
+</head>
+
+<style>
+    @page {
+        /*A4*/
+        size: A4 portrait;
+        margin: 30mm 22mm 30mm 22mm;
+    }
+
+    @media print {
+        .page {
+            margin: 0 auto;
+        }
+
+        .text-truncate {
+            overflow: visible !important;
+            text-overflow: initial !important;
+            white-space: normal !important;
+            word-break: break-all;
+        }
+
+        ::placeholder {
+            color: transparent !important;
+        }
+    }
+
+    .custom-control-label {
+        font-size: 12px;
+        line-height: 21px;
+    }
+
+    .custom-control-inline {
+        margin-right: 0;
+    }
+
+    .custom-control-inline+.custom-control-inline {
+        margin-left: 1rem;
+    }
+
+    table th {
+        text-align: center;
+    }
+
+    .page {
+        width: 95% !important;
+    }
+
+    .popup-header {
+        width: 100%;
+        max-width: none !important;
+    }
+
+    .popup-footer {
+        width: 100%;
+        max-width: none !important;
+    }
+
+    .custom-file {
+        height: auto !important;
+    }
+
+    .custom-file label {
+        margin: 0 !important;
+    }
+
+    @media (min-width:1000px) {
+        a.width-120px {
+            width: 94% !important;
+        }
+    }
+</style>
+
+<body class="popup">
+
+    <div class="no-print-page">
+        <div class="popup-header">
+            <h1>예방접종 자가 검사 표</h1>
+            <a href="javascipt:;" class="close" onclick="self.close();">
+                <img src="../assets/images/icon-close-white.svg" alt="닫기 버튼">
+            </a>
+        </div>
+    </div>
+    <div class="page">
+        <!-- 프린트 시에만 보이게 하는 영역 {-->
+        <div class="only-print-page"></div>
+        <!-- } -->
+
+        <div class="sector">
+            <br>
+            <div class="table-title  table-top-info d-flex align-items-center justify-content-between" style="margin-top:0;">
+                기본정보
+                <div class="no-print-page">
+                    <a href="javascript:;" class=" printBtn">
+                        인쇄
+                    </a>
+                </div>
+            </div>
+            <table class="table table-bordered table-fixed">
+                <colgroup>
+                    <col style="width:170px">
+                    <col>
+                    <col style="width:170px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th rowspan="3">사진</th>
+                        <td rowspan="3">
+                            <div class="row row-0align-items-end justify-content-center">
+                                <div class="col-auto">
+                                    <div class="profile-thumb">
+                                        <span style="display:none;">NO IMAGE</span>
+                                        <img src="../assets/images/@landscape.png" alt="학생사진">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                        <th>이름<strong class="text-danger"></strong></th>
+                        <td>김학생</td>
+
+                    </tr>
+                    <tr>
+                        <th>학번<strong class="text-danger"></strong></th>
+                        <td>981016</td>
+                    </tr>
+                    <tr>
+                        <th>학년<strong class="text-danger"></strong></th>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰<strong class="text-danger"></strong></th>
+                        <td>010-2233-4455</td>
+                        <th>이메일<strong class="text-danger"></strong></th>
+                        <td>abvdd@naver.com</td>
+                    </tr>
+                    <tr colspan="4">
+                        <th>주소<strong class="text-danger"></strong></th>
+                        <td colspan="3">우(1211) 강원도 강릉시 강동 호림아파트 102동 100호</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br> <br>
+        <div class="sector">
+            <div class="box p-3">
+                <p class="text-danger mb-2 font-weight-bold">유의사항</p>
+                <p>※ 개인정보를 외부에 유출할 경우, 법적 책임을 받을 수 있으므로 유의하세요.</p>
+                <p class="text-danger">※ 각 항목에 맞추어 항체유무와 접종유무(차수)를 체크하세요..</p>
+            </div>
+        </div>
+        <br>
+        <div class="sector">
+            <div class="table-title table-top-info">결핵(흉부 X선) 검사</div>
+            <table class="table table-bordered table-sm">
+                <colgroup>
+                    <col width="10%">
+                    <col>
+                    <col>
+                    <col width="25%">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>검사유무</th>
+                        <th>검사결과</th>
+                        <th>검사일</th>
+                        <th>증빙자료(결과지)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center text-danger">
+                            <strong>결핵검사</strong>
+                        </td>
+                        <td class="text-center">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">정상소견</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">이상소견</label>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br><br>
+        <div class="sector">
+            <div class="table-title table-top-info">항체검사 및 예방접종</div>
+            <table class="table table-bordered table-sm">
+                <colgroup>
+                    <col width="13%">
+                    <col>
+                    <col>
+                    <col width="27%">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>검사유무</th>
+                        <th>
+                            항체유무<br>
+                            <p class="font-size-12px">
+                                (만 19세 이후 검사만 인정)
+                            </p>
+                        </th>
+                        <th>접종</th>
+                        <th>증빙자료(결과지)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center text-danger" rowspan="3">
+                            <strong>비형간염*</strong>
+                            <p class="text-black font-12px">*6개월에 3회 접종</p>
+                        </td>
+                        <td class="text-center" rowspan="3">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center" rowspan="3">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 2차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진-홍길동.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 3차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 예방접종 자가 접종표-홍길동.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-danger">
+                            <strong>결핵*</strong>
+                            <p class="text-black font-12px">*6개월에 2회 접종</p>
+                        </td>
+                        <td class="text-center">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                            </div>
+                        </td>
+                        <td class="text-center">
+
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-danger" rowspan="2">
+                            <strong>홍역*</strong>
+                        </td>
+                        <td class="text-center" rowspan="2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center" rowspan="2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 2차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    <tr>
+                        <td class="text-center text-danger" rowspan="2">
+                            <strong>유행성이하선염*</strong>
+                        </td>
+                        <td class="text-center" rowspan="2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center" rowspan="2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 2차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-danger" rowspan="2">
+                            <strong>풍진*</strong>
+                        </td>
+                        <td class="text-center" rowspan="2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center" rowspan="2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 2차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-danger" rowspan="2">
+                            <strong>수두*</strong>
+                            <p class="font-12px text-black">*1개월 간격 2회 접종</p>
+                        </td>
+                        <td class="text-center" rowspan="2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center" rowspan="2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">양성</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">음성</label>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 2차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-danger">
+                            <strong>파상풍*</strong>
+                        </td>
+                        <td class="text-center">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center"></td>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-danger">
+                            <strong>디프테리아*</strong>
+                        </td>
+                        <td class="text-center">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center"></td>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-danger">
+                            <strong>백일해*</strong>
+                        </td>
+                        <td class="text-center">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center"></td>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-danger">
+                            <strong>인풀루엔자*</strong>
+                        </td>
+                        <td class="text-center">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center"></td>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-danger">
+                            <strong>코로나PCR*</strong>
+                        </td>
+                        <td class="text-center">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-1" name="">
+                                <label for="chk1-1" class="custom-control-label" name="">실시</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" id="chk1-2" name="">
+                                <label for="chk1-2" class="custom-control-label" name="">미실시</label>
+                            </div>
+                        </td>
+                        <td class="text-center"></td>
+                        <td class="text-center">
+                            <div class="row row-5 align-items-center">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">실시 1차</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control form-datepicker w-100" placeholder="0000-00-00">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="row row-5  align-items-center">
+                                <div class="col">
+                                    <div class="row row-5  align-items-center">
+                                        <div class="col">
+                                            <a href="javascript:void(0);" class="d-inline-block text-truncate break-all width-120px">2학년 자가검진.pdf</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-primary btn-sm no-print-page" data-target="#modal-cancel" data-toggle="modal">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto  no-print-page">
+                                    <div class="custom-file w-100">
+                                        <input type="file" class="form-control custom-file-input d-none" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="btn btn-secondary btn-sm" for="customFile" lang="ko">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="row row-0 my-2">
+            <div class="col-12 font-weight-bold">
+                <span>현장지도자 예방접종자가점검표 버튼 활성화 여부 :</span>
+                <div class="custom-control custom-radio custom-control-inline ml-2">
+                    <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio" checked>
+                    <label for="customRadio1" class="custom-control-label font-weight-bold">활성화</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" id="customRadio2" name="customRadio">
+                    <label for="customRadio2" class="custom-control-label font-weight-bold">비활성화</label>
+                </div>
+            </div>
+            <div class="col-12 font-weight-bold mt-2">
+                <span>현장지도자 증빙 자료 다운로드 지정 여부:</span>
+                <div class="custom-control custom-radio custom-control-inline ml-2">
+                    <input class="custom-control-input" type="radio" id="customRadio3" name="customRadio2" checked>
+                    <label for="customRadio3" class="custom-control-label font-weight-bold">다운로드 가능</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" id="customRadio4" name="customRadio2">
+                    <label for="customRadio4" class="custom-control-label font-weight-bold">다운로드 불가</label>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <div class="no-print-page">
+        <div class="popup-footer">
+            <div class="row row-10">
+                <div class="col-auto">
+                    <button type="button" class="btn-primary btn">저장</button>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn-secondary btn" onclick="self.close();">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    /*
+     * 글자수 입력 제한
+     */
+    $('textarea, input').on("input", function() {
+        if ($(this).attr('maxlength') !== "") {
+            var maxlength = $(this).attr("maxlength");
+            var content = $(this).val();
+
+            $($(this).attr('data-byte-target')).html(content.length);
+
+            if (content.length > maxlength) {
+                $(this).val(content.substring(0, maxlength));
+                $($(this).attr('data-byte-target')).html();
+            }
+        }
+    });
+
+
+    /*
+     * 프린트 미리보기 실행 
+     */
+    $('.printBtn').on('click', function() {
+        window.print();
+    });
+
+    /*
+     * 캘린더 
+     */
+
+    $(document).ready(function() {
+        $(function() {
+            // calendar element 취득
+            var calendarEl = document.getElementById('calendar');
+            // full-calendar 생성하기
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                /** 플러그인 모음 */
+                // 캘린더 불러오는 버전차이때문인지 플러그인 인터랙션때문에  호출이 안되서 일단 주석처리 해놨습니다. html 옮긴후 주석풀고 확인해주세요
+                // plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+                /** default 값 */
+                defaultView: 'dayGridMonth',
+                /** 한글 설정 */
+                locale: 'kr',
+                /** 하루종일 슬롯 ->false*/
+                allDaySlot: false,
+                /** 커스텀 버튼 */
+                customButtons: {
+                    /** 커스텀 옵션 */
+                    myCustomButton: {
+                        /** 제목 */
+                        text: '일정 등록',
+                        /** 클릭 시 */
+                        click: function() {
+                            /** 날짜 형식 */
+                            var regex = RegExp(/^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/);
+                            /** 시간 형식 */
+                            var timeFormat = /^([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/;
+
+                            /** 날짜 팝업 */
+                            var dateStr = prompt('YYYY-MM-DD 날짜 형식에 맞게 입력해주세요');
+
+                            /** 시작 날짜 미입력 시 */
+                            if (dateStr == '' || dateStr == null) {
+                                /** 미입력 시 알람 */
+                                alert("날짜를 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+                            /** 형식에 맞지 않으면 */
+                            else if (regex.test(dateStr) == false) {
+                                /** 형식 맞지 않으면 */
+                                alert("날짜 형식에 맞게 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+
+                            /** 시간 팝업 */
+                            var timeStr = prompt('00:00:00 시작 시간을 형식에 맞게 입력해주세요')
+
+                            /** 시작 시간 미입력 시 */
+                            if (timeStr == '' || timeStr == null) {
+                                /** 미입력 시 알람 */
+                                alert("시간을 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+                            /** 형식에 맞지 않으면 */
+                            else if (timeFormat.test(timeStr) == false) {
+                                /** 형식 맞지 않으면 */
+                                alert("시간 형식에 맞게 입력해주세요");
+                                /** 리턴 */
+                                return
+                            }
+
+                            /** date에 담기 */
+                            var date = new Date(dateStr + 'T' + timeStr);
+
+                            /** date 값이 있으면 */
+                            if (!isNaN(date.valueOf())) {
+                                /** 캘린더에 이벤트 추가 */
+                                calendar.addEvent({
+                                    'id': 'a',
+                                    'title': '',
+                                    'start': date
+                                });
+                            }
+                            /** date 값이 없으면 */
+                            else {
+                                /** 입력 형식에 맞지 않을 시 알람 */
+                                alert('형식에 맞춰 입력해주세요');
+                            }
+                        }
+                    }
+                },
+                /** 툴바 */
+                header: {
+                    /** 왼쪽 설정 */
+                    left: 'prev,next today myCustomButton',
+                    /** 가운데 설정 */
+                    center: 'title',
+                    /** 오른쪽 설정 */
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+
+                /** 이벤트 html 추가 */
+                eventRender: function(eventInfo) {
+                    /** 셀렉트 버튼 추가 */
+                    eventInfo.el.querySelector('.fc-content').innerHTML += "<select class='fa fa-external-link pull-right'><option>출석</option><option>미지정</option></select>";
+                },
+            });
+
+
+            // 캘린더 랜더링
+            calendar.render();
+        });
+    });
+</script>

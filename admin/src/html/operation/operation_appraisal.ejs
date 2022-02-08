@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">평가서관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">운영관리</a></li>
+                                <li class="breadcrumb-item">평가서관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="operation-appraisal">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col style="width: 150px">
+                                <col>
+                                <col style="width: 150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>연도 선택</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">연도 선택</option>
+                                        </select>
+                                    </td>
+                                    <th>학년</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>평가자</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                    <th>실습교과목</th>
+                                    <td>
+                                        <select name="" id="" class="custom-select width-200px">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button type="button" class="btn btn-dark min-width-90px">검색</button>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-between align-items-end mb-3">
+                        <div class="col-auto">
+                            <b>Total : 000</b>,
+                            Page 1/3
+                        </div>
+                        <div class="col-auto">
+                            <a href="operation_appraisal_form.html" class="btn btn-primary mr-1">평가표등록</a>
+                            <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
+                            <select class="custom-select w-auto">
+                                <option>10</option>
+                                <option>30</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center">번호</th>
+                                    <th class="text-center">연도</th>
+                                    <th class="text-center">평가자</th>
+                                    <th class="text-center">학년</th>
+                                    <th class="text-center">실습교과목</th>
+                                    <th class="text-center">평가서명</th>
+                                    <th class="text-center">등록일</th>
+                                    <th class="text-center">관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 10; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center"><%= i%></td>
+                                    <td class="text-center">2021년</td>
+                                    <td class="text-center">교수</td>
+                                    <td class="text-center">3학년</td>
+                                    <td class="text-center">아동간호실습1</td>
+                                    <td class=""><a href="#modal-appraisal" data-toggle="modal" class="text-underline">아동간호1-교수용</a></td>
+                                    <td class="text-center">2022.01.01</td>
+                                    <td class="text-center">
+                                        <a href="#modal-delete" data-toggle="modal" class="btn btn-sm btn-secondary">삭제</a>
+                                        <a href="operation_appraisal_form.html" class="btn btn-sm btn-dark">수정</a>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-appraisal").modal("show");
+        });
+    </script>
+</body>
+
+</html>
